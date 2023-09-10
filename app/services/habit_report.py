@@ -14,13 +14,13 @@ class HabitReport:
         self.repo = habit_repository()
 
     def get_habit_measure_resume(self, hab_id: int):
-        self.habit_data = self.repo.get_habit_data(hab_id)
+        habit_data = self.repo.habit_data(hab_id)
         today = date.today()
-        yn = self.habit_data[0]
-        freq_type = self.habit_data[2]
-        goal = self.habit_data[3]
-        freq_date = self.habit_data[4]
-        data = self.habit_data[5]
+        yn = habit_data[0]
+        freq_type = habit_data[2]
+        goal = habit_data[3]
+        freq_date = habit_data[4]
+        data = habit_data[5]
 
         report = md.HabitMeasureResumeReportModel()
         if freq_type == freq_types[1]:
@@ -41,32 +41,30 @@ class HabitReport:
             else:
                 week = first_date - timedelta(days=weekday - 1)
 
-
-
         return report
     
     def get_habit_measure_history(self, hab_id: int):
-        self.habit_data = self.repo.get_habit_data(hab_id)
+        habit_data = self.repo.habit_data(hab_id)
         report = md.HabitMeasureHistoryReportModel()
         return report
     
     def get_habit_yn_resume(self, hab_id: int):
-        self.habit_data = self.repo.get_habit_data(hab_id)
+        habit_data = self.repo.habit_data(hab_id)
         report = md.HabitYNResumeReportModel()
         return report
     
     def get_habit_yn_history(self, hab_id: int):
-        self.habit_data = self.repo.get_habit_data(hab_id)
+        habit_data = self.repo.habit_data(hab_id)
         report = md.HabitYNHistoryReportModel()
         return report
     
     def get_habit_yn_best_streak(self, hab_id: int):
-        self.habit_data = self.repo.get_habit_data(hab_id)
+        habit_data = self.repo.habit_data(hab_id)
         report = md.HabitYNBestStreakReportModel()
         return report
     
     def get_habit_freq_week_day(self, hab_id: int):
-        self.habit_data = self.repo.get_habit_data(hab_id)
+        habit_data = self.repo.habit_data(hab_id)
         report = md.HabitFreqWeekDayReportModel()
         return report
     

@@ -22,10 +22,6 @@ app.add_middleware(
 
 app.include_router(report_router.router, prefix="/report", tags=["report"])
 
-@app.get("/health")
-async def health():
-    return {"message": "Ok"}
-
 @app.get("/")
 async def health():
     return {"message": "Ok"}
