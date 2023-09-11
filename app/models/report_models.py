@@ -10,6 +10,9 @@ class DataReportModel(BaseModel):
 class DateFloatDir(BaseModel):
     data: Dict[date, float]
 
+class DateIntDir(BaseModel):
+    data: Dict[date, int]
+
 class HabitMeasureResumeReportModel(BaseModel):
     toDay: Optional[DataReportModel] = None
     week: Optional[DataReportModel] = None
@@ -32,20 +35,16 @@ class HabitYNResumeReportModel(BaseModel):
     total: int
 
 class HabitYNHistoryReportModel(BaseModel):
-    #data: {week(<start date>, <end date>): <quantity>}
-    week: Dict[Tuple[date, date], int]
-    #data: {month(<month>, <year>): <quantity>}
-    month: Dict[Tuple[int, int], int]
-    #data: {semester(<semester>, <year>): <quantity>}
-    semester: Dict[Tuple[int, int], int]
-    #data: {year(<year>): <quantity>}
-    year: Dict[int, int]
+    week: DateIntDir
+    month: DateIntDir
+    semester: DateIntDir
+    year: DateIntDir
 
 class HabitYNBestStreakReportModel(BaseModel):
     #data: {(<start date>, <end date>): <quantity>}
     data: Dict[Tuple[date, date], int]
 
 class HabitFreqWeekDayReportModel(BaseModel):
-    #data: {(<month>, <year>): {<day of week>: <quantity>}}
+    #data: {(<year>, <month>): {<day of week>: <quantity>}}
     data: Dict[Tuple[int, int], Dict[int, int]]
 

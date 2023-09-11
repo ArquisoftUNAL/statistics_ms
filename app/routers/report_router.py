@@ -27,8 +27,8 @@ async def get_habit_yn_history(hab_id: int, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_yn_history(hab_id)
 
 @router.get("/habit/{hab_id}/yn/best_streak", response_model=md.HabitYNBestStreakReportModel)
-async def get_habit_yn_best_streak(hab_id: int, hs: HabitReport = Depends(get_hs)):
-    return hs.get_habit_yn_best_streak(hab_id)
+async def get_habit_yn_streaks(hab_id: int, hs: HabitReport = Depends(get_hs)):
+    return hs.get_habit_yn_streaks(hab_id)
 
 @router.get("/habit/{hab_id}/freq/week_day", response_model=md.HabitFreqWeekDayReportModel)
 async def get_habit_freq_week_day(hab_id: int, hs: HabitReport = Depends(get_hs)):
