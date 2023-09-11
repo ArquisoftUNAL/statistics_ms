@@ -26,6 +26,8 @@ def week_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: i
 
     if freq_type == 1:
         goal = goal * 7
+    if freq_type == 2:
+        goal = goal * 7/2
 
     return rm.DataReportModel(
         percentage=progress / goal,
@@ -45,7 +47,11 @@ def month_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: 
     if freq_type == 1:
         goal = goal * month_days
     if freq_type == 2:
+        goal = goal * month_days / 2
+    if freq_type == 3:
         goal = goal * month_days / 7
+    if freq_type == 4:
+        goal = goal * month_days / 7 / 2
 
     return rm.DataReportModel(
         percentage=progress / goal,
@@ -68,9 +74,15 @@ def semester_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) 
     if freq_type == 1:
         goal = goal * 365 / 2
     if freq_type == 2:
-        goal = goal * 52 / 2
+        goal = goal * 365 / 4
     if freq_type == 3:
-        goal = goal * 12 / 2
+        goal = goal * 52 / 2
+    if freq_type == 4:
+        goal = goal * 52 / 4
+    if freq_type == 5:
+        goal = goal * 6
+    if freq_type == 6:
+        goal = goal * 3
 
     return rm.DataReportModel(
         percentage=progress / goal,
@@ -89,9 +101,15 @@ def year_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> r
     if freq_type == 1:
         goal = goal * 365
     if freq_type == 2:
-        goal = goal * 52
+        goal = goal * 365 / 2
     if freq_type == 3:
+        goal = goal * 52
+    if freq_type == 4:
+        goal = goal * 52 / 2
+    if freq_type == 5:
         goal = goal * 12
+    if freq_type == 6:
+        goal = goal * 6
 
     return rm.DataReportModel(
         percentage=progress / goal,
@@ -137,14 +155,69 @@ def ms_year_history(df: pd.DataFrame) -> rm.DateFloatDir:
     return rm.DateFloatDir(data=df.to_dict()['hab_dat_amount'])
 
 #Functions for get_habit_yn_resume report:
-def month_yn_resume(df: pd.DataFrame, goal: int, today: date) -> float:
-    return 0.0
+def month_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
+    year = today.year
+    month = today.month
+    month_days = calendar.monthrange(year, month)[1]
+    goal = 0
+    if freq == 1:
+        goal = month_days
+    if freq == 2:
+        goal = month_days/2
+    if freq == 3:
+        goal = month_days/7
+    if freq == 4:
+        goal = month_days/14
+    if freq == 5:
+        goal == 1
+    if freq == 6:
+        goal == 0.5
 
-def semester_yn_resume(df: pd.DataFrame, goal: int, today: date) -> float:
-    return 0.0
+    progress = df[(['month'] == month) & (['year'] == year)].size
 
-def year_yn_resume(df: pd.DataFrame, goal: int, today: date) -> float:
-    return 0.0
+    return progress/goal
+
+def semester_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
+    year = today.year
+    month = today.month
+    goal = 0
+    if freq == 1:
+        goal = 365/2
+    if freq == 2:
+        goal = 365/4
+    if freq == 3:
+        goal = 52/2
+    if freq == 4:
+        goal = 52/4
+    if freq == 5:
+        goal == 6
+    if freq == 6:
+        goal == 3
+
+    progress = df[(['month'] == month) & (['year'] == year)].size
+
+    return progress/goal
+
+def year_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
+    year = today.year
+    month = today.month
+    goal = 0
+    if freq == 1:
+        goal = 365
+    if freq == 2:
+        goal = 365/2
+    if freq == 3:
+        goal = 52
+    if freq == 4:
+        goal = 52/2
+    if freq == 5:
+        goal == 12
+    if freq == 6:
+        goal == 6
+
+    progress = df[(['month'] == month) & (['year'] == year)].size
+
+    return progress/goal
 
 def total_yn_resume(df: pd.DataFrame, today:date) -> int:
     df = df[df['hab_dat_collected_at'] == today.year]

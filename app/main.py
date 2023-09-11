@@ -20,7 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )"""
 
-app.include_router(report_router.router, prefix="/statistics", tags=["statistics"])
+app.include_router(report_router.router, prefix="/api/stats", tags=["statistics"])
 
 @app.get("/")
 async def health():

@@ -5,8 +5,11 @@ from . import functions as fn
 
 freq_types = {
     'daily': 1,
-    'weekly': 2,
-    'monthly': 3,
+    'daily2': 2,
+    'weekly': 3,
+    'weekly2': 4,
+    'monthly': 5,
+    'monthly2': 6
 }
 
 class HabitReport:
@@ -26,18 +29,18 @@ class HabitReport:
         today = date.today()
         habit_data = self.repo.get_habit_data(hab_id)
         freq_type = habit_data.hab_rec.hab_rec_freq_type
-        goal = habit_data.hab_rec.hab_rec_goal
+        freq_types[freq_type] = habit_data.hab_rec.hab_rec_freq_types[freq_type]
         df = habit_data.data
 
         report = md.HabitMeasureResumeReportModel()
 
-        report.year = fn.year_progress(df, goal, today, freq_types[freq_type])
-        report.semester = fn.semester_progress(df, goal, today, freq_types[freq_type])
-        report.month = fn.month_progress(df, goal, today, freq_types[freq_type])
+        report.year = fn.year_progress(df, freq_types[freq_type], today, freq_types[freq_type])
+        report.semester = fn.semester_progress(df, freq_types[freq_type], today, freq_types[freq_type])
+        report.month = fn.month_progress(df, freq_types[freq_type], today, freq_types[freq_type])
         if freq_types[freq_type] < 3:
-            report.week = fn.week_progress(df, goal, today, freq_types[freq_type])
+            report.week = fn.week_progress(df, freq_types[freq_type], today, freq_types[freq_type])
         if freq_types[freq_type] == 1:
-            report.today = fn.day_progress(df, goal, today)
+            report.today = fn.day_progress(df, freq_types[freq_type], today)
 
         return report
     
@@ -77,14 +80,13 @@ class HabitReport:
         today = date.today()
         habit_data = self.repo.habit_data(hab_id)
         df = habit_data.data
-        freq_type = habit_data.hab_rec.hab_rec_freq_type
-        goal = None
+        freq_type = freq_types[habit_data.hab_rec.hab_rec_freq_type]
 
         report = md.HabitYNResumeReportModel()
 
-        report.year = fn.year_yn_resume(df, goal, today)
-        report.semester = fn.semester_yn_resume(df, goal, today)
-        report.month = fn.month_yn_resume(df, goal, today)
+        report.year = fn.year_yn_resume(df, freq_type, today)
+        report.semester = fn.semester_yn_resume(df, freq_type, today)
+        report.month = fn.month_yn_resume(df, freq_type, today)
         report.total = fn.total_yn_resume(df, today)
 
         return report
