@@ -1,6 +1,5 @@
-from pydantic import BaseModel, validator, Field
+from pydantic import BaseModel
 import pandas as pd
-from typing import Type
 
 class DataFrameModel(BaseModel):
     data: pd.DataFrame

@@ -124,8 +124,7 @@ class HabitReport:
         today = date.today()
         habit_data = self.repo.habit_data(hab_id)
         df = habit_data.data
-        report = md.HabitYNBestStreakReportModel()
-        return report
+        return fn.yn_streaks(df, today)
     
     def get_habit_freq_week_day(self, hab_id: int) -> md.HabitFreqWeekDayReportModel:
         """

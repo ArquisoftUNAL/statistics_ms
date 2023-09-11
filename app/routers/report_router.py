@@ -10,26 +10,26 @@ def get_hs():
     return HabitReport(repo)
 
 
-@router.get("/habit/{hab_id}/measure/resume", response_model=md.HabitMeasureResumeReportModel)
+@router.get("/measure/resume/{hab_id}", response_model=md.HabitMeasureResumeReportModel)
 async def get_habit_measure_resume(hab_id: int, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_measure_resume(hab_id)
 
-@router.get("/habit/{hab_id}/measure/history", response_model=md.HabitMeasureHistoryReportModel)
+@router.get("/measure/history/{hab_id}", response_model=md.HabitMeasureHistoryReportModel)
 async def get_habit_measure_history(hab_id: int, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_measure_history(hab_id)
 
-@router.get("/habit/{hab_id}/yn/resume", response_model=md.HabitYNResumeReportModel)
+@router.get("/yn/resume/{hab_id}", response_model=md.HabitYNResumeReportModel)
 async def get_habit_yn_resume(hab_id: int, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_yn_resume(hab_id)
 
-@router.get("/habit/{hab_id}/yn/history", response_model=md.HabitYNHistoryReportModel)
+@router.get("/yn/history/{hab_id}", response_model=md.HabitYNHistoryReportModel)
 async def get_habit_yn_history(hab_id: int, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_yn_history(hab_id)
 
-@router.get("/habit/{hab_id}/yn/best_streak", response_model=md.HabitYNBestStreakReportModel)
+@router.get("/yn/best_streak/{hab_id}", response_model=md.HabitYNBestStreakReportModel)
 async def get_habit_yn_streaks(hab_id: int, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_yn_streaks(hab_id)
 
-@router.get("/habit/{hab_id}/freq/week_day", response_model=md.HabitFreqWeekDayReportModel)
+@router.get("/freq/week_day/{hab_id}", response_model=md.HabitFreqWeekDayReportModel)
 async def get_habit_freq_week_day(hab_id: int, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_freq_week_day(hab_id)

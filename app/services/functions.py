@@ -182,7 +182,7 @@ def yn_year_history(df: pd.DataFrame) -> rm.DateIntDir:
     return rm.DateIntDir(data=df.to_dict()['hab_dat_amount'])
 
 #Functions for get_habit_yn_best_streak report:
-def yn_best_streak(df: pd.DataFrame, today: date) -> rm.HabitYNBestStreakReportModel:
+def yn_streaks(df: pd.DataFrame, today: date) -> rm.HabitYNBestStreakReportModel:
     df = df[['hab_dat_collected_at', 'hab_dat_amount']].where(df['year'] == today.year).dropna()
     df['diff_days'] = df['hab_dat_collected_at'].diff().dt.days
     df['streak'] = (df['diff_days'] != 1).cumsum()
