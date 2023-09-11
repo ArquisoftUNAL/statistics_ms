@@ -1,10 +1,11 @@
-""" a class to read from postgresql database using sqlalchemy and pandas"""
+""" a class to read from postgresql database using sqlalchemy"""
 from sqlalchemy import create_engine, URL, MetaData, Table, select
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
 import pandas as pd
 import asyncio
 import os
+import app.models.repo_models as rm
 
 load_dotenv()
 url = URL.create(
@@ -39,12 +40,11 @@ class HabitRepository:
         result = await asyncio.get_event_loop().run_in_executor(None, self.engine.execute, query)
         return result.scalar()
     
-    async def get_hab_rec(self, hab_id):
+    async def get_hab_rec(self, hab_id) -> rm.HabRec:
         query = select([
             self.hab_rec.c.hab_rec_id,
             self.hab_rec.c.hab_rec_freq_type,
             self.hab_rec.c.hab_rec_goal,
-            self.hab_rec.c.hab_rec_freq_data,
         ]).select_from(
             self.hab.rec
         ).where(
@@ -52,12 +52,25 @@ class HabitRepository:
         )
 
         result = await asyncio.get_event_loop().run_in_executor(None, self.engine.execute, query)
-        return result.fetchone()
+        data = result.fetchone()
+
+        if data is not None:
+            return rm.HabRec(
+                hab_rec_id=data[0],
+                hab_rec_freq_type=data[1],
+                hab_rec_goal=data[2],
+            )
+        return data
         
-    async def get_habit_data(self, hab_id):
-        is_yn = await self.get_hab_is_yn(hab_id)
+    async def get_habit_data(self, hab_id) -> rm.HabData:
+        #is_yn = await self.get_hab_is_yn(hab_id)
         hab_rec = await self.get_hab_rec(hab_id)
+        
+        if hab_rec is None:
+            return None
+        
         query = select([
+            self.hab_data.c.hab_dat_id,
             self.hab_data.c.hab_dat_amount,
             self.hab_data.c.hab_dat_collected_at,
         ]).select_from(
@@ -67,4 +80,10 @@ class HabitRepository:
         ).order_by(self.hab_data.c.hab_dat_collected_at.desc())
 
         response = await asyncio.get_event_loop().run_in_executor(None, pd.read_sql, query, self.engine)
-        return [is_yn, hab_rec[0], hab_rec[1], hab_rec[2], hab_rec[3], response]
+        if response.empty:
+            return None
+        response['hab_dat_collected_at'] = pd.to_datetime(response['hab_dat_collected_at'])
+        response[['year', 'week', 'weekday']] = response['hab_dat_collected_at'].apply(lambda x: pd.Series(x.isocalendar()))
+        response['month'] = response['hab_dat_collected_at'].apply(lambda x: x.month)
+
+        return rm.HabData(hab_rec=hab_rec, data=response)

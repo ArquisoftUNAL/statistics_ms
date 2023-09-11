@@ -1,51 +1,57 @@
 from app.repositories.habits_repository import HabitRepository
 import app.models.report_models as md
 from datetime import date, timedelta
+from . import functions as fn
 
 freq_types = {
-    1: 'daily',
-    2: 'weekly',
-    3: 'monthly',
+    'daily': 1,
+    'weekly': 2,
+    'monthly': 3,
 }
-
 
 class HabitReport:
     def __init__(self, habit_repository: HabitRepository):
         self.repo = habit_repository()
 
-    def get_habit_measure_resume(self, hab_id: int):
-        habit_data = self.repo.habit_data(hab_id)
+    def get_habit_measure_resume(self, hab_id: int) -> md.HabitMeasureResumeReportModel:
+        """
+        Calculates the progress of a habit with a measure type frequency.
+
+        Args:
+            hab_id (int): The id of the habit.
+
+        Returns:
+            HabitMeasureResumeReportModel: The report with the progress of the habit.
+        """
         today = date.today()
-        yn = habit_data[0]
-        freq_type = habit_data[2]
-        goal = habit_data[3]
-        freq_date = habit_data[4]
-        data = habit_data[5]
+        habit_data = self.repo.get_habit_data(hab_id)
+        freq_type = habit_data.hab_rec.hab_rec_freq_type
+        goal = habit_data.hab_rec.hab_rec_goal
+        df = habit_data.data
 
         report = md.HabitMeasureResumeReportModel()
-        if freq_type == freq_types[1]:
-            if data['hab_dat_collected_at'].iloc[0] == today:
-                report.toDay = md.DataReportModel(
-                    percentage=data['hab_dat_amount'].iloc[0] / goal,
-                    progress=data['hab_dat_amount'].iloc[0],
-                    remaining=goal - data['hab_dat_amount'].iloc[0],
-                )
-        elif freq_type == freq_types[2]:
-            #get the first day of the actual week at the dataframe if exists
-            first_date = data['hab_dat_collected_at'].iloc[0]
-            year, week, weekday = first_date.isocalendar()
-            if year == today.year and week == today.isocalendar()[1]:
-                week = date.fromisocalendar(year, week, 1)
-                if first_date < week:
-                    week -= timedelta(days=7)
-            else:
-                week = first_date - timedelta(days=weekday - 1)
+
+        report.year = fn.year_progress(df, goal, today, freq_types[freq_type])
+        report.semester = fn.semester_progress(df, goal, today, freq_types[freq_type])
+        report.month = fn.month_progress(df, goal, today, freq_types[freq_type])
+        if freq_types[freq_type] < 3:
+            report.week = fn.week_progress(df, goal, today, freq_types[freq_type])
+        if freq_types[freq_type] == 1:
+            report.today = fn.day_progress(df, goal, today)
 
         return report
     
     def get_habit_measure_history(self, hab_id: int):
         habit_data = self.repo.habit_data(hab_id)
+        df = habit_data.data
         report = md.HabitMeasureHistoryReportModel()
+
+        report.year = fn.year_history(df)
+        report.semester = fn.semester_history(df)
+        report.month = fn.month_history(df)
+        report.week = fn.week_history(df)
+        report.day = fn.day_history(df)
+
         return report
     
     def get_habit_yn_resume(self, hab_id: int):

@@ -7,6 +7,9 @@ class DataReportModel(BaseModel):
     progress: float
     remaining: float
 
+class DateFloatDir(BaseModel):
+    data: Dict[date, float]
+
 class HabitMeasureResumeReportModel(BaseModel):
     toDay: Optional[DataReportModel] = None
     week: Optional[DataReportModel] = None
@@ -15,16 +18,11 @@ class HabitMeasureResumeReportModel(BaseModel):
     year: DataReportModel
 
 class HabitMeasureHistoryReportModel(BaseModel):
-    #data: {<date>: <quantity>}
-    day: Dict[date, float]
-    #data: {week(<start date>, <end date>): <quantity>}
-    week: Dict[Tuple[date, date], float]
-    #data: {month(<month>, <year>): <quantity>}
-    month: Dict[Tuple[int, int], float]
-    #data: {semester(<semester>, <year>): <quantity>}
-    semester: Dict[Tuple[int, int], float]
-    #data: {year(<year>): <quantity>}
-    year: Dict[int, float]
+    day: DateFloatDir
+    week: DateFloatDir
+    month: DateFloatDir
+    semester: DateFloatDir
+    year: DateFloatDir
 
 
 class HabitYNResumeReportModel(BaseModel):
