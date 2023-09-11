@@ -1,0 +1,545 @@
+{
+    "message": "Successfully retrieved habits, recurrences & data for user with ID: KJiwUXFgtui",
+    "habits": [
+        {
+            "hab_id": "265968ef-e465-4cb2-8f7a-50e1b1111207",
+            "hab_name": "0lzCOZXF6dtO",
+            "hab_description": "RrZyHx",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "rWBW90",
+            "hab_units": "IvNYL",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "82c7a624-44dd-41f2-802b-d3c09db7c333",
+                    "hab_id": "265968ef-e465-4cb2-8f7a-50e1b1111207",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "2442-03-27",
+                    "data": [
+                        {
+                            "hab_dat_id": "700e682a-95dc-4a50-8896-1611b622c2ad",
+                            "hab_dat_amount": "44.42",
+                            "hab_dat_collected_at": "2023-09-11T16:50:05.998189",
+                            "hab_rec_id": "82c7a624-44dd-41f2-802b-d3c09db7c333"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "55eb7844-d471-4b57-9915-211c41952a6e",
+            "hab_name": "s1z8wysda",
+            "hab_description": "YPYP3cwXADRhsK0",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "GPhF6o",
+            "hab_units": "QhX2D",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "364e9746-e429-4977-986b-022ab39ad8d8",
+                    "hab_id": "55eb7844-d471-4b57-9915-211c41952a6e",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "2356-08-25",
+                    "data": [
+                        {
+                            "hab_dat_id": "a389a18c-2cad-4674-a7b5-e50124d60538",
+                            "hab_dat_amount": "33.84",
+                            "hab_dat_collected_at": "2023-09-11T16:50:07.239763",
+                            "hab_rec_id": "364e9746-e429-4977-986b-022ab39ad8d8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "860c385b-51a9-4539-9e4d-bdb570761a44",
+            "hab_name": "pSOryteRkbIEmub0K",
+            "hab_description": "8vnHDNRLT",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "sqlyg",
+            "hab_units": "C6wpV",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "53900e64-7cfd-4c04-8ccd-3372f780812b",
+                    "hab_id": "860c385b-51a9-4539-9e4d-bdb570761a44",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "0793-10-14",
+                    "data": [
+                        {
+                            "hab_dat_id": "35fd25ab-7619-48a9-b3f0-94a71e60300a",
+                            "hab_dat_amount": "96.42",
+                            "hab_dat_collected_at": "2023-09-11T16:50:08.303403",
+                            "hab_rec_id": "53900e64-7cfd-4c04-8ccd-3372f780812b"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "eefd243d-8626-4ad7-8d47-2616a2aa8490",
+            "hab_name": "ECAXLNZBuHhUTx",
+            "hab_description": "Ap07frXHKovWCZupqY",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "Mj9fkx",
+            "hab_units": "LrOQu",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "a8d7f51f-e5d5-43dc-a853-4f9e11384d5c",
+                    "hab_id": "eefd243d-8626-4ad7-8d47-2616a2aa8490",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "1591-11-03",
+                    "data": [
+                        {
+                            "hab_dat_id": "b8e22317-79bc-4db8-8347-9eb9136afc34",
+                            "hab_dat_amount": "6.95",
+                            "hab_dat_collected_at": "2023-09-11T16:50:09.367958",
+                            "hab_rec_id": "a8d7f51f-e5d5-43dc-a853-4f9e11384d5c"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "744166ad-09f1-4510-90f3-954fd3c4e478",
+            "hab_name": "OCOk62",
+            "hab_description": "C3ef4p4aINvJ",
+            "hab_is_favorite": true,
+            "hab_is_yn": false,
+            "hab_color": "d3clhF",
+            "hab_units": "BrQza",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "6f79fb6b-92d2-4682-84e5-86aeb88b5f94",
+                    "hab_id": "744166ad-09f1-4510-90f3-954fd3c4e478",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "0638-08-05",
+                    "data": [
+                        {
+                            "hab_dat_id": "7f64aa4b-62fb-40db-a3a2-88b8fdc00bbe",
+                            "hab_dat_amount": "89.04",
+                            "hab_dat_collected_at": "2023-09-11T16:50:10.491072",
+                            "hab_rec_id": "6f79fb6b-92d2-4682-84e5-86aeb88b5f94"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "a38cf0d7-3536-4fd9-80f5-d2ac2124465d",
+            "hab_name": "mFWQr",
+            "hab_description": "gs2LLraD4llX",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "DeORmo",
+            "hab_units": "G6XJ2",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "edca7074-6472-41aa-ac2e-cd29e3fbe34f",
+                    "hab_id": "a38cf0d7-3536-4fd9-80f5-d2ac2124465d",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "2211-06-27",
+                    "data": [
+                        {
+                            "hab_dat_id": "b44cb1b0-3d23-4975-8790-6b58ab516567",
+                            "hab_dat_amount": "42.09",
+                            "hab_dat_collected_at": "2023-09-11T16:50:12.494709",
+                            "hab_rec_id": "edca7074-6472-41aa-ac2e-cd29e3fbe34f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "662001f4-da9f-463a-aa27-f2bf50e98a89",
+            "hab_name": "XXBUFdb",
+            "hab_description": "OT4rIlGj3NejWYPT",
+            "hab_is_favorite": true,
+            "hab_is_yn": true,
+            "hab_color": "MAfoX1",
+            "hab_units": "kRNiX",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "db46f19c-3661-40f7-a2ec-37c696d3385d",
+                    "hab_id": "662001f4-da9f-463a-aa27-f2bf50e98a89",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "0824-02-16",
+                    "data": [
+                        {
+                            "hab_dat_id": "ff86330f-81c3-4390-a353-baf271d9c6e3",
+                            "hab_dat_amount": "17.69",
+                            "hab_dat_collected_at": "2023-09-11T16:50:13.351197",
+                            "hab_rec_id": "db46f19c-3661-40f7-a2ec-37c696d3385d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "c1d08130-67d6-4431-98c1-b5ba1ea853d6",
+            "hab_name": "iEzvU9",
+            "hab_description": "W2lXZ1IepL9",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "BFI3JT",
+            "hab_units": "syc2L",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "c81e4d23-8c4d-4e8d-9395-970e488600a7",
+                    "hab_id": "c1d08130-67d6-4431-98c1-b5ba1ea853d6",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "1693-10-15",
+                    "data": [
+                        {
+                            "hab_dat_id": "54b1dc9f-a346-4923-b4b3-3141479e27d5",
+                            "hab_dat_amount": "20.04",
+                            "hab_dat_collected_at": "2023-09-11T16:50:14.760547",
+                            "hab_rec_id": "c81e4d23-8c4d-4e8d-9395-970e488600a7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "6186f1ed-02dd-4c7f-9912-59316e1da27c",
+            "hab_name": "V78is3p",
+            "hab_description": "hEpl57Yks",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "g2ELPi",
+            "hab_units": "qULuS",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "39143cff-8643-4f43-b1a0-dc5cdf2aa167",
+                    "hab_id": "6186f1ed-02dd-4c7f-9912-59316e1da27c",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "0135-03-05",
+                    "data": [
+                        {
+                            "hab_dat_id": "b982d984-f847-4793-a10e-2eba8a0c6c6f",
+                            "hab_dat_amount": "99.35",
+                            "hab_dat_collected_at": "2023-09-11T16:50:16.042569",
+                            "hab_rec_id": "39143cff-8643-4f43-b1a0-dc5cdf2aa167"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "5827d657-0d70-451c-862c-2ea358acb55a",
+            "hab_name": "bp7bFflcEQstGRr",
+            "hab_description": "rRBZl8DWbIbNhp",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "oX3Umc",
+            "hab_units": "RkfU7",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "0f03168e-ddf8-433a-9a49-90955bb51848",
+                    "hab_id": "5827d657-0d70-451c-862c-2ea358acb55a",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "1418-11-12",
+                    "data": [
+                        {
+                            "hab_dat_id": "489c1956-210e-4da9-aab9-530df3c4719a",
+                            "hab_dat_amount": "13.16",
+                            "hab_dat_collected_at": "2023-09-11T16:50:17.733577",
+                            "hab_rec_id": "0f03168e-ddf8-433a-9a49-90955bb51848"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "d39a154a-ebfd-43f8-ad8c-ea19f69e9d9a",
+            "hab_name": "Gij4rASEGc",
+            "hab_description": "qWw60DTm125EoKQ",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "HnCwwk",
+            "hab_units": "Z9xrw",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "a6926987-36ae-4b3b-9000-ec52e5d127cf",
+                    "hab_id": "d39a154a-ebfd-43f8-ad8c-ea19f69e9d9a",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "2705-06-23",
+                    "data": [
+                        {
+                            "hab_dat_id": "9a281cea-ae92-47f9-871e-7b88bd49cc56",
+                            "hab_dat_amount": "87.72",
+                            "hab_dat_collected_at": "2023-09-11T16:50:19.033020",
+                            "hab_rec_id": "a6926987-36ae-4b3b-9000-ec52e5d127cf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "4747395f-7ec9-4560-b550-460696eb9f51",
+            "hab_name": "GPAg124QTZQr",
+            "hab_description": "VqvhZXuvyx5EprREW",
+            "hab_is_favorite": true,
+            "hab_is_yn": true,
+            "hab_color": "qxzpsP",
+            "hab_units": "v39hW",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "8614cc3a-abd4-452a-b7da-4978ba5398eb",
+                    "hab_id": "4747395f-7ec9-4560-b550-460696eb9f51",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "0151-07-06",
+                    "data": [
+                        {
+                            "hab_dat_id": "dca89ac9-8ebe-431e-86d3-7725918f0735",
+                            "hab_dat_amount": "76.52",
+                            "hab_dat_collected_at": "2023-09-11T16:50:20.364833",
+                            "hab_rec_id": "8614cc3a-abd4-452a-b7da-4978ba5398eb"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "660868af-3c45-441c-a524-187491f569cf",
+            "hab_name": "57wvPo",
+            "hab_description": "yM4Xs34zLzJORTO",
+            "hab_is_favorite": true,
+            "hab_is_yn": false,
+            "hab_color": "S4ruHu",
+            "hab_units": "FuU0S",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "b8c74e5d-623a-40ea-ac23-bdf6ec561e4f",
+                    "hab_id": "660868af-3c45-441c-a524-187491f569cf",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "1083-12-07",
+                    "data": [
+                        {
+                            "hab_dat_id": "1fdfc4cd-376c-4257-a1ee-1bb8d924803f",
+                            "hab_dat_amount": "60.40",
+                            "hab_dat_collected_at": "2023-09-11T16:50:24.217936",
+                            "hab_rec_id": "b8c74e5d-623a-40ea-ac23-bdf6ec561e4f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "b76e7846-8bdd-4c98-aeaf-e9bdd9545fb2",
+            "hab_name": "WsAhXGb",
+            "hab_description": "6hxC0uH0o6yF",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "UDUsKk",
+            "hab_units": "HFGRI",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "9971ac3b-6c22-4dfd-b6f0-a194918a40ba",
+                    "hab_id": "b76e7846-8bdd-4c98-aeaf-e9bdd9545fb2",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "1943-10-21",
+                    "data": [
+                        {
+                            "hab_dat_id": "06b379f9-c545-42d6-af4f-a7053b713cb3",
+                            "hab_dat_amount": "86.39",
+                            "hab_dat_collected_at": "2023-09-11T16:50:25.337849",
+                            "hab_rec_id": "9971ac3b-6c22-4dfd-b6f0-a194918a40ba"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "b30a16df-6a2c-4117-a6e2-58f7986facac",
+            "hab_name": "4UmYZ3okIW4vM",
+            "hab_description": "iBX0Cy49m6hWXa1",
+            "hab_is_favorite": true,
+            "hab_is_yn": false,
+            "hab_color": "xL08AW",
+            "hab_units": "FzRGl",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "053a5b93-081d-4155-b3f3-73a15258a10a",
+                    "hab_id": "b30a16df-6a2c-4117-a6e2-58f7986facac",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "2009-07-05",
+                    "data": [
+                        {
+                            "hab_dat_id": "dba1060f-199b-4045-a9c7-26a57ff0d92c",
+                            "hab_dat_amount": "64.53",
+                            "hab_dat_collected_at": "2023-09-11T16:50:26.312348",
+                            "hab_rec_id": "053a5b93-081d-4155-b3f3-73a15258a10a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "55be9c35-378c-4eca-a07c-a3a9ccb2429f",
+            "hab_name": "lyXD2vVW9qvu0NFYD",
+            "hab_description": "AEPXYS3ZGnW03O",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "5VWcwZ",
+            "hab_units": "YPGeh",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "3e1f5429-fd55-4f2d-ba34-d807f6794669",
+                    "hab_id": "55be9c35-378c-4eca-a07c-a3a9ccb2429f",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "2333-11-13",
+                    "data": [
+                        {
+                            "hab_dat_id": "b80b19f3-14b6-4b4e-b97f-accbf5849061",
+                            "hab_dat_amount": "22.87",
+                            "hab_dat_collected_at": "2023-09-11T16:50:27.284004",
+                            "hab_rec_id": "3e1f5429-fd55-4f2d-ba34-d807f6794669"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "471f2c7e-cb9d-41c9-965a-1199965875b6",
+            "hab_name": "R8MmpI6h5Uo",
+            "hab_description": "9O5UMVHHauocS9CBg",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "z9UQ5z",
+            "hab_units": "1b7hJ",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "4031f18d-d1fe-4d50-806c-a5240c7c3542",
+                    "hab_id": "471f2c7e-cb9d-41c9-965a-1199965875b6",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "1863-02-01",
+                    "data": [
+                        {
+                            "hab_dat_id": "241c106b-2632-46b8-b3e5-4019d7582f6d",
+                            "hab_dat_amount": "7.47",
+                            "hab_dat_collected_at": "2023-09-11T16:50:28.703861",
+                            "hab_rec_id": "4031f18d-d1fe-4d50-806c-a5240c7c3542"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "e12e669b-8382-4c1b-8b92-7bdfa68b6de9",
+            "hab_name": "qPLPc",
+            "hab_description": "4XplfQ6mrNJAxpsm",
+            "hab_is_favorite": true,
+            "hab_is_yn": true,
+            "hab_color": "b5jWs",
+            "hab_units": "kVYBG",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "d5658bf2-1a2e-42a2-845e-0b05727c4097",
+                    "hab_id": "e12e669b-8382-4c1b-8b92-7bdfa68b6de9",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "0352-02-24",
+                    "data": [
+                        {
+                            "hab_dat_id": "cb2e38f2-f0ba-4ad9-94f5-93c9b61abc60",
+                            "hab_dat_amount": "50.05",
+                            "hab_dat_collected_at": "2023-09-11T16:50:30.652897",
+                            "hab_rec_id": "d5658bf2-1a2e-42a2-845e-0b05727c4097"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "7e526214-5f4a-4f6a-a9e8-dff21ee76719",
+            "hab_name": "bnbR1",
+            "hab_description": "3qZw7LwleCxCGQ",
+            "hab_is_favorite": true,
+            "hab_is_yn": true,
+            "hab_color": "wr8tTP",
+            "hab_units": "rNhWi",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "recurrences": [
+                {
+                    "hab_rec_id": "14413ed3-a90f-45a2-9bb4-ec9c174b3df8",
+                    "hab_id": "7e526214-5f4a-4f6a-a9e8-dff21ee76719",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "1354-09-23",
+                    "data": [
+                        {
+                            "hab_dat_id": "aab811c3-4a7e-47ad-a78c-6b757c2a9d27",
+                            "hab_dat_amount": "80.20",
+                            "hab_dat_collected_at": "2023-09-11T16:50:34.007713",
+                            "hab_rec_id": "14413ed3-a90f-45a2-9bb4-ec9c174b3df8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "546965cb-cd89-4a3e-8bdf-c87919675161",
+            "hab_name": "VIXWO8YAF",
+            "hab_description": "RDUT1sdkSykfl",
+            "hab_is_favorite": true,
+            "hab_is_yn": false,
+            "hab_color": "n2sRX",
+            "hab_units": "8qOGo",
+            "usr_id": "KJiwUXFgtui",
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "recurrences": [
+                {
+                    "hab_rec_id": "b2791d1d-3932-44a0-a903-b4f10bffd5a9",
+                    "hab_id": "546965cb-cd89-4a3e-8bdf-c87919675161",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "1178-04-19",
+                    "data": [
+                        {
+                            "hab_dat_id": "793f8f40-a1a5-42e2-8d56-d3d187e87a29",
+                            "hab_dat_amount": "51.24",
+                            "hab_dat_collected_at": "2023-09-11T16:50:35.534780",
+                            "hab_rec_id": "b2791d1d-3932-44a0-a903-b4f10bffd5a9"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

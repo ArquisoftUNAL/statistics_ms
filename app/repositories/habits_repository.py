@@ -13,8 +13,10 @@ url = os.getenv("GATEWAY_URL")
 
 class HabitRepository:
     def __init__(self):
+
+        # Delete and query microservice on each request
         habits_file = open('data/habits.json')
-        self.habits = json.load(habits_file)
+        self.habits = json.load(habits_file)["habits"]
 
     def get_habit(self, hab_id):
         # Query to microservice rather than on local file

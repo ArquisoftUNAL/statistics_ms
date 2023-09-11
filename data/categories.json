@@ -1,0 +1,405 @@
+{
+    "message": "Successfully retrieved categories",
+    "categories": [
+        {
+            "cat_id": "9ebfb40b-5ff7-4255-afbb-ae7104250eb1",
+            "cat_name": "dGTPCoW"
+        },
+        {
+            "cat_id": "bcc6a781-a68f-4614-98d8-47cb3476690a",
+            "cat_name": "YxRGRr4SKV"
+        },
+        {
+            "cat_id": "85bec864-04e9-48fc-ba97-3b10dfbbebc7",
+            "cat_name": "ia5ciTHM"
+        },
+        {
+            "cat_id": "713879f3-365f-4bde-bd49-fcfa158893ae",
+            "cat_name": "Lh31TfZsYb7nDCOxLgQ"
+        },
+        {
+            "cat_id": "031c850b-74fa-4cc7-bf8e-e05b7da7c954",
+            "cat_name": "o5y90OTTPeRTYK"
+        },
+        {
+            "cat_id": "00385f1a-cf5b-4a0b-ae88-5096e32dcee1",
+            "cat_name": "RDYveDSwQtKa7vI"
+        },
+        {
+            "cat_id": "6ef5fb2e-b721-4419-a19b-1e310746c789",
+            "cat_name": "5TUIXiUgLJETIouukI"
+        },
+        {
+            "cat_id": "e87a09b0-fa95-4b2f-b2f9-90260148c951",
+            "cat_name": "VyG6vzdHAlA"
+        },
+        {
+            "cat_id": "b5f1bd02-81b6-42f0-86e2-614349a91cff",
+            "cat_name": "ZUkylhMcvg003i"
+        },
+        {
+            "cat_id": "cf6ca583-dcf1-4cd6-bfd4-074f2387e35f",
+            "cat_name": "seJnOUqZxrvd"
+        },
+        {
+            "cat_id": "ca8bcd20-62de-49ee-bffe-52ed5a058ef8",
+            "cat_name": "geKqRNhLP"
+        },
+        {
+            "cat_id": "2701ae69-f1e0-44a4-86db-983da8ed4e44",
+            "cat_name": "B5CuSBT4OSj"
+        },
+        {
+            "cat_id": "93b67567-dab9-4c9c-a8d3-aa0ff6068734",
+            "cat_name": "VcjxtDTa5tRAi55OC9"
+        },
+        {
+            "cat_id": "8517ba1e-06a9-4f0c-8006-22f8bed024b4",
+            "cat_name": "aOwLYfAP7bI1"
+        },
+        {
+            "cat_id": "e9861b44-e64a-4d1d-8b52-de1857ee1ab0",
+            "cat_name": "B7sdpBkUGfKk"
+        },
+        {
+            "cat_id": "a34580a6-b2ca-4edb-ab3c-ce97f96228df",
+            "cat_name": "AxSCdWj6rw1mp8wp"
+        },
+        {
+            "cat_id": "b19dcd1b-d47b-44df-ae1f-c44f558b5e87",
+            "cat_name": "Rs5xh9MagfNZ2JB2Z"
+        },
+        {
+            "cat_id": "553fc5da-5d55-4dc2-9e10-8bb11fcb428b",
+            "cat_name": "lHtW5jCuiluLEywc"
+        },
+        {
+            "cat_id": "3354f3b2-8156-4e6d-b1c0-3899559b5340",
+            "cat_name": "6fExc6we7wy1A830"
+        },
+        {
+            "cat_id": "3985c952-0f63-4fc5-9326-d64870012b3a",
+            "cat_name": "qsjCx5OJgAIAr"
+        },
+        {
+            "cat_id": "a3aba24e-c702-4ed8-8d11-3b33528ddb55",
+            "cat_name": "RJzuvckTEQkAKbA6"
+        },
+        {
+            "cat_id": "3723c03f-6b27-4334-a54f-9d89535deb11",
+            "cat_name": "TL6V4"
+        },
+        {
+            "cat_id": "78056233-0aae-45ab-93f2-dd5c40b39b4b",
+            "cat_name": "WI19aOEV3G3n1Z9qH"
+        },
+        {
+            "cat_id": "5d1ffa7a-9be8-4681-96e6-7ea28a90582c",
+            "cat_name": "aELJId12VpMq9"
+        },
+        {
+            "cat_id": "dad7bff8-0adc-48b8-b293-34a8adad58d5",
+            "cat_name": "FcIR8HWtZyIW"
+        },
+        {
+            "cat_id": "8bad4fdb-9ff2-4567-94a4-c17fbf3b56b1",
+            "cat_name": "QviVHy8"
+        },
+        {
+            "cat_id": "3fb7bc4b-2965-44f5-bf01-d3273c472293",
+            "cat_name": "gPMYQE"
+        },
+        {
+            "cat_id": "d0dce983-fb95-4f72-8463-7d0de5386a3c",
+            "cat_name": "MmSuQImL"
+        },
+        {
+            "cat_id": "2435b16b-8b9d-4af6-8a22-22e6b493ad52",
+            "cat_name": "boDPW6tg"
+        },
+        {
+            "cat_id": "acc272b6-b2ad-40ec-b515-56fc8c3baa5e",
+            "cat_name": "IFR7yfW380pxRL5r"
+        },
+        {
+            "cat_id": "df4e64d5-a8cc-469c-ac1d-983687445e5b",
+            "cat_name": "MTNhZr6"
+        },
+        {
+            "cat_id": "c1e57aa1-2a40-418d-affa-36e0f8148df0",
+            "cat_name": "LLM1vEI6sjOExqt9A"
+        },
+        {
+            "cat_id": "212efa77-c94c-4ad9-b1de-8784562dbe15",
+            "cat_name": "jQdr2LNjTSdN4x"
+        },
+        {
+            "cat_id": "59f61d9b-9503-470f-990a-b3012787ebf4",
+            "cat_name": "cDMVZpstDuh4baO"
+        },
+        {
+            "cat_id": "7e81cacb-87bf-4d90-8f12-b17b14cd28b9",
+            "cat_name": "yBVhBKX3"
+        },
+        {
+            "cat_id": "9eaa0ef3-47f4-4a94-984b-ffdd6bc882be",
+            "cat_name": "6u2etyewQLrPDP6dlYV"
+        },
+        {
+            "cat_id": "d05d634e-8cb6-4983-afcc-5bc5ed5e4b52",
+            "cat_name": "PwEmO6bt"
+        },
+        {
+            "cat_id": "c0c39257-a09c-40a6-91b1-84338e019c84",
+            "cat_name": "ydtoGZng6HxkVCvMJL0"
+        },
+        {
+            "cat_id": "3874f4e4-f0e4-455f-b633-ce1c57cb34fa",
+            "cat_name": "dcWlDjoneiswJuSSmF"
+        },
+        {
+            "cat_id": "c1b6ab5f-11e8-40a7-9502-43ad3b958844",
+            "cat_name": "a1HtYhoYo2y2DktuW"
+        },
+        {
+            "cat_id": "a2f11d66-c78c-4e75-a43c-5cf2e923f1df",
+            "cat_name": "LYmZ1"
+        },
+        {
+            "cat_id": "3b11a1ee-6ff0-4ff6-ac83-f04972936166",
+            "cat_name": "6FJcmh"
+        },
+        {
+            "cat_id": "501b6048-3393-4770-90d0-2773ccbffbd9",
+            "cat_name": "dOQ6S1bwHTqTlF7cPH"
+        },
+        {
+            "cat_id": "17daa853-2fbd-4481-b5b4-ecb0b044901a",
+            "cat_name": "taK5N"
+        },
+        {
+            "cat_id": "9ca160c5-0614-4890-9de7-ec608aa86a3e",
+            "cat_name": "idD39jTcCFVc0r"
+        },
+        {
+            "cat_id": "643d788d-dc5d-4528-895d-73e2973463fa",
+            "cat_name": "0mtEIGApr"
+        },
+        {
+            "cat_id": "4c06edd9-2f06-4956-a6c3-7f86e0256dab",
+            "cat_name": "fneX1FSnS"
+        },
+        {
+            "cat_id": "fe54e7bd-fe7e-48e7-9329-bae737b5ee51",
+            "cat_name": "XdOdUfurKomjpt9HKGo"
+        },
+        {
+            "cat_id": "28361382-df92-4a3d-afa6-66ff2195f35a",
+            "cat_name": "0SnRFpusrpcR"
+        },
+        {
+            "cat_id": "d135b78d-2e7c-4773-9837-bbbe608d8282",
+            "cat_name": "fKJPQ5fLDVoPd"
+        },
+        {
+            "cat_id": "d83373c6-108c-4b8c-8c42-f06c55d3c172",
+            "cat_name": "n8JmmE"
+        },
+        {
+            "cat_id": "ce7c2609-a83b-492c-8d1b-3a000c06dc6f",
+            "cat_name": "AAUjbzBziUM84ex1Gy"
+        },
+        {
+            "cat_id": "55de5e5f-2365-4f1f-ab96-e9ef3bec8b7a",
+            "cat_name": "dvQ4dbJhwHA"
+        },
+        {
+            "cat_id": "06485081-62c9-450e-82c9-7b8c01936c88",
+            "cat_name": "FZZqPe1"
+        },
+        {
+            "cat_id": "d5875e24-6f6b-4449-9c0b-319c136f9231",
+            "cat_name": "5jHyX00D"
+        },
+        {
+            "cat_id": "6dd12255-77be-4e80-a5cd-f90112d50f03",
+            "cat_name": "w1WrEreUiE8T"
+        },
+        {
+            "cat_id": "d2f16938-84c9-4dec-8c52-b1323e3af178",
+            "cat_name": "SZ8oGsUfMZa9"
+        },
+        {
+            "cat_id": "b907c5cd-2914-467b-8b07-c2c4fff13dee",
+            "cat_name": "ny84vm1MeFyqr"
+        },
+        {
+            "cat_id": "0771613d-8256-4256-976a-8665b0a2a527",
+            "cat_name": "xLjltgRDYtkQR2c"
+        },
+        {
+            "cat_id": "13e2c516-f212-472b-9e05-b02288232e9d",
+            "cat_name": "8V0HIufQCGNpT4iUN"
+        },
+        {
+            "cat_id": "34857c7c-9412-40c1-ac3c-a635b28bb961",
+            "cat_name": "KTOfB"
+        },
+        {
+            "cat_id": "2c6a80e6-f681-45fc-9507-773c1fc05093",
+            "cat_name": "75QbTAd5xZiORlRUXwt"
+        },
+        {
+            "cat_id": "85ff6e99-0ef2-4467-a5fc-86267c070249",
+            "cat_name": "k8MhUX9"
+        },
+        {
+            "cat_id": "36e5dda6-3e65-44b5-b73d-7e3af6c9015d",
+            "cat_name": "E26UlZkht"
+        },
+        {
+            "cat_id": "d3d8e4f6-3875-4669-95b4-903acc3960a6",
+            "cat_name": "x61OFcAsZG"
+        },
+        {
+            "cat_id": "dbb4217a-0fc9-43a3-9c2a-e0273a896a38",
+            "cat_name": "8PsgFXdwsR8njaGG6ld"
+        },
+        {
+            "cat_id": "73ca8967-de36-4612-9f3e-d1d2c175dbfb",
+            "cat_name": "w0GHvSWkcKZlRrB"
+        },
+        {
+            "cat_id": "fb883f38-a2e1-42e0-ba0b-0ee53c580555",
+            "cat_name": "tArcImgK"
+        },
+        {
+            "cat_id": "c87e6cb9-7220-424c-8dd4-779e67687b09",
+            "cat_name": "hFNkQP4a2gyj"
+        },
+        {
+            "cat_id": "65c4fc1e-6fd6-4564-8b00-a18b863bcec2",
+            "cat_name": "joQN66B8Al"
+        },
+        {
+            "cat_id": "7c5122d2-cf59-4182-ae07-a312032c7bfd",
+            "cat_name": "H9vOsJM"
+        },
+        {
+            "cat_id": "c498302e-82f4-43da-8133-be7edd35e0d1",
+            "cat_name": "Xdhx75063RzHTH0"
+        },
+        {
+            "cat_id": "0cfd5739-198b-42d8-ae9e-7245a79f0aa7",
+            "cat_name": "R5Rn0cqa"
+        },
+        {
+            "cat_id": "24485cd7-2481-4fb1-8d72-4a56fe77c832",
+            "cat_name": "INNIi6OjF"
+        },
+        {
+            "cat_id": "dd78741b-72a7-4072-875f-95f9e148f047",
+            "cat_name": "HRpjQVHrLqKk"
+        },
+        {
+            "cat_id": "7e038788-b17b-4f0c-8f8f-598965d2eceb",
+            "cat_name": "XbORgwp"
+        },
+        {
+            "cat_id": "68e116a2-b895-466f-9fbf-82d0202ec803",
+            "cat_name": "vM2Y2d1Lvnz"
+        },
+        {
+            "cat_id": "93b0ce91-c671-4acf-b311-4116d86ea15a",
+            "cat_name": "UzsnkGKqOe"
+        },
+        {
+            "cat_id": "650282ea-3d9c-4b1f-8df3-17e027dd288a",
+            "cat_name": "Gwj7h63"
+        },
+        {
+            "cat_id": "a40a9f52-4198-43c9-9bdb-4a10a59f9ac7",
+            "cat_name": "z8Jv2Wq05NkyOA"
+        },
+        {
+            "cat_id": "e7c04a64-71d3-4602-b294-0106be5132bb",
+            "cat_name": "EAHbRKEKacW"
+        },
+        {
+            "cat_id": "46cd194a-c29e-4753-817d-c1ec36f09899",
+            "cat_name": "5QEreCbaMI3sVxbGu"
+        },
+        {
+            "cat_id": "81a46949-4bfc-448f-8a40-7cf77194d4f0",
+            "cat_name": "23csbTSLQeZsxam"
+        },
+        {
+            "cat_id": "d6f77aa6-32b0-4f5e-bbba-783459d3fd49",
+            "cat_name": "ncBllTrqFQv29"
+        },
+        {
+            "cat_id": "a1488dda-60c5-4878-9e43-8b42af7d48d1",
+            "cat_name": "IwnhOimvnuBs"
+        },
+        {
+            "cat_id": "f128b945-062f-41cc-ab0c-67c091b5f582",
+            "cat_name": "4zfJrblz0GwsTQ0uumc"
+        },
+        {
+            "cat_id": "8f4b30dc-6b61-4d1d-898e-effed9f53c3f",
+            "cat_name": "xGX4F6e1"
+        },
+        {
+            "cat_id": "f18bfb71-f468-4f8d-9bc5-7eaf26bf026a",
+            "cat_name": "ZF2B8v6LDgFbk"
+        },
+        {
+            "cat_id": "73bfcda7-63b0-4e56-8e7c-9bd1653a92cd",
+            "cat_name": "BaKNCoepmzTLt"
+        },
+        {
+            "cat_id": "9287ac45-5a69-44f4-b4ff-bc25640b87e8",
+            "cat_name": "XOm9kRwcYoZ"
+        },
+        {
+            "cat_id": "b3237047-f47a-4ca2-9662-a2ddb751402e",
+            "cat_name": "uJuJJFoXGQCBNR"
+        },
+        {
+            "cat_id": "1021a2fc-8cbe-467c-b1d7-a7fcc6c63035",
+            "cat_name": "A421qG6dyDwG"
+        },
+        {
+            "cat_id": "ff001cf5-6ce5-4785-b087-98bca5dfecd9",
+            "cat_name": "UyXWRjALhoUR124awfo"
+        },
+        {
+            "cat_id": "00577a16-f6f0-4f4c-947e-dc4fa834a635",
+            "cat_name": "9yyZTEspYf"
+        },
+        {
+            "cat_id": "41e1ee54-a29c-451e-ab10-f35d2787e3f5",
+            "cat_name": "5W183jWyr5DKj7yKMVs"
+        },
+        {
+            "cat_id": "67430738-f404-42ff-90b7-e2f77436d0dd",
+            "cat_name": "pY8PwKKDh2C1w8mdS"
+        },
+        {
+            "cat_id": "f87de942-57e2-465f-884c-ce34e9a4a46b",
+            "cat_name": "hbIOg"
+        },
+        {
+            "cat_id": "e80141a8-84da-43f1-b099-febb86b7ac0a",
+            "cat_name": "Bh13LZ9"
+        },
+        {
+            "cat_id": "b12ffe4c-f741-4b6d-812b-59e5b8176b6f",
+            "cat_name": "YMgGJ0PftWuYhgbQ"
+        },
+        {
+            "cat_id": "d562fd7b-95cc-44b6-b955-bd8bad0abdf3",
+            "cat_name": "26tdFPadtkQUMMUXJCo"
+        }
+    ]
+}
