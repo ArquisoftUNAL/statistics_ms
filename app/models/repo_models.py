@@ -1,7 +1,13 @@
 from pydantic import BaseModel
 import pandas as pd
 
-class DataFrameModel(BaseModel):
+class HabRec(BaseModel):
+    hab_rec_id: str
+    hab_rec_freq_type: str
+    hab_rec_goal: float
+
+class HabData(BaseModel):
+    hab_rec: HabRec
     data: pd.DataFrame
 
     class Config:
@@ -16,12 +22,3 @@ class DataFrameModel(BaseModel):
         if not isinstance(value, pd.DataFrame):
             raise ValueError('data must be a Pandas DataFrame')
         return value
-
-class HabRec(BaseModel):
-    hab_rec_id: int
-    hab_rec_freq_type: str
-    hab_rec_goal: float
-
-class HabData(BaseModel):
-    hab_rec: HabRec
-    data: DataFrameModel

@@ -5,6 +5,7 @@ import asyncio
 import os
 import app.models.repo_models as rm
 import json
+from datetime import datetime, date
 
 load_dotenv()
 url = os.getenv("GATEWAY_URL")
@@ -62,7 +63,7 @@ class HabitRepository:
         return rm.HabRec(
             hab_rec_id=recurrence['hab_rec_id'],
             hab_rec_freq_type=recurrence['hab_rec_freq_type'],
-            hab_rec_goal=recurrence['hab_rec_goal']
+            hab_rec_goal=recurrence.get('hab_rec_goal', 0)
         )
 
     async def get_habit_data(self, hab_id) -> rm.HabData:
@@ -78,8 +79,9 @@ class HabitRepository:
         
         # Generate data
         data = pd.json_normalize(data)
-        
-        data['hab_dat_collected_at'] = pd.to_datetime(data['hab_dat_collected_at'])
+
+        data['hab_dat_collected_at'] = data['hab_dat_collected_at'].apply(lambda x: datetime.fromisoformat(x))
+        data['hab_dat_amount'] = data['hab_dat_amount'].astype(float)
         data[['year', 'week', 'weekday']] = data['hab_dat_collected_at'].apply(lambda x: pd.Series(x.isocalendar()))
         data['month'] = data['hab_dat_collected_at'].apply(lambda x: x.month)
         

@@ -19,6 +19,9 @@ def week_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: i
     year, week, _ = today.isocalendar()
     df = data_frame[(data_frame['year'] == year) & (data_frame['week'] == week)]
 
+    if goal == 0:
+        return None
+
     if df.empty:
         return None
     
@@ -38,6 +41,10 @@ def week_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: i
 def month_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataReportModel:
     year, *_ = today.isocalendar()
     month = today.month
+
+    if goal == 0:
+        return None
+
     df = data_frame[(data_frame['year'] == year) & (data_frame['month'] == month)]
     if df.empty:
         return None
@@ -62,6 +69,10 @@ def month_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: 
 def semester_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataReportModel:
     year, *_ = today.isocalendar()
     month = today.month
+
+    if goal == 0:
+        return None
+
     if month <= 6:
         df = df[(df['year'] == year) & (df['month'] <= 6)]
     else:
@@ -94,9 +105,12 @@ def year_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> r
     year, *_ = today.isocalendar()
     df = df[(df['year'] == year)]
 
+    if goal == 0:
+        return None
+
     if df.empty:
         return None
-    
+    print(df)
     progress = df['hab_dat_amount'].sum()
     if freq_type == 1:
         goal = goal * 365
@@ -111,6 +125,8 @@ def year_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> r
     if freq_type == 6:
         goal = goal * 6
 
+    print("GOAL: ", goal)
+    print("PROGRESS: ", progress)
     return rm.DataReportModel(
         percentage=progress / goal,
         progress=progress,
@@ -122,37 +138,41 @@ def ms_day_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount']]
     df = df.set_index('hab_dat_collected_at')
     df = df.sort_index()
-    return rm.DateFloatDir(data=df.to_dict()['hab_dat_amount'])
+    data = df.to_dict()['hab_dat_amount']
+    return rm.DateFloatDir(data=data)
 
 def ms_week_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'week']]
-    df = df.set_index('hab_dat_collected_at')
-    df = df.sort_index()
-    df = df.groupby(['year', 'week']).sum()
-    return rm.DateFloatDir(data=df.to_dict()['hab_dat_amount'])
+    old_dates = df.groupby(['year', 'week']).min()['hab_dat_collected_at'].astype(str)
+    df = df.groupby(['year', 'week'])['hab_dat_amount'].sum()
+    df.reindex(old_dates)
+    data = df.to_dict()
+    return rm.DateFloatDir(data=data)
 
 def ms_month_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'month']]
-    df = df.set_index('hab_dat_collected_at')
-    df = df.sort_index()
-    df = df.groupby(['year', 'month']).sum()
-    return rm.DateFloatDir(data=df.to_dict()['hab_dat_amount'])
+    old_dates = df.groupby(['year', 'month']).min()['hab_dat_collected_at'].astype(str)
+    df = df.groupby(['year', 'month'])['hab_dat_amount'].sum()
+    df.reindex(old_dates)
+    data = df.to_dict()
+    return rm.DateFloatDir(data=data)
 
 def ms_semester_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'month']]
-    df = df.set_index('hab_dat_collected_at')
-    df = df.sort_index()
-    df = df.groupby(['year', 'month']).sum()
     df['semester'] = df['month'].apply(lambda x: 1 if x <= 6 else 2)
-    df = df.groupby(['year', 'semester']).sum()
-    return rm.DateFloatDir(data=df.to_dict()['hab_dat_amount'])
+    old_dates = df.groupby(['year', 'semester']).min()['hab_dat_collected_at'].astype(str)
+    df = df.groupby(['year', 'semester'])['hab_dat_amount'].sum()
+    df.reindex(old_dates)
+    data = df.to_dict()
+    return rm.DateFloatDir(data=data)
 
 def ms_year_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year']]
-    df = df.set_index('hab_dat_collected_at')
-    df = df.sort_index()
-    df = df.groupby(['year']).sum()
-    return rm.DateFloatDir(data=df.to_dict()['hab_dat_amount'])
+    old_dates = df.groupby('year').min()['hab_dat_collected_at'].astype(str)
+    df = df.groupby(df['year'])['hab_dat_amount'].sum()
+    df = df.reindex(old_dates)
+    data = df.to_dict()
+    return rm.DateFloatDir(data=data)
 
 #Functions for get_habit_yn_resume report:
 def month_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
@@ -173,7 +193,7 @@ def month_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
     if freq == 6:
         goal == 0.5
 
-    progress = df[(['month'] == month) & (['year'] == year)].size
+    progress = df[(df['month'] == month) & (df['year'] == year)].size
 
     return progress/goal
 
@@ -194,7 +214,7 @@ def semester_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
     if freq == 6:
         goal == 3
 
-    progress = df[(['month'] == month) & (['year'] == year)].size
+    progress = df[(df['month'] == month) & (df['year'] == year)].size
 
     return progress/goal
 
@@ -214,45 +234,47 @@ def year_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
         goal == 12
     if freq == 6:
         goal == 6
-
-    progress = df[(['month'] == month) & (['year'] == year)].size
+    progress = df[(df['month'] == month) & (df['year'] == year)].size
 
     return progress/goal
 
 def total_yn_resume(df: pd.DataFrame, today:date) -> int:
     df = df[df['hab_dat_collected_at'] == today.year]
-    return df['hab_dat_amount'].sum()
+    return df['hab_dat_amount'].count()
 
 #Functions for get_habit_yn_history report:
 def yn_week_history(df: pd.DataFrame) -> rm.DateIntDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'week']]
-    df = df.set_index('hab_dat_collected_at')
-    df = df.sort_index()
-    df = df.groupby(['year', 'week']).sum()
-    return rm.DateIntDir(data=df.to_dict()['hab_dat_amount'])
+    old_dates = df.groupby(['year', 'week']).min()['hab_dat_collected_at']
+    df = df.groupby(['year', 'week']).count()
+    df.set_index(old_dates, inplace=True)
+    data = df.to_dict()['hab_dat_collected_at']
+    return rm.DateIntDir(data=data)
 
 def yn_month_history(df: pd.DataFrame) -> rm.DateIntDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'month']]
-    df = df.set_index('hab_dat_collected_at')
-    df = df.sort_index()
-    df = df.groupby(['year', 'month']).sum()
-    return rm.DateIntDir(data=df.to_dict()['hab_dat_amount'])
+    old_dates = df.groupby(['year', 'month']).min()['hab_dat_collected_at']
+    df = df.groupby(['year', 'month']).count()
+    df.set_index(old_dates, inplace=True)
+    data = df.to_dict()['hab_dat_collected_at']
+    return rm.DateIntDir(data=data)
 
 def yn_semester_history(df: pd.DataFrame) -> rm.DateIntDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'month']]
-    df = df.set_index('hab_dat_collected_at')
-    df = df.sort_index()
-    df = df.groupby(['year', 'month']).sum()
     df['semester'] = df['month'].apply(lambda x: 1 if x <= 6 else 2)
-    df = df.groupby(['year', 'semester']).sum()
-    return rm.DateIntDir(data=df.to_dict()['hab_dat_amount'])
+    old_dates = df.groupby(['year', 'semester']).min()['hab_dat_collected_at']
+    df = df.groupby(['year', 'semester']).count()
+    df.set_index(old_dates, inplace=True)
+    data = df.to_dict()['hab_dat_collected_at']
+    return rm.DateIntDir(data=data)
 
 def yn_year_history(df: pd.DataFrame) -> rm.DateIntDir:
-    df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year']]
-    df = df.set_index('hab_dat_collected_at')
-    df = df.sort_index()
-    df = df.groupby(['year']).sum()
-    return rm.DateIntDir(data=df.to_dict()['hab_dat_amount'])
+    df = df[['hab_dat_collected_at', 'year']]
+    old_dates = df.groupby('year').min()['hab_dat_collected_at']
+    df = df.groupby('year').count()
+    df.set_index(old_dates, inplace=True)
+    data = df.to_dict()['hab_dat_collected_at']
+    return rm.DateIntDir(data=data)
 
 #Functions for get_habit_yn_best_streak report:
 def yn_streaks(df: pd.DataFrame, today: date) -> rm.HabitYNBestStreakReportModel:
@@ -266,12 +288,14 @@ def yn_streaks(df: pd.DataFrame, today: date) -> rm.HabitYNBestStreakReportModel
     streaks.set_index(['start_date', 'end_date'], inplace=True)
     streaks = streaks.sort_index(ascending=False)
     streaks = streaks.to_dict()['count']
+    print(streaks)
     return rm.HabitYNBestStreakReportModel(data=streaks)
 
 #Functions for get_habit_freq_week_per_day report:
 def freq_week_day(df: pd.DataFrame) -> rm.HabitFreqWeekDayReportModel:
-    df = df[['year', 'month', 'weekday']]
-    df = df.groupby(['year', 'month', 'weekday']).count()
+    df = df[['year', 'month', 'weekday', 'hab_dat_amount']]
+    df = df.groupby(['year', 'month', 'weekday'])['hab_dat_amount'].count()
     df = df.to_frame(name='count').reset_index().groupby(['year', 'month'])[['weekday', 'count']]
+    print("OOOOOOO\n",df)
     df = df.apply(lambda x: dict(x.values)).to_dict()
     return rm.HabitFreqWeekDayReportModel(data=df)

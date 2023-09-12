@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import Dict, Tuple, Optional
-from datetime import date
+from datetime import datetime, date
 
 class DataReportModel(BaseModel):
     percentage: float
@@ -8,17 +8,17 @@ class DataReportModel(BaseModel):
     remaining: float
 
 class DateFloatDir(BaseModel):
-    data: Dict[date, float]
+    data: Dict[datetime, float]
 
 class DateIntDir(BaseModel):
-    data: Dict[date, int]
+    data: Dict[datetime, int]
 
 class HabitMeasureResumeReportModel(BaseModel):
     toDay: Optional[DataReportModel] = None
     week: Optional[DataReportModel] = None
-    month: DataReportModel
-    semester: DataReportModel
-    year: DataReportModel
+    month: Optional[DataReportModel] = None
+    semester: Optional[DataReportModel] = None
+    year: Optional[DataReportModel] = None
 
 class HabitMeasureHistoryReportModel(BaseModel):
     day: DateFloatDir
@@ -42,7 +42,7 @@ class HabitYNHistoryReportModel(BaseModel):
 
 class HabitYNBestStreakReportModel(BaseModel):
     #data: {(<start date>, <end date>): <quantity>}
-    data: Dict[Tuple[date, date], int]
+    data: Dict[Tuple[datetime, datetime], int]
 
 class HabitFreqWeekDayReportModel(BaseModel):
     #data: {(<year>, <month>): {<day of week>: <quantity>}}
