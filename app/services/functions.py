@@ -110,7 +110,6 @@ def year_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> r
 
     if df.empty:
         return None
-    print(df)
     progress = df['hab_dat_amount'].sum()
     if freq_type == 1:
         goal = goal * 365
@@ -145,7 +144,6 @@ def ms_week_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'week']]
     old_dates = df.groupby(['year', 'week']).min()['hab_dat_collected_at'].astype(str)
     df = df.groupby(['year', 'week'])['hab_dat_amount'].sum()
-    df.reindex(old_dates)
     data = df.to_dict()
     return rm.DateFloatDir(data=data)
 
@@ -153,7 +151,6 @@ def ms_month_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'month']]
     old_dates = df.groupby(['year', 'month']).min()['hab_dat_collected_at'].astype(str)
     df = df.groupby(['year', 'month'])['hab_dat_amount'].sum()
-    df.reindex(old_dates)
     data = df.to_dict()
     return rm.DateFloatDir(data=data)
 
@@ -162,7 +159,6 @@ def ms_semester_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df['semester'] = df['month'].apply(lambda x: 1 if x <= 6 else 2)
     old_dates = df.groupby(['year', 'semester']).min()['hab_dat_collected_at'].astype(str)
     df = df.groupby(['year', 'semester'])['hab_dat_amount'].sum()
-    df.reindex(old_dates)
     data = df.to_dict()
     return rm.DateFloatDir(data=data)
 
@@ -170,8 +166,8 @@ def ms_year_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year']]
     old_dates = df.groupby('year').min()['hab_dat_collected_at'].astype(str)
     df = df.groupby(df['year'])['hab_dat_amount'].sum()
-    df = df.reindex(old_dates)
     data = df.to_dict()
+    print(data)
     return rm.DateFloatDir(data=data)
 
 #Functions for get_habit_yn_resume report:
@@ -288,7 +284,6 @@ def yn_streaks(df: pd.DataFrame, today: date) -> rm.HabitYNBestStreakReportModel
     streaks.set_index(['start_date', 'end_date'], inplace=True)
     streaks = streaks.sort_index(ascending=False)
     streaks = streaks.to_dict()['count']
-    print(streaks)
     return rm.HabitYNBestStreakReportModel(data=streaks)
 
 #Functions for get_habit_freq_week_per_day report:
@@ -296,6 +291,5 @@ def freq_week_day(df: pd.DataFrame) -> rm.HabitFreqWeekDayReportModel:
     df = df[['year', 'month', 'weekday', 'hab_dat_amount']]
     df = df.groupby(['year', 'month', 'weekday'])['hab_dat_amount'].count()
     df = df.to_frame(name='count').reset_index().groupby(['year', 'month'])[['weekday', 'count']]
-    print("OOOOOOO\n",df)
     df = df.apply(lambda x: dict(x.values)).to_dict()
     return rm.HabitFreqWeekDayReportModel(data=df)
