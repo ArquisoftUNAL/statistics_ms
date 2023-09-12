@@ -14,7 +14,7 @@ freq_types = {
 
 class HabitReport:
     def __init__(self, habit_repository: HabitRepository):
-        self.repo = habit_repository()
+        self.repo = habit_repository
 
     def get_habit_measure_resume(self, hab_id: int) -> md.HabitMeasureResumeReportModel:
         """

@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  habitus_statistics_ms:
+    container_name: habitus_statistics_ms
+    image: habitus_statistics_ms
+    build: .
+    restart: on-failure
+    ports:
+      - 8000:8000
+    env_file:
+      - .env

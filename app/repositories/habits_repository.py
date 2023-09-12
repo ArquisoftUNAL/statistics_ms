@@ -42,7 +42,7 @@ class HabitRepository:
 
         return habit['recurrences']
     
-    async def get_hab_is_yn(self, hab_id):
+    def get_hab_is_yn(self, hab_id):
         habit = self.get_habit(hab_id)
 
         if habit is None:
@@ -50,7 +50,7 @@ class HabitRepository:
 
         return habit['hab_is_yn']
 
-    async def get_hab_rec(self, hab_id) -> rm.HabRec:
+    def get_hab_rec(self, hab_id) -> rm.HabRec:
         
         recurrences = self.get_habit_recurrences(hab_id)
 
@@ -65,8 +65,8 @@ class HabitRepository:
             hab_rec_goal=recurrence['hab_rec_goal']
         )
 
-    async def get_habit_data(self, hab_id) -> rm.HabData:
-        hab_rec = await self.get_hab_rec(hab_id)
+    def get_habit_data(self, hab_id) -> rm.HabData:
+        hab_rec = self.get_hab_rec(hab_id)
 
         if hab_rec is None:
             return None

@@ -1,1781 +1,1821 @@
 {
-    "message": "Successfully retrieved habits, recurrences & data for user with ID: iq5vrI8vgvII1FZx",
+    "message": "Successfully retrieved habits, recurrences & data for user with ID: 8HYSRHE7824HB0iEQ",
     "habits": [
         {
-            "hab_id": "bff243a9-7c75-4061-82d6-0ef20676cafa",
-            "hab_name": "4UWmRkPsvMAIDDz84D",
-            "hab_description": "DkdcFCP4WH",
+            "hab_id": "efe52aa5-a8b0-4dd3-b76b-2318a23165d4",
+            "hab_name": "jFPy4creCww23znTf",
+            "hab_description": "BIvALer6Sxr6uwcwro1",
             "hab_is_favorite": true,
             "hab_is_yn": true,
-            "hab_color": "319Kq4",
-            "hab_units": "a9xHf",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
+            "hab_color": "b8POUp",
+            "hab_units": "3Q1c8",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
             "recurrences": [
                 {
-                    "hab_rec_id": "bbcf5898-2332-4cbb-97a9-e3f51c8a99a0",
-                    "hab_id": "bff243a9-7c75-4061-82d6-0ef20676cafa",
+                    "hab_rec_id": "5aaff55b-c8ca-4446-8fdb-129065469ceb",
+                    "hab_id": "efe52aa5-a8b0-4dd3-b76b-2318a23165d4",
                     "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "2010-10-31",
+                    "hab_rec_freq_data": "1564-08-15",
+                    "hab_rec_goal": "92.24",
                     "data": [
                         {
-                            "hab_dat_id": "17f32397-4d45-4df9-ba56-eae5d237b15c",
-                            "hab_dat_amount": "19.74",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.188401",
-                            "hab_rec_id": "bbcf5898-2332-4cbb-97a9-e3f51c8a99a0"
+                            "hab_dat_id": "9f284ce8-fc3c-423f-8b98-43f80196bd40",
+                            "hab_dat_amount": "94.57",
+                            "hab_dat_collected_at": "2023-09-11T23:33:18.952680",
+                            "hab_rec_id": "5aaff55b-c8ca-4446-8fdb-129065469ceb"
                         },
                         {
-                            "hab_dat_id": "8bad3588-0c2b-45d3-a1f2-d18840162b12",
-                            "hab_dat_amount": "71.02",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.650126",
-                            "hab_rec_id": "bbcf5898-2332-4cbb-97a9-e3f51c8a99a0"
+                            "hab_dat_id": "9c2e5a0a-931b-496d-8922-0bbf68a84164",
+                            "hab_dat_amount": "7.97",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.548465",
+                            "hab_rec_id": "5aaff55b-c8ca-4446-8fdb-129065469ceb"
                         },
                         {
-                            "hab_dat_id": "67b6cab4-7305-4f8e-91e0-0ce5933bdd29",
-                            "hab_dat_amount": "85.80",
-                            "hab_dat_collected_at": "2023-09-11T17:11:37.383450",
-                            "hab_rec_id": "bbcf5898-2332-4cbb-97a9-e3f51c8a99a0"
+                            "hab_dat_id": "853416f6-dec8-4552-b13e-3702d373bb2a",
+                            "hab_dat_amount": "67.04",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.505758",
+                            "hab_rec_id": "5aaff55b-c8ca-4446-8fdb-129065469ceb"
                         },
                         {
-                            "hab_dat_id": "fc0cd8a3-2acb-4895-9ee9-72b3edcf42c8",
-                            "hab_dat_amount": "51.58",
-                            "hab_dat_collected_at": "2023-09-11T17:11:46.971240",
-                            "hab_rec_id": "bbcf5898-2332-4cbb-97a9-e3f51c8a99a0"
+                            "hab_dat_id": "f30d2c3f-30df-4a44-be57-303c1a027f90",
+                            "hab_dat_amount": "41.36",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.148795",
+                            "hab_rec_id": "5aaff55b-c8ca-4446-8fdb-129065469ceb"
                         },
                         {
-                            "hab_dat_id": "911c1a94-dd09-471e-a0d7-9695f78ef83a",
-                            "hab_dat_amount": "98.02",
-                            "hab_dat_collected_at": "2023-09-11T17:12:03.159626",
-                            "hab_rec_id": "bbcf5898-2332-4cbb-97a9-e3f51c8a99a0"
+                            "hab_dat_id": "80653973-370d-4a86-b590-bf352152def7",
+                            "hab_dat_amount": "30.00",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.955807",
+                            "hab_rec_id": "5aaff55b-c8ca-4446-8fdb-129065469ceb"
                         }
                     ]
                 },
                 {
-                    "hab_rec_id": "84a8ed64-f5de-431b-a950-3559ed594135",
-                    "hab_id": "bff243a9-7c75-4061-82d6-0ef20676cafa",
+                    "hab_rec_id": "34e290e4-1ebb-438d-be08-fd70edb6620e",
+                    "hab_id": "efe52aa5-a8b0-4dd3-b76b-2318a23165d4",
                     "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "1452-03-23",
+                    "hab_rec_freq_data": "2195-04-27",
+                    "hab_rec_goal": "78.86",
                     "data": [
                         {
-                            "hab_dat_id": "f8b014fb-874f-4ced-8126-ea058f7c4463",
-                            "hab_dat_amount": "3.62",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.374935",
-                            "hab_rec_id": "84a8ed64-f5de-431b-a950-3559ed594135"
+                            "hab_dat_id": "890cf929-7fde-4571-893b-4439a983cbc4",
+                            "hab_dat_amount": "28.13",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.762131",
+                            "hab_rec_id": "34e290e4-1ebb-438d-be08-fd70edb6620e"
                         },
                         {
-                            "hab_dat_id": "a110d8d5-e38b-4cfe-9b11-55463939fbb4",
-                            "hab_dat_amount": "45.42",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.712954",
-                            "hab_rec_id": "84a8ed64-f5de-431b-a950-3559ed594135"
+                            "hab_dat_id": "9a013e1f-9199-4e66-8032-ed6ea9e6128d",
+                            "hab_dat_amount": "33.02",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.624292",
+                            "hab_rec_id": "34e290e4-1ebb-438d-be08-fd70edb6620e"
                         },
                         {
-                            "hab_dat_id": "4c0a30b6-ff41-4777-8f91-e9ff2c1e9d03",
-                            "hab_dat_amount": "84.49",
-                            "hab_dat_collected_at": "2023-09-11T17:11:43.587378",
-                            "hab_rec_id": "84a8ed64-f5de-431b-a950-3559ed594135"
+                            "hab_dat_id": "e6bba262-5b89-4292-a684-469134ed6370",
+                            "hab_dat_amount": "67.55",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.321878",
+                            "hab_rec_id": "34e290e4-1ebb-438d-be08-fd70edb6620e"
                         },
                         {
-                            "hab_dat_id": "4607c07e-b832-426e-bbe8-e907f4bd7180",
-                            "hab_dat_amount": "42.91",
-                            "hab_dat_collected_at": "2023-09-11T17:12:00.134853",
-                            "hab_rec_id": "84a8ed64-f5de-431b-a950-3559ed594135"
+                            "hab_dat_id": "cd5df3f6-3abc-48aa-9678-def65527b847",
+                            "hab_dat_amount": "64.88",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.115431",
+                            "hab_rec_id": "34e290e4-1ebb-438d-be08-fd70edb6620e"
                         },
                         {
-                            "hab_dat_id": "b945d7fd-e17d-4bef-896e-3ce470917404",
-                            "hab_dat_amount": "58.37",
-                            "hab_dat_collected_at": "2023-09-11T17:12:10.265229",
-                            "hab_rec_id": "84a8ed64-f5de-431b-a950-3559ed594135"
+                            "hab_dat_id": "37bc9715-7ac2-4907-b19f-fe4978ae526b",
+                            "hab_dat_amount": "38.45",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.764699",
+                            "hab_rec_id": "34e290e4-1ebb-438d-be08-fd70edb6620e"
                         }
                     ]
                 }
             ]
         },
         {
-            "hab_id": "f2a0c9c1-1ce9-41c0-8857-cf94acbda901",
-            "hab_name": "ErFcaYPBaw7",
-            "hab_description": "8Wr39rqqSBcNrkffZ",
+            "hab_id": "53cbead5-2681-434f-8d45-61bb500d91f9",
+            "hab_name": "XIqO8NAV0",
+            "hab_description": "IzAzOk",
             "hab_is_favorite": true,
             "hab_is_yn": true,
-            "hab_color": "6lwyXY",
-            "hab_units": "x2pPM",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
+            "hab_color": "JsuF1j",
+            "hab_units": "PE533",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
             "recurrences": [
                 {
-                    "hab_rec_id": "075645b5-8d5b-4d0f-825a-6ac577da4602",
-                    "hab_id": "f2a0c9c1-1ce9-41c0-8857-cf94acbda901",
+                    "hab_rec_id": "bd37be1b-c39b-4cbb-b027-681f1b00f9e4",
+                    "hab_id": "53cbead5-2681-434f-8d45-61bb500d91f9",
                     "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "1562-07-13",
+                    "hab_rec_freq_data": "0254-01-31",
+                    "hab_rec_goal": "11.62",
                     "data": [
                         {
-                            "hab_dat_id": "a6c2c9cf-b7b8-44f9-a796-27408eda4ad3",
-                            "hab_dat_amount": "28.83",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.239306",
-                            "hab_rec_id": "075645b5-8d5b-4d0f-825a-6ac577da4602"
+                            "hab_dat_id": "de58cfb4-8a51-4428-9cd1-0f16374a0063",
+                            "hab_dat_amount": "36.43",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.015217",
+                            "hab_rec_id": "bd37be1b-c39b-4cbb-b027-681f1b00f9e4"
                         },
                         {
-                            "hab_dat_id": "89803319-8e4f-4e09-92d6-45253241ff90",
-                            "hab_dat_amount": "77.30",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.692351",
-                            "hab_rec_id": "075645b5-8d5b-4d0f-825a-6ac577da4602"
+                            "hab_dat_id": "baf81741-ee86-4c3f-9db9-ee0e37a72dfe",
+                            "hab_dat_amount": "18.48",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.588744",
+                            "hab_rec_id": "bd37be1b-c39b-4cbb-b027-681f1b00f9e4"
                         },
                         {
-                            "hab_dat_id": "8f83d1a4-2e9a-4f2e-a003-37b7ab37d8e5",
-                            "hab_dat_amount": "65.29",
-                            "hab_dat_collected_at": "2023-09-11T17:11:37.430695",
-                            "hab_rec_id": "075645b5-8d5b-4d0f-825a-6ac577da4602"
+                            "hab_dat_id": "94a07a15-e48d-4c77-bce2-ad7ee74d94c6",
+                            "hab_dat_amount": "11.22",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.543939",
+                            "hab_rec_id": "bd37be1b-c39b-4cbb-b027-681f1b00f9e4"
                         },
                         {
-                            "hab_dat_id": "e0697067-51aa-43b9-8ab7-a8f7be7efae7",
-                            "hab_dat_amount": "51.07",
-                            "hab_dat_collected_at": "2023-09-11T17:11:47.114538",
-                            "hab_rec_id": "075645b5-8d5b-4d0f-825a-6ac577da4602"
+                            "hab_dat_id": "b924a504-6c91-4e61-a966-bc9bc94bbb95",
+                            "hab_dat_amount": "18.34",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.189655",
+                            "hab_rec_id": "bd37be1b-c39b-4cbb-b027-681f1b00f9e4"
                         },
                         {
-                            "hab_dat_id": "2e02e9f0-0011-4194-a575-32f10ec5a360",
-                            "hab_dat_amount": "97.52",
-                            "hab_dat_collected_at": "2023-09-11T17:12:03.356410",
-                            "hab_rec_id": "075645b5-8d5b-4d0f-825a-6ac577da4602"
+                            "hab_dat_id": "bfb2c093-1ad1-4714-85d3-f570571a8a81",
+                            "hab_dat_amount": "74.00",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.994756",
+                            "hab_rec_id": "bd37be1b-c39b-4cbb-b027-681f1b00f9e4"
                         }
                     ]
                 },
                 {
-                    "hab_rec_id": "70f82e0e-eeb4-4da0-984b-1a984b9a18b1",
-                    "hab_id": "f2a0c9c1-1ce9-41c0-8857-cf94acbda901",
+                    "hab_rec_id": "0f44fa09-9bda-41cc-bbaa-0a7d83a387e6",
+                    "hab_id": "53cbead5-2681-434f-8d45-61bb500d91f9",
                     "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "1698-12-27",
+                    "hab_rec_freq_data": "0438-10-10",
+                    "hab_rec_goal": "78.61",
                     "data": [
                         {
-                            "hab_dat_id": "4dcdba60-eac9-4365-a747-1d79b82750fc",
-                            "hab_dat_amount": "84.93",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.423956",
-                            "hab_rec_id": "70f82e0e-eeb4-4da0-984b-1a984b9a18b1"
+                            "hab_dat_id": "02ae1601-362d-4c8c-87a1-ac5387275959",
+                            "hab_dat_amount": "84.65",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.804730",
+                            "hab_rec_id": "0f44fa09-9bda-41cc-bbaa-0a7d83a387e6"
                         },
                         {
-                            "hab_dat_id": "be5ee21e-ead9-4dc2-93fb-d07e575fab8f",
-                            "hab_dat_amount": "4.49",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.769685",
-                            "hab_rec_id": "70f82e0e-eeb4-4da0-984b-1a984b9a18b1"
+                            "hab_dat_id": "e893e947-20a1-4cc2-8ca1-c2a714d67fa4",
+                            "hab_dat_amount": "23.00",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.666457",
+                            "hab_rec_id": "0f44fa09-9bda-41cc-bbaa-0a7d83a387e6"
                         },
                         {
-                            "hab_dat_id": "39f5c1be-4a3c-4fbe-8cee-e3342d5d4894",
-                            "hab_dat_amount": "4.81",
-                            "hab_dat_collected_at": "2023-09-11T17:11:43.779799",
-                            "hab_rec_id": "70f82e0e-eeb4-4da0-984b-1a984b9a18b1"
+                            "hab_dat_id": "55ebcb2c-2c65-464a-a395-ce55ddceb1f1",
+                            "hab_dat_amount": "17.06",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.363820",
+                            "hab_rec_id": "0f44fa09-9bda-41cc-bbaa-0a7d83a387e6"
                         },
                         {
-                            "hab_dat_id": "26284071-0654-441e-9cfa-07d027c07861",
-                            "hab_dat_amount": "41.14",
-                            "hab_dat_collected_at": "2023-09-11T17:12:00.270484",
-                            "hab_rec_id": "70f82e0e-eeb4-4da0-984b-1a984b9a18b1"
+                            "hab_dat_id": "45ace8e0-891e-4ae0-9776-adf6c873d720",
+                            "hab_dat_amount": "42.57",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.155531",
+                            "hab_rec_id": "0f44fa09-9bda-41cc-bbaa-0a7d83a387e6"
                         },
                         {
-                            "hab_dat_id": "24d0a93a-7642-48af-a9bf-6e0bf80789cf",
-                            "hab_dat_amount": "48.90",
-                            "hab_dat_collected_at": "2023-09-11T17:12:10.556570",
-                            "hab_rec_id": "70f82e0e-eeb4-4da0-984b-1a984b9a18b1"
+                            "hab_dat_id": "a90fb8c0-95ff-4ca4-9450-8a271b964650",
+                            "hab_dat_amount": "58.81",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.805923",
+                            "hab_rec_id": "0f44fa09-9bda-41cc-bbaa-0a7d83a387e6"
                         }
                     ]
                 }
             ]
         },
         {
-            "hab_id": "586218a3-f49e-4b33-a238-191716fead93",
-            "hab_name": "crv1zHz",
-            "hab_description": "rmNtyWK5ULtyc",
+            "hab_id": "b7ff4018-ff86-499a-a2d6-3012e2881a59",
+            "hab_name": "etkbxFL0F",
+            "hab_description": "QwZYg96",
             "hab_is_favorite": false,
             "hab_is_yn": true,
-            "hab_color": "7gPlKR",
-            "hab_units": "4Rtde",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
+            "hab_color": "U0Ukro",
+            "hab_units": "8KLcp",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
             "recurrences": [
                 {
-                    "hab_rec_id": "67eece89-190f-4b76-8312-fa445816ec5e",
-                    "hab_id": "586218a3-f49e-4b33-a238-191716fead93",
+                    "hab_rec_id": "31f67626-2606-4ce3-afb1-6ddf41eb8c71",
+                    "hab_id": "b7ff4018-ff86-499a-a2d6-3012e2881a59",
                     "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "1043-10-02",
+                    "hab_rec_freq_data": "2170-07-06",
+                    "hab_rec_goal": "10.84",
                     "data": [
                         {
-                            "hab_dat_id": "b915e95b-b79f-48f5-a3cf-5ef6cd6b8acf",
-                            "hab_dat_amount": "10.74",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.285510",
-                            "hab_rec_id": "67eece89-190f-4b76-8312-fa445816ec5e"
+                            "hab_dat_id": "9e12a543-a4de-4bc6-8296-a37c5c35435b",
+                            "hab_dat_amount": "7.70",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.090741",
+                            "hab_rec_id": "31f67626-2606-4ce3-afb1-6ddf41eb8c71"
                         },
                         {
-                            "hab_dat_id": "ae8aa26e-a3e5-48b2-80f5-bcca044a5c9f",
-                            "hab_dat_amount": "60.05",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.736542",
-                            "hab_rec_id": "67eece89-190f-4b76-8312-fa445816ec5e"
+                            "hab_dat_id": "76caa317-78b8-40e2-b204-9f963873ab0c",
+                            "hab_dat_amount": "29.79",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.627201",
+                            "hab_rec_id": "31f67626-2606-4ce3-afb1-6ddf41eb8c71"
                         },
                         {
-                            "hab_dat_id": "a6fd6f69-9bd5-4279-a40a-fcaac3166361",
-                            "hab_dat_amount": "51.94",
-                            "hab_dat_collected_at": "2023-09-11T17:11:37.478024",
-                            "hab_rec_id": "67eece89-190f-4b76-8312-fa445816ec5e"
+                            "hab_dat_id": "97377e19-f623-459d-bcda-d5410350c849",
+                            "hab_dat_amount": "53.22",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.584514",
+                            "hab_rec_id": "31f67626-2606-4ce3-afb1-6ddf41eb8c71"
                         },
                         {
-                            "hab_dat_id": "181d7aa5-6d71-47da-9711-f5596be15056",
-                            "hab_dat_amount": "21.23",
-                            "hab_dat_collected_at": "2023-09-11T17:11:47.256424",
-                            "hab_rec_id": "67eece89-190f-4b76-8312-fa445816ec5e"
+                            "hab_dat_id": "232f261d-0c25-4864-bfd7-e0cda40a4ea7",
+                            "hab_dat_amount": "6.49",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.231830",
+                            "hab_rec_id": "31f67626-2606-4ce3-afb1-6ddf41eb8c71"
                         },
                         {
-                            "hab_dat_id": "45d135e4-e0df-4609-9c9c-650433777a0d",
-                            "hab_dat_amount": "54.77",
-                            "hab_dat_collected_at": "2023-09-11T17:12:03.515270",
-                            "hab_rec_id": "67eece89-190f-4b76-8312-fa445816ec5e"
+                            "hab_dat_id": "8ea7babe-da41-4e07-a25a-11d274d599da",
+                            "hab_dat_amount": "34.22",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.032456",
+                            "hab_rec_id": "31f67626-2606-4ce3-afb1-6ddf41eb8c71"
                         }
                     ]
                 },
                 {
-                    "hab_rec_id": "99319bee-1575-4625-88e6-c407b2f5b0f2",
-                    "hab_id": "586218a3-f49e-4b33-a238-191716fead93",
+                    "hab_rec_id": "736ca13a-6ead-4cca-9f38-2067676c5678",
+                    "hab_id": "b7ff4018-ff86-499a-a2d6-3012e2881a59",
                     "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "0272-09-14",
+                    "hab_rec_freq_data": "2601-03-06",
+                    "hab_rec_goal": "3.25",
                     "data": [
                         {
-                            "hab_dat_id": "6858d0b9-9289-45b8-a6f1-1487f63bd7ae",
-                            "hab_dat_amount": "56.59",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.755782",
-                            "hab_rec_id": "99319bee-1575-4625-88e6-c407b2f5b0f2"
+                            "hab_dat_id": "4dfe2f86-4f11-43e6-995f-f97d237c7884",
+                            "hab_dat_amount": "18.07",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.851621",
+                            "hab_rec_id": "736ca13a-6ead-4cca-9f38-2067676c5678"
                         },
                         {
-                            "hab_dat_id": "a63af7fe-c6cd-4f58-9c53-0768d14eba5d",
-                            "hab_dat_amount": "5.11",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.817449",
-                            "hab_rec_id": "99319bee-1575-4625-88e6-c407b2f5b0f2"
+                            "hab_dat_id": "b55888bd-d518-49ca-ae2b-0c7d72d56b1f",
+                            "hab_dat_amount": "41.99",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.706375",
+                            "hab_rec_id": "736ca13a-6ead-4cca-9f38-2067676c5678"
                         },
                         {
-                            "hab_dat_id": "8ae8875f-61d0-4f1f-b9f8-f40db48bb634",
-                            "hab_dat_amount": "92.72",
-                            "hab_dat_collected_at": "2023-09-11T17:11:44.009927",
-                            "hab_rec_id": "99319bee-1575-4625-88e6-c407b2f5b0f2"
+                            "hab_dat_id": "ddc5f7e7-d7ac-44e5-8bec-8143bfa9dd25",
+                            "hab_dat_amount": "66.46",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.405483",
+                            "hab_rec_id": "736ca13a-6ead-4cca-9f38-2067676c5678"
                         },
                         {
-                            "hab_dat_id": "fcf5848a-ed2c-4a76-99b9-3378d9e27d22",
-                            "hab_dat_amount": "82.84",
-                            "hab_dat_collected_at": "2023-09-11T17:12:00.315329",
-                            "hab_rec_id": "99319bee-1575-4625-88e6-c407b2f5b0f2"
+                            "hab_dat_id": "af46c539-3709-4243-b762-d00816ff397e",
+                            "hab_dat_amount": "21.94",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.197027",
+                            "hab_rec_id": "736ca13a-6ead-4cca-9f38-2067676c5678"
                         },
                         {
-                            "hab_dat_id": "106ef5fc-389c-4d6b-850c-a5b9455cf79e",
-                            "hab_dat_amount": "66.78",
-                            "hab_dat_collected_at": "2023-09-11T17:12:10.798583",
-                            "hab_rec_id": "99319bee-1575-4625-88e6-c407b2f5b0f2"
+                            "hab_dat_id": "b79ae09a-9c5e-4d0b-9b33-27c569cc547b",
+                            "hab_dat_amount": "18.48",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.851176",
+                            "hab_rec_id": "736ca13a-6ead-4cca-9f38-2067676c5678"
                         }
                     ]
                 }
             ]
         },
         {
-            "hab_id": "d5a1cb4f-6bcd-494b-a9e6-dd9a01207907",
-            "hab_name": "S0BTY6b6",
-            "hab_description": "mY029RgcJlKt",
-            "hab_is_favorite": true,
-            "hab_is_yn": true,
-            "hab_color": "O66Jrh",
-            "hab_units": "Vnhrx",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "6d19dca8-bc88-4a4c-9914-93ff44e0b82d",
-                    "hab_id": "d5a1cb4f-6bcd-494b-a9e6-dd9a01207907",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "0088-05-09",
-                    "data": [
-                        {
-                            "hab_dat_id": "bd4a4588-564e-4524-9b44-aa852026d21a",
-                            "hab_dat_amount": "44.07",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.337674",
-                            "hab_rec_id": "6d19dca8-bc88-4a4c-9914-93ff44e0b82d"
-                        },
-                        {
-                            "hab_dat_id": "778cd43d-91db-4bbe-9607-91f419f5ee45",
-                            "hab_dat_amount": "56.57",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.777072",
-                            "hab_rec_id": "6d19dca8-bc88-4a4c-9914-93ff44e0b82d"
-                        },
-                        {
-                            "hab_dat_id": "4e7fc8e8-6410-4e16-a180-ba0398f41642",
-                            "hab_dat_amount": "33.92",
-                            "hab_dat_collected_at": "2023-09-11T17:11:37.771255",
-                            "hab_rec_id": "6d19dca8-bc88-4a4c-9914-93ff44e0b82d"
-                        },
-                        {
-                            "hab_dat_id": "9fb15af0-66f8-41bc-842a-54b46458038d",
-                            "hab_dat_amount": "54.13",
-                            "hab_dat_collected_at": "2023-09-11T17:11:49.450488",
-                            "hab_rec_id": "6d19dca8-bc88-4a4c-9914-93ff44e0b82d"
-                        },
-                        {
-                            "hab_dat_id": "a07c3ced-bceb-4a11-8482-3f5473ea320d",
-                            "hab_dat_amount": "54.26",
-                            "hab_dat_collected_at": "2023-09-11T17:12:03.626265",
-                            "hab_rec_id": "6d19dca8-bc88-4a4c-9914-93ff44e0b82d"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "1bb3e480-7292-4e84-98f0-3d80000b1b85",
-                    "hab_id": "d5a1cb4f-6bcd-494b-a9e6-dd9a01207907",
-                    "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "0368-09-22",
-                    "data": [
-                        {
-                            "hab_dat_id": "8587c8b6-041d-489e-86a8-2602956bc1b5",
-                            "hab_dat_amount": "59.88",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.871160",
-                            "hab_rec_id": "1bb3e480-7292-4e84-98f0-3d80000b1b85"
-                        },
-                        {
-                            "hab_dat_id": "82a594a5-b819-476d-b012-ccdaf8a55909",
-                            "hab_dat_amount": "13.76",
-                            "hab_dat_collected_at": "2023-09-11T17:11:31.081905",
-                            "hab_rec_id": "1bb3e480-7292-4e84-98f0-3d80000b1b85"
-                        },
-                        {
-                            "hab_dat_id": "d2294be3-997f-4dac-b210-c09501d40f11",
-                            "hab_dat_amount": "11.23",
-                            "hab_dat_collected_at": "2023-09-11T17:11:44.212146",
-                            "hab_rec_id": "1bb3e480-7292-4e84-98f0-3d80000b1b85"
-                        },
-                        {
-                            "hab_dat_id": "1bf8fda4-c081-4432-a3d5-4b605aad90ee",
-                            "hab_dat_amount": "87.54",
-                            "hab_dat_collected_at": "2023-09-11T17:12:00.366715",
-                            "hab_rec_id": "1bb3e480-7292-4e84-98f0-3d80000b1b85"
-                        },
-                        {
-                            "hab_dat_id": "7adb3e80-5815-4304-9c76-be4f7521fca4",
-                            "hab_dat_amount": "83.11",
-                            "hab_dat_collected_at": "2023-09-11T17:12:11.022852",
-                            "hab_rec_id": "1bb3e480-7292-4e84-98f0-3d80000b1b85"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "7e5e003a-e357-4973-bdc6-003bd82d6cad",
-            "hab_name": "bhMgrFuyYU",
-            "hab_description": "FyrCIfstk",
+            "hab_id": "97039839-8aaa-4451-a380-af049f5df3fe",
+            "hab_name": "Xh4HKdY",
+            "hab_description": "xK7yCif78UIy",
             "hab_is_favorite": true,
             "hab_is_yn": false,
-            "hab_color": "otJozY",
-            "hab_units": "asqn0",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
+            "hab_color": "5bV727",
+            "hab_units": "ODCtD",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
             "recurrences": [
                 {
-                    "hab_rec_id": "57b7b697-efa1-471f-9e33-2e96101b0280",
-                    "hab_id": "7e5e003a-e357-4973-bdc6-003bd82d6cad",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "2167-01-25",
+                    "hab_rec_id": "0f77a89a-efef-4169-9f2f-a20cdc4b7cd9",
+                    "hab_id": "97039839-8aaa-4451-a380-af049f5df3fe",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "0023-04-15",
+                    "hab_rec_goal": "86.02",
                     "data": [
                         {
-                            "hab_dat_id": "856721d2-85fb-46ab-8636-0c01736ad774",
-                            "hab_dat_amount": "83.86",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.384784",
-                            "hab_rec_id": "57b7b697-efa1-471f-9e33-2e96101b0280"
+                            "hab_dat_id": "3320e2a5-6eab-417b-bf15-2e8d4b85d3f6",
+                            "hab_dat_amount": "68.37",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.129794",
+                            "hab_rec_id": "0f77a89a-efef-4169-9f2f-a20cdc4b7cd9"
                         },
                         {
-                            "hab_dat_id": "775fde1f-61f4-4755-a88a-616130462ba5",
-                            "hab_dat_amount": "10.64",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.826018",
-                            "hab_rec_id": "57b7b697-efa1-471f-9e33-2e96101b0280"
+                            "hab_dat_id": "50ec18e9-4dcc-426f-81c8-333e1b6ba501",
+                            "hab_dat_amount": "56.29",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.661650",
+                            "hab_rec_id": "0f77a89a-efef-4169-9f2f-a20cdc4b7cd9"
                         },
                         {
-                            "hab_dat_id": "7e2f48a5-3c53-4c78-9e3d-ae5364d00939",
-                            "hab_dat_amount": "37.79",
-                            "hab_dat_collected_at": "2023-09-11T17:11:38.122121",
-                            "hab_rec_id": "57b7b697-efa1-471f-9e33-2e96101b0280"
+                            "hab_dat_id": "094206bf-3e99-4a14-a5c0-5eca6055d17d",
+                            "hab_dat_amount": "27.96",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.621270",
+                            "hab_rec_id": "0f77a89a-efef-4169-9f2f-a20cdc4b7cd9"
                         },
                         {
-                            "hab_dat_id": "522441f3-fee8-404e-ae35-7cac17d5d4a9",
-                            "hab_dat_amount": "89.55",
-                            "hab_dat_collected_at": "2023-09-11T17:11:49.555116",
-                            "hab_rec_id": "57b7b697-efa1-471f-9e33-2e96101b0280"
+                            "hab_dat_id": "87acca38-6903-4c77-b1cd-bb313111a95d",
+                            "hab_dat_amount": "18.26",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.272597",
+                            "hab_rec_id": "0f77a89a-efef-4169-9f2f-a20cdc4b7cd9"
                         },
                         {
-                            "hab_dat_id": "89a65c00-9185-4c16-8b3d-79701daa051b",
-                            "hab_dat_amount": "43.96",
-                            "hab_dat_collected_at": "2023-09-11T17:12:05.009751",
-                            "hab_rec_id": "57b7b697-efa1-471f-9e33-2e96101b0280"
+                            "hab_dat_id": "4b549b53-9092-4a56-997c-e89f6c5a1c97",
+                            "hab_dat_amount": "7.34",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.070369",
+                            "hab_rec_id": "0f77a89a-efef-4169-9f2f-a20cdc4b7cd9"
                         }
                     ]
                 },
                 {
-                    "hab_rec_id": "c5d87cab-a4a7-428e-90d6-053455d212ed",
-                    "hab_id": "7e5e003a-e357-4973-bdc6-003bd82d6cad",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "2428-02-21",
-                    "data": [
-                        {
-                            "hab_dat_id": "b65e1448-78f1-4bc0-ba73-ec162d7b9afa",
-                            "hab_dat_amount": "35.11",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.920835",
-                            "hab_rec_id": "c5d87cab-a4a7-428e-90d6-053455d212ed"
-                        },
-                        {
-                            "hab_dat_id": "0b0a5302-8505-48c7-9da1-3d9197e7e6ba",
-                            "hab_dat_amount": "90.29",
-                            "hab_dat_collected_at": "2023-09-11T17:11:31.129518",
-                            "hab_rec_id": "c5d87cab-a4a7-428e-90d6-053455d212ed"
-                        },
-                        {
-                            "hab_dat_id": "43edacda-8d2e-4dcb-b3fb-3af9848d6662",
-                            "hab_dat_amount": "71.20",
-                            "hab_dat_collected_at": "2023-09-11T17:11:44.454427",
-                            "hab_rec_id": "c5d87cab-a4a7-428e-90d6-053455d212ed"
-                        },
-                        {
-                            "hab_dat_id": "9ef313af-4f21-4ecd-bfe7-69a01b9be3cd",
-                            "hab_dat_amount": "23.22",
-                            "hab_dat_collected_at": "2023-09-11T17:12:00.412508",
-                            "hab_rec_id": "c5d87cab-a4a7-428e-90d6-053455d212ed"
-                        },
-                        {
-                            "hab_dat_id": "099ed1c2-df7f-48f0-8fbf-317a2c7ad3e9",
-                            "hab_dat_amount": "40.29",
-                            "hab_dat_collected_at": "2023-09-11T17:12:11.203988",
-                            "hab_rec_id": "c5d87cab-a4a7-428e-90d6-053455d212ed"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "208117e0-c628-4785-8ea7-899df1e8ee83",
-            "hab_name": "nViUUC7QwhzxB",
-            "hab_description": "lihdPJl9N",
-            "hab_is_favorite": true,
-            "hab_is_yn": true,
-            "hab_color": "LqqHC2",
-            "hab_units": "sEtQN",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "81514224-bb56-4684-bd5e-898c51a03d60",
-                    "hab_id": "208117e0-c628-4785-8ea7-899df1e8ee83",
+                    "hab_rec_id": "3f6bc436-32cc-4e75-8bd1-bc58c90f9d31",
+                    "hab_id": "97039839-8aaa-4451-a380-af049f5df3fe",
                     "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "1628-07-11",
+                    "hab_rec_freq_data": "1870-01-13",
+                    "hab_rec_goal": "1.32",
                     "data": [
                         {
-                            "hab_dat_id": "971b42c8-e8fb-4164-bebe-31b096e6a175",
-                            "hab_dat_amount": "39.30",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.433347",
-                            "hab_rec_id": "81514224-bb56-4684-bd5e-898c51a03d60"
-                        },
-                        {
-                            "hab_dat_id": "800536a8-a5de-42cb-9a0c-ba19659ec6eb",
-                            "hab_dat_amount": "47.06",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.871253",
-                            "hab_rec_id": "81514224-bb56-4684-bd5e-898c51a03d60"
-                        },
-                        {
-                            "hab_dat_id": "9e5dff18-b1f7-4598-949a-189240aa6686",
-                            "hab_dat_amount": "59.52",
-                            "hab_dat_collected_at": "2023-09-11T17:11:38.493622",
-                            "hab_rec_id": "81514224-bb56-4684-bd5e-898c51a03d60"
-                        },
-                        {
-                            "hab_dat_id": "16bf6c5f-512b-46c2-b6b1-678ad1e6d623",
-                            "hab_dat_amount": "50.68",
-                            "hab_dat_collected_at": "2023-09-11T17:11:49.696736",
-                            "hab_rec_id": "81514224-bb56-4684-bd5e-898c51a03d60"
-                        },
-                        {
-                            "hab_dat_id": "e6cc3d38-f1df-4118-9358-4de3b4d7ff0c",
-                            "hab_dat_amount": "0.59",
-                            "hab_dat_collected_at": "2023-09-11T17:12:05.610531",
-                            "hab_rec_id": "81514224-bb56-4684-bd5e-898c51a03d60"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "3ae258b1-1a69-4379-9439-1ee1efa658ef",
-                    "hab_id": "208117e0-c628-4785-8ea7-899df1e8ee83",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "0767-03-30",
-                    "data": [
-                        {
-                            "hab_dat_id": "9ac4f7ed-a505-475b-9322-9b17c22448c5",
-                            "hab_dat_amount": "46.52",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.971675",
-                            "hab_rec_id": "3ae258b1-1a69-4379-9439-1ee1efa658ef"
-                        },
-                        {
-                            "hab_dat_id": "8f553527-62f9-4a10-adec-bbaa603254d1",
-                            "hab_dat_amount": "71.36",
-                            "hab_dat_collected_at": "2023-09-11T17:11:31.250498",
-                            "hab_rec_id": "3ae258b1-1a69-4379-9439-1ee1efa658ef"
-                        },
-                        {
-                            "hab_dat_id": "c25df419-6973-466a-94b4-13c92704e29d",
-                            "hab_dat_amount": "60.27",
-                            "hab_dat_collected_at": "2023-09-11T17:11:44.623955",
-                            "hab_rec_id": "3ae258b1-1a69-4379-9439-1ee1efa658ef"
-                        },
-                        {
-                            "hab_dat_id": "32523dda-f764-4b31-927d-58edb200edea",
-                            "hab_dat_amount": "43.35",
-                            "hab_dat_collected_at": "2023-09-11T17:12:00.469801",
-                            "hab_rec_id": "3ae258b1-1a69-4379-9439-1ee1efa658ef"
-                        },
-                        {
-                            "hab_dat_id": "29fd2162-25e0-4718-b7ed-96513a8a165a",
-                            "hab_dat_amount": "87.51",
-                            "hab_dat_collected_at": "2023-09-11T17:12:11.423624",
-                            "hab_rec_id": "3ae258b1-1a69-4379-9439-1ee1efa658ef"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "55664008-d810-4f03-a6f8-b6bfd6ee5b16",
-            "hab_name": "DPxtpLAk7HCO",
-            "hab_description": "03X2mlUKMDc2dCGz",
-            "hab_is_favorite": false,
-            "hab_is_yn": true,
-            "hab_color": "k31QGc",
-            "hab_units": "aGsSH",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "f1d7da0b-d200-4964-a002-2e8606c23e90",
-                    "hab_id": "55664008-d810-4f03-a6f8-b6bfd6ee5b16",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "2007-07-14",
-                    "data": [
-                        {
-                            "hab_dat_id": "850ac033-785c-44e9-bf38-f8988d54ba9a",
-                            "hab_dat_amount": "22.40",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.484074",
-                            "hab_rec_id": "f1d7da0b-d200-4964-a002-2e8606c23e90"
-                        },
-                        {
-                            "hab_dat_id": "80d2e1b5-d25b-460e-9518-6f3d2eb0895e",
-                            "hab_dat_amount": "28.16",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.924220",
-                            "hab_rec_id": "f1d7da0b-d200-4964-a002-2e8606c23e90"
-                        },
-                        {
-                            "hab_dat_id": "056218e4-c972-471b-93fc-73d33d5fa8e8",
-                            "hab_dat_amount": "93.01",
-                            "hab_dat_collected_at": "2023-09-11T17:11:38.860073",
-                            "hab_rec_id": "f1d7da0b-d200-4964-a002-2e8606c23e90"
-                        },
-                        {
-                            "hab_dat_id": "561b512b-c2f8-4ce4-acdb-f3935678e520",
-                            "hab_dat_amount": "62.07",
-                            "hab_dat_collected_at": "2023-09-11T17:11:49.802563",
-                            "hab_rec_id": "f1d7da0b-d200-4964-a002-2e8606c23e90"
-                        },
-                        {
-                            "hab_dat_id": "3792f85f-daa0-4daf-ab60-a24de941e590",
-                            "hab_dat_amount": "31.46",
-                            "hab_dat_collected_at": "2023-09-11T17:12:05.787002",
-                            "hab_rec_id": "f1d7da0b-d200-4964-a002-2e8606c23e90"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "6efa6595-c440-4613-9d87-f2a8df24576e",
-                    "hab_id": "55664008-d810-4f03-a6f8-b6bfd6ee5b16",
-                    "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "0140-10-05",
-                    "data": [
-                        {
-                            "hab_dat_id": "1837ccbf-044e-4781-afb0-3664659f1ece",
-                            "hab_dat_amount": "77.67",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.020591",
-                            "hab_rec_id": "6efa6595-c440-4613-9d87-f2a8df24576e"
-                        },
-                        {
-                            "hab_dat_id": "0341a87a-d750-4a17-bd00-faa1f7115d37",
-                            "hab_dat_amount": "45.83",
-                            "hab_dat_collected_at": "2023-09-11T17:11:31.438335",
-                            "hab_rec_id": "6efa6595-c440-4613-9d87-f2a8df24576e"
-                        },
-                        {
-                            "hab_dat_id": "c91d35a9-ae51-4acf-b318-b49e615fce1f",
-                            "hab_dat_amount": "34.45",
-                            "hab_dat_collected_at": "2023-09-11T17:11:44.700048",
-                            "hab_rec_id": "6efa6595-c440-4613-9d87-f2a8df24576e"
-                        },
-                        {
-                            "hab_dat_id": "bb32ce8f-90b0-4902-9791-fef26725d769",
-                            "hab_dat_amount": "55.61",
-                            "hab_dat_collected_at": "2023-09-11T17:12:00.520380",
-                            "hab_rec_id": "6efa6595-c440-4613-9d87-f2a8df24576e"
-                        },
-                        {
-                            "hab_dat_id": "07dc769d-4edb-4bf5-9c90-ddc88dcc6bf6",
-                            "hab_dat_amount": "93.04",
-                            "hab_dat_collected_at": "2023-09-11T17:12:11.651151",
-                            "hab_rec_id": "6efa6595-c440-4613-9d87-f2a8df24576e"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "57bc101c-23ef-4d06-9d33-b5fc76917e20",
-            "hab_name": "TIDzWHif24Uyzmzr8qX",
-            "hab_description": "ZnPTg",
-            "hab_is_favorite": false,
-            "hab_is_yn": true,
-            "hab_color": "qwTfcR",
-            "hab_units": "NjWYh",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "fcec7a71-86c0-4be0-b525-511d6db5e2fc",
-                    "hab_id": "57bc101c-23ef-4d06-9d33-b5fc76917e20",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "1802-11-06",
-                    "data": [
-                        {
-                            "hab_dat_id": "d6b69163-f17d-4e89-ba2e-594889688dda",
-                            "hab_dat_amount": "4.16",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.529364",
-                            "hab_rec_id": "fcec7a71-86c0-4be0-b525-511d6db5e2fc"
-                        },
-                        {
-                            "hab_dat_id": "04e9e6ba-f59e-4470-bef7-9628f0460ffb",
-                            "hab_dat_amount": "47.00",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.966133",
-                            "hab_rec_id": "fcec7a71-86c0-4be0-b525-511d6db5e2fc"
-                        },
-                        {
-                            "hab_dat_id": "0a423cef-6fab-489e-8809-892d5009e411",
-                            "hab_dat_amount": "64.06",
-                            "hab_dat_collected_at": "2023-09-11T17:11:39.032761",
-                            "hab_rec_id": "fcec7a71-86c0-4be0-b525-511d6db5e2fc"
-                        },
-                        {
-                            "hab_dat_id": "4dac4909-94b0-40d1-ac71-ec7aa13d2155",
-                            "hab_dat_amount": "83.29",
-                            "hab_dat_collected_at": "2023-09-11T17:11:53.272472",
-                            "hab_rec_id": "fcec7a71-86c0-4be0-b525-511d6db5e2fc"
-                        },
-                        {
-                            "hab_dat_id": "5bb27036-0440-4cc3-9db0-67155b1582f9",
-                            "hab_dat_amount": "91.92",
-                            "hab_dat_collected_at": "2023-09-11T17:12:05.995143",
-                            "hab_rec_id": "fcec7a71-86c0-4be0-b525-511d6db5e2fc"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "c067d770-5d17-4c8c-9657-e444e3ae3e22",
-                    "hab_id": "57bc101c-23ef-4d06-9d33-b5fc76917e20",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "1200-04-07",
-                    "data": [
-                        {
-                            "hab_dat_id": "276ebec8-63f0-45eb-81c7-d14ffb69202e",
-                            "hab_dat_amount": "8.72",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.067367",
-                            "hab_rec_id": "c067d770-5d17-4c8c-9657-e444e3ae3e22"
-                        },
-                        {
-                            "hab_dat_id": "a5b7db3d-e7ff-4f10-9918-e08be2b3d53b",
-                            "hab_dat_amount": "8.62",
-                            "hab_dat_collected_at": "2023-09-11T17:11:34.249701",
-                            "hab_rec_id": "c067d770-5d17-4c8c-9657-e444e3ae3e22"
-                        },
-                        {
-                            "hab_dat_id": "71a56bf8-1534-4263-9c20-a0b3d793b236",
-                            "hab_dat_amount": "27.17",
-                            "hab_dat_collected_at": "2023-09-11T17:11:44.815546",
-                            "hab_rec_id": "c067d770-5d17-4c8c-9657-e444e3ae3e22"
-                        },
-                        {
-                            "hab_dat_id": "3f635b3d-992b-419a-894f-750bd0b99541",
-                            "hab_dat_amount": "1.10",
-                            "hab_dat_collected_at": "2023-09-11T17:12:00.695445",
-                            "hab_rec_id": "c067d770-5d17-4c8c-9657-e444e3ae3e22"
-                        },
-                        {
-                            "hab_dat_id": "36884f34-f6fb-4b4b-91d7-7ca65fc2177a",
-                            "hab_dat_amount": "31.51",
-                            "hab_dat_collected_at": "2023-09-11T17:12:11.732510",
-                            "hab_rec_id": "c067d770-5d17-4c8c-9657-e444e3ae3e22"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "4ac3e453-f490-4f14-bacb-5fd765cebb7d",
-            "hab_name": "ott0acv4jF04p",
-            "hab_description": "U1wv86j6FgTukke",
-            "hab_is_favorite": false,
-            "hab_is_yn": false,
-            "hab_color": "3oIArp",
-            "hab_units": "8ks8y",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "1838c559-146c-4bfc-908e-6248a2b5af74",
-                    "hab_id": "4ac3e453-f490-4f14-bacb-5fd765cebb7d",
-                    "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "1173-08-12",
-                    "data": [
-                        {
-                            "hab_dat_id": "7d5b7b5a-2456-4130-850a-bb4e587a9666",
-                            "hab_dat_amount": "79.93",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.594030",
-                            "hab_rec_id": "1838c559-146c-4bfc-908e-6248a2b5af74"
-                        },
-                        {
-                            "hab_dat_id": "f128cd02-99df-4246-a83e-d51dbd72bd29",
-                            "hab_dat_amount": "80.50",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.008097",
-                            "hab_rec_id": "1838c559-146c-4bfc-908e-6248a2b5af74"
-                        },
-                        {
-                            "hab_dat_id": "2818c35b-c4f4-40a2-a8c9-0f2faa303a46",
-                            "hab_dat_amount": "28.31",
-                            "hab_dat_collected_at": "2023-09-11T17:11:39.140903",
-                            "hab_rec_id": "1838c559-146c-4bfc-908e-6248a2b5af74"
-                        },
-                        {
-                            "hab_dat_id": "3ff695c1-c215-45d3-8584-724754b17aa4",
-                            "hab_dat_amount": "36.33",
-                            "hab_dat_collected_at": "2023-09-11T17:11:53.689098",
-                            "hab_rec_id": "1838c559-146c-4bfc-908e-6248a2b5af74"
-                        },
-                        {
-                            "hab_dat_id": "a689f4ca-3cfe-4332-ba9c-2260e4401636",
-                            "hab_dat_amount": "19.51",
-                            "hab_dat_collected_at": "2023-09-11T17:12:06.245468",
-                            "hab_rec_id": "1838c559-146c-4bfc-908e-6248a2b5af74"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "4485ed1e-fc00-497d-9d2a-c76de73faebe",
-                    "hab_id": "4ac3e453-f490-4f14-bacb-5fd765cebb7d",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "0803-08-21",
-                    "data": [
-                        {
-                            "hab_dat_id": "46c96abf-1c8c-434c-a333-0faab697294f",
-                            "hab_dat_amount": "21.31",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.113614",
-                            "hab_rec_id": "4485ed1e-fc00-497d-9d2a-c76de73faebe"
-                        },
-                        {
-                            "hab_dat_id": "44b14c44-c68b-4a03-b631-4a9c3ee97589",
-                            "hab_dat_amount": "35.48",
-                            "hab_dat_collected_at": "2023-09-11T17:11:34.607124",
-                            "hab_rec_id": "4485ed1e-fc00-497d-9d2a-c76de73faebe"
-                        },
-                        {
-                            "hab_dat_id": "a60760b6-e770-4274-ae57-5aa92c463713",
-                            "hab_dat_amount": "51.70",
-                            "hab_dat_collected_at": "2023-09-11T17:11:44.976231",
-                            "hab_rec_id": "4485ed1e-fc00-497d-9d2a-c76de73faebe"
-                        },
-                        {
-                            "hab_dat_id": "0c1222c0-4918-41bb-9895-8fdc45bd1830",
-                            "hab_dat_amount": "43.95",
-                            "hab_dat_collected_at": "2023-09-11T17:12:00.911216",
-                            "hab_rec_id": "4485ed1e-fc00-497d-9d2a-c76de73faebe"
-                        },
-                        {
-                            "hab_dat_id": "610ff151-eee3-4017-b1c6-d84b68e1be09",
-                            "hab_dat_amount": "1.79",
-                            "hab_dat_collected_at": "2023-09-11T17:12:11.819652",
-                            "hab_rec_id": "4485ed1e-fc00-497d-9d2a-c76de73faebe"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "7db23b3d-1384-4f71-8db1-5818ab5ff6cc",
-            "hab_name": "OzwM9eMq9xIoUgyk3Y",
-            "hab_description": "4J3Ec3jwYo",
-            "hab_is_favorite": false,
-            "hab_is_yn": true,
-            "hab_color": "Yx7Zg",
-            "hab_units": "VPU5J",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "68f355d0-e242-488d-8fd7-9d25b02c5a94",
-                    "hab_id": "7db23b3d-1384-4f71-8db1-5818ab5ff6cc",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "2606-03-28",
-                    "data": [
-                        {
-                            "hab_dat_id": "c9482dc0-74c5-46fb-a334-ed3289cc594e",
-                            "hab_dat_amount": "4.90",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.662162",
-                            "hab_rec_id": "68f355d0-e242-488d-8fd7-9d25b02c5a94"
-                        },
-                        {
-                            "hab_dat_id": "736ea4f1-94ab-4952-ada3-c7f281a54d9e",
-                            "hab_dat_amount": "61.67",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.047960",
-                            "hab_rec_id": "68f355d0-e242-488d-8fd7-9d25b02c5a94"
-                        },
-                        {
-                            "hab_dat_id": "38e063ad-e0e1-49fe-8975-21187493379e",
-                            "hab_dat_amount": "34.29",
-                            "hab_dat_collected_at": "2023-09-11T17:11:39.202326",
-                            "hab_rec_id": "68f355d0-e242-488d-8fd7-9d25b02c5a94"
-                        },
-                        {
-                            "hab_dat_id": "b0ed4126-79e4-4b93-aa3e-fda457db46cf",
-                            "hab_dat_amount": "84.17",
-                            "hab_dat_collected_at": "2023-09-11T17:11:53.926036",
-                            "hab_rec_id": "68f355d0-e242-488d-8fd7-9d25b02c5a94"
-                        },
-                        {
-                            "hab_dat_id": "191b5512-5a7d-4255-a687-bc91571ccf88",
-                            "hab_dat_amount": "98.88",
-                            "hab_dat_collected_at": "2023-09-11T17:12:06.483340",
-                            "hab_rec_id": "68f355d0-e242-488d-8fd7-9d25b02c5a94"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "33e57256-c49f-440a-903e-69487fb4ace1",
-                    "hab_id": "7db23b3d-1384-4f71-8db1-5818ab5ff6cc",
-                    "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "1466-07-24",
-                    "data": [
-                        {
-                            "hab_dat_id": "23664031-a345-480c-b022-09d073dd95f0",
-                            "hab_dat_amount": "68.14",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.161059",
-                            "hab_rec_id": "33e57256-c49f-440a-903e-69487fb4ace1"
-                        },
-                        {
-                            "hab_dat_id": "a6b770c0-5b76-4422-a9f8-5ef263f42364",
-                            "hab_dat_amount": "69.51",
-                            "hab_dat_collected_at": "2023-09-11T17:11:34.661302",
-                            "hab_rec_id": "33e57256-c49f-440a-903e-69487fb4ace1"
-                        },
-                        {
-                            "hab_dat_id": "0c855d5a-e3fe-4932-851f-97dbe7101481",
-                            "hab_dat_amount": "99.11",
-                            "hab_dat_collected_at": "2023-09-11T17:11:45.144754",
-                            "hab_rec_id": "33e57256-c49f-440a-903e-69487fb4ace1"
-                        },
-                        {
-                            "hab_dat_id": "392a72c1-31cd-48e0-82de-e7b780fba8ef",
-                            "hab_dat_amount": "36.07",
-                            "hab_dat_collected_at": "2023-09-11T17:12:01.154908",
-                            "hab_rec_id": "33e57256-c49f-440a-903e-69487fb4ace1"
-                        },
-                        {
-                            "hab_dat_id": "c806517f-819d-4a88-a383-9ba0f5715c7e",
-                            "hab_dat_amount": "88.39",
-                            "hab_dat_collected_at": "2023-09-11T17:12:11.980798",
-                            "hab_rec_id": "33e57256-c49f-440a-903e-69487fb4ace1"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "4d9423ef-3d36-46ba-ab18-d6569a373fb6",
-            "hab_name": "4KunprOh0mIR",
-            "hab_description": "fBbg4Y28N",
-            "hab_is_favorite": false,
-            "hab_is_yn": true,
-            "hab_color": "pdpSIh",
-            "hab_units": "ux0k8",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "bcd53610-08ad-42f5-8889-6c201b11853e",
-                    "hab_id": "4d9423ef-3d36-46ba-ab18-d6569a373fb6",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "2524-10-06",
-                    "data": [
-                        {
-                            "hab_dat_id": "0970a9a2-85d9-486e-b5d5-ca920617c260",
-                            "hab_dat_amount": "83.23",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.728028",
-                            "hab_rec_id": "bcd53610-08ad-42f5-8889-6c201b11853e"
-                        },
-                        {
-                            "hab_dat_id": "6e213433-e930-4e9c-bf82-648a643050cf",
-                            "hab_dat_amount": "72.57",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.096820",
-                            "hab_rec_id": "bcd53610-08ad-42f5-8889-6c201b11853e"
-                        },
-                        {
-                            "hab_dat_id": "c3780c7e-3b9f-48c7-ad40-82ed19d29856",
-                            "hab_dat_amount": "46.42",
-                            "hab_dat_collected_at": "2023-09-11T17:11:39.565268",
-                            "hab_rec_id": "bcd53610-08ad-42f5-8889-6c201b11853e"
-                        },
-                        {
-                            "hab_dat_id": "0a891012-e5a2-4da4-ac9e-1b3294b8648d",
-                            "hab_dat_amount": "47.45",
-                            "hab_dat_collected_at": "2023-09-11T17:11:54.261794",
-                            "hab_rec_id": "bcd53610-08ad-42f5-8889-6c201b11853e"
-                        },
-                        {
-                            "hab_dat_id": "7d8900f9-29a3-45fa-9b12-a0cf38789575",
-                            "hab_dat_amount": "34.07",
-                            "hab_dat_collected_at": "2023-09-11T17:12:06.767666",
-                            "hab_rec_id": "bcd53610-08ad-42f5-8889-6c201b11853e"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "0cd4f5ef-83fb-4168-b264-387ac66ae74c",
-                    "hab_id": "4d9423ef-3d36-46ba-ab18-d6569a373fb6",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "2022-08-28",
-                    "data": [
-                        {
-                            "hab_dat_id": "1f358bf9-030c-4115-94c5-2aa4ea680e88",
-                            "hab_dat_amount": "11.91",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.205457",
-                            "hab_rec_id": "0cd4f5ef-83fb-4168-b264-387ac66ae74c"
-                        },
-                        {
-                            "hab_dat_id": "e4f9ed9b-97fa-4748-8a6e-64627c53e788",
-                            "hab_dat_amount": "20.47",
-                            "hab_dat_collected_at": "2023-09-11T17:11:34.705733",
-                            "hab_rec_id": "0cd4f5ef-83fb-4168-b264-387ac66ae74c"
-                        },
-                        {
-                            "hab_dat_id": "9aa34a6e-8f9a-4eee-9415-eae347ffbe88",
-                            "hab_dat_amount": "17.81",
-                            "hab_dat_collected_at": "2023-09-11T17:11:45.315711",
-                            "hab_rec_id": "0cd4f5ef-83fb-4168-b264-387ac66ae74c"
-                        },
-                        {
-                            "hab_dat_id": "a84d6d04-32e3-4765-aff4-4e1de772d102",
-                            "hab_dat_amount": "15.13",
-                            "hab_dat_collected_at": "2023-09-11T17:12:01.362577",
-                            "hab_rec_id": "0cd4f5ef-83fb-4168-b264-387ac66ae74c"
-                        },
-                        {
-                            "hab_dat_id": "c06875bf-2108-4c78-9445-098a3f22fb71",
-                            "hab_dat_amount": "12.24",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.108676",
-                            "hab_rec_id": "0cd4f5ef-83fb-4168-b264-387ac66ae74c"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "7fc5e959-fb58-4508-a3ac-9c7705fb4948",
-            "hab_name": "Dyf19Hc",
-            "hab_description": "kdBMXBwS3K8D",
-            "hab_is_favorite": true,
-            "hab_is_yn": false,
-            "hab_color": "KAny7M",
-            "hab_units": "d8lEf",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "fd8eb748-d432-4301-87f5-c8a9e82acde0",
-                    "hab_id": "7fc5e959-fb58-4508-a3ac-9c7705fb4948",
-                    "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "2029-10-24",
-                    "data": [
-                        {
-                            "hab_dat_id": "492bcefa-9fcb-4ebc-b100-9805599ebc18",
-                            "hab_dat_amount": "41.91",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.811611",
-                            "hab_rec_id": "fd8eb748-d432-4301-87f5-c8a9e82acde0"
-                        },
-                        {
-                            "hab_dat_id": "d0a32e3f-60c2-47ac-a791-0a48c825d987",
-                            "hab_dat_amount": "43.01",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.138180",
-                            "hab_rec_id": "fd8eb748-d432-4301-87f5-c8a9e82acde0"
-                        },
-                        {
-                            "hab_dat_id": "d8b34409-9a37-441a-8c3f-940918ce5725",
-                            "hab_dat_amount": "45.77",
-                            "hab_dat_collected_at": "2023-09-11T17:11:39.922475",
-                            "hab_rec_id": "fd8eb748-d432-4301-87f5-c8a9e82acde0"
-                        },
-                        {
-                            "hab_dat_id": "aeccddf8-0a2e-4842-9529-248cd5c927b3",
-                            "hab_dat_amount": "28.84",
-                            "hab_dat_collected_at": "2023-09-11T17:11:54.721972",
-                            "hab_rec_id": "fd8eb748-d432-4301-87f5-c8a9e82acde0"
-                        },
-                        {
-                            "hab_dat_id": "55269394-86ed-4c46-b5b7-caa97f3ac9a1",
-                            "hab_dat_amount": "33.83",
-                            "hab_dat_collected_at": "2023-09-11T17:12:07.007263",
-                            "hab_rec_id": "fd8eb748-d432-4301-87f5-c8a9e82acde0"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "04d5b079-5d1e-49cf-9c5e-703709ad7f22",
-                    "hab_id": "7fc5e959-fb58-4508-a3ac-9c7705fb4948",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "1798-12-12",
-                    "data": [
-                        {
-                            "hab_dat_id": "47928714-ab92-4d31-a92e-d077697bb7b4",
-                            "hab_dat_amount": "11.33",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.245967",
-                            "hab_rec_id": "04d5b079-5d1e-49cf-9c5e-703709ad7f22"
-                        },
-                        {
-                            "hab_dat_id": "1edd1368-94f7-4968-96bf-389214e8a247",
-                            "hab_dat_amount": "37.54",
-                            "hab_dat_collected_at": "2023-09-11T17:11:34.861661",
-                            "hab_rec_id": "04d5b079-5d1e-49cf-9c5e-703709ad7f22"
-                        },
-                        {
-                            "hab_dat_id": "622e1732-3554-4b2b-b1c1-f36b88599463",
-                            "hab_dat_amount": "89.22",
-                            "hab_dat_collected_at": "2023-09-11T17:11:45.485428",
-                            "hab_rec_id": "04d5b079-5d1e-49cf-9c5e-703709ad7f22"
-                        },
-                        {
-                            "hab_dat_id": "2d7fed54-a027-4a39-b4be-e4e238d6c66e",
-                            "hab_dat_amount": "58.60",
-                            "hab_dat_collected_at": "2023-09-11T17:12:01.530967",
-                            "hab_rec_id": "04d5b079-5d1e-49cf-9c5e-703709ad7f22"
-                        },
-                        {
-                            "hab_dat_id": "32e9bb72-f0a3-4b4d-996a-7fc78d7239e1",
-                            "hab_dat_amount": "1.32",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.144172",
-                            "hab_rec_id": "04d5b079-5d1e-49cf-9c5e-703709ad7f22"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "b0a7255d-8e2b-4ddb-a5f7-db5cff01b21e",
-            "hab_name": "TEnvjp6",
-            "hab_description": "34JtBadcvBajPsW4lfy",
-            "hab_is_favorite": false,
-            "hab_is_yn": true,
-            "hab_color": "cvjflU",
-            "hab_units": "ymBz1",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "12e9b31b-727a-4179-bdc3-3c30c6fd7ed0",
-                    "hab_id": "b0a7255d-8e2b-4ddb-a5f7-db5cff01b21e",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "0307-02-26",
-                    "data": [
-                        {
-                            "hab_dat_id": "ff47e6ba-7681-41ef-bd26-d4b7eec625c3",
-                            "hab_dat_amount": "43.10",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.865748",
-                            "hab_rec_id": "12e9b31b-727a-4179-bdc3-3c30c6fd7ed0"
-                        },
-                        {
-                            "hab_dat_id": "79cbf50b-615f-44d7-82b9-0de9ee178a71",
-                            "hab_dat_amount": "68.93",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.180262",
-                            "hab_rec_id": "12e9b31b-727a-4179-bdc3-3c30c6fd7ed0"
-                        },
-                        {
-                            "hab_dat_id": "3d651a36-7fd6-4531-9453-9a08925d2b55",
-                            "hab_dat_amount": "56.82",
-                            "hab_dat_collected_at": "2023-09-11T17:11:40.272137",
-                            "hab_rec_id": "12e9b31b-727a-4179-bdc3-3c30c6fd7ed0"
-                        },
-                        {
-                            "hab_dat_id": "e06cfc99-0bc3-4dbc-b6da-2371200ec115",
-                            "hab_dat_amount": "93.48",
-                            "hab_dat_collected_at": "2023-09-11T17:11:54.931812",
-                            "hab_rec_id": "12e9b31b-727a-4179-bdc3-3c30c6fd7ed0"
-                        },
-                        {
-                            "hab_dat_id": "87f7ca13-c806-452c-aaa7-9da3250e332c",
-                            "hab_dat_amount": "54.74",
-                            "hab_dat_collected_at": "2023-09-11T17:12:07.256622",
-                            "hab_rec_id": "12e9b31b-727a-4179-bdc3-3c30c6fd7ed0"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "8cc6811d-2433-42c4-90d6-8162018a9980",
-                    "hab_id": "b0a7255d-8e2b-4ddb-a5f7-db5cff01b21e",
-                    "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "2459-09-20",
-                    "data": [
-                        {
-                            "hab_dat_id": "5aa26ecb-ea29-4044-8840-93c85c06f8c9",
-                            "hab_dat_amount": "71.57",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.289160",
-                            "hab_rec_id": "8cc6811d-2433-42c4-90d6-8162018a9980"
-                        },
-                        {
-                            "hab_dat_id": "92d04082-12f2-42cc-a800-6e6c2a866116",
-                            "hab_dat_amount": "62.92",
-                            "hab_dat_collected_at": "2023-09-11T17:11:35.013879",
-                            "hab_rec_id": "8cc6811d-2433-42c4-90d6-8162018a9980"
-                        },
-                        {
-                            "hab_dat_id": "59d668ee-8706-4bc8-a80b-9fb1b99c1930",
-                            "hab_dat_amount": "92.33",
-                            "hab_dat_collected_at": "2023-09-11T17:11:45.656702",
-                            "hab_rec_id": "8cc6811d-2433-42c4-90d6-8162018a9980"
-                        },
-                        {
-                            "hab_dat_id": "bed4cd37-d04f-4cf1-94c3-9361ac9868c1",
-                            "hab_dat_amount": "12.30",
-                            "hab_dat_collected_at": "2023-09-11T17:12:01.780537",
-                            "hab_rec_id": "8cc6811d-2433-42c4-90d6-8162018a9980"
-                        },
-                        {
-                            "hab_dat_id": "3bb6e512-e29d-4c50-b953-48019608f8fd",
-                            "hab_dat_amount": "35.17",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.187353",
-                            "hab_rec_id": "8cc6811d-2433-42c4-90d6-8162018a9980"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "09eed984-f30e-47d1-bb85-9a8419bf9df7",
-            "hab_name": "XfWA5wB4rZ7YW2mbiMC",
-            "hab_description": "G4XSlxJjG1MxDajRPxt",
-            "hab_is_favorite": true,
-            "hab_is_yn": false,
-            "hab_color": "0vB0xh",
-            "hab_units": "LcKXq",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "26fbbcfa-3d28-4f44-8de5-3750db9aa7d7",
-                    "hab_id": "09eed984-f30e-47d1-bb85-9a8419bf9df7",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "0266-07-03",
-                    "data": [
-                        {
-                            "hab_dat_id": "6c236dcb-1b9c-4899-b457-5e18f1bbdd6a",
-                            "hab_dat_amount": "87.36",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.920679",
-                            "hab_rec_id": "26fbbcfa-3d28-4f44-8de5-3750db9aa7d7"
-                        },
-                        {
-                            "hab_dat_id": "2062eab1-b07d-4d7d-b04b-4d2b7c3e7538",
-                            "hab_dat_amount": "57.04",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.367510",
-                            "hab_rec_id": "26fbbcfa-3d28-4f44-8de5-3750db9aa7d7"
-                        },
-                        {
-                            "hab_dat_id": "42d227e1-30b2-4504-95af-6d43477ff63d",
-                            "hab_dat_amount": "67.13",
-                            "hab_dat_collected_at": "2023-09-11T17:11:40.375638",
-                            "hab_rec_id": "26fbbcfa-3d28-4f44-8de5-3750db9aa7d7"
-                        },
-                        {
-                            "hab_dat_id": "0382d34a-a8da-43a1-9d95-1d8fd1338633",
-                            "hab_dat_amount": "24.96",
-                            "hab_dat_collected_at": "2023-09-11T17:11:55.076438",
-                            "hab_rec_id": "26fbbcfa-3d28-4f44-8de5-3750db9aa7d7"
-                        },
-                        {
-                            "hab_dat_id": "ac01b740-b465-457b-a711-cd73bc2dc800",
-                            "hab_dat_amount": "84.06",
-                            "hab_dat_collected_at": "2023-09-11T17:12:07.535345",
-                            "hab_rec_id": "26fbbcfa-3d28-4f44-8de5-3750db9aa7d7"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "56a0751a-05d1-40f9-bdc4-943ca5092df2",
-                    "hab_id": "09eed984-f30e-47d1-bb85-9a8419bf9df7",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "2029-01-26",
-                    "data": [
-                        {
-                            "hab_dat_id": "dde006f3-ac3d-45c4-a477-f5c11743720a",
-                            "hab_dat_amount": "41.21",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.326429",
-                            "hab_rec_id": "56a0751a-05d1-40f9-bdc4-943ca5092df2"
-                        },
-                        {
-                            "hab_dat_id": "223c3e50-fc21-47c9-8042-6f04f9e82d79",
-                            "hab_dat_amount": "45.26",
-                            "hab_dat_collected_at": "2023-09-11T17:11:35.273207",
-                            "hab_rec_id": "56a0751a-05d1-40f9-bdc4-943ca5092df2"
-                        },
-                        {
-                            "hab_dat_id": "b6e58b4b-352a-475c-bc1c-fe58276671a4",
-                            "hab_dat_amount": "96.53",
-                            "hab_dat_collected_at": "2023-09-11T17:11:45.859040",
-                            "hab_rec_id": "56a0751a-05d1-40f9-bdc4-943ca5092df2"
-                        },
-                        {
-                            "hab_dat_id": "53631f97-c737-4368-bf7d-0225f8c9eed5",
+                            "hab_dat_id": "2284b8fe-52db-41ea-a550-9b3211c3871d",
                             "hab_dat_amount": "60.92",
-                            "hab_dat_collected_at": "2023-09-11T17:12:02.031641",
-                            "hab_rec_id": "56a0751a-05d1-40f9-bdc4-943ca5092df2"
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.890257",
+                            "hab_rec_id": "3f6bc436-32cc-4e75-8bd1-bc58c90f9d31"
                         },
                         {
-                            "hab_dat_id": "ab6c7050-0f50-4e60-a5e1-35c50dd5938d",
-                            "hab_dat_amount": "26.92",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.225032",
-                            "hab_rec_id": "56a0751a-05d1-40f9-bdc4-943ca5092df2"
+                            "hab_dat_id": "beee4976-8403-45fe-ac03-d0ec8ab39b89",
+                            "hab_dat_amount": "56.75",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.747784",
+                            "hab_rec_id": "3f6bc436-32cc-4e75-8bd1-bc58c90f9d31"
+                        },
+                        {
+                            "hab_dat_id": "fccea0ae-8ee3-4e56-b2d2-1beac68e5192",
+                            "hab_dat_amount": "22.85",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.449911",
+                            "hab_rec_id": "3f6bc436-32cc-4e75-8bd1-bc58c90f9d31"
+                        },
+                        {
+                            "hab_dat_id": "33e4446e-d5d5-490f-9409-6496efc74e18",
+                            "hab_dat_amount": "67.63",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.240210",
+                            "hab_rec_id": "3f6bc436-32cc-4e75-8bd1-bc58c90f9d31"
+                        },
+                        {
+                            "hab_dat_id": "bbd02351-ef6a-415e-ae47-d6dec123d3ec",
+                            "hab_dat_amount": "55.08",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.895699",
+                            "hab_rec_id": "3f6bc436-32cc-4e75-8bd1-bc58c90f9d31"
                         }
                     ]
                 }
             ]
         },
         {
-            "hab_id": "1eb73165-56e8-477e-b9cc-49cef3064d85",
-            "hab_name": "gGLDlDQ",
-            "hab_description": "HnCzNFo4DCS",
+            "hab_id": "66d2948e-e365-49bd-b8d8-99ab6b14af21",
+            "hab_name": "UmDSwDdSPt",
+            "hab_description": "VaQp9cuOP8jXbSu",
             "hab_is_favorite": false,
             "hab_is_yn": false,
-            "hab_color": "pYs1lw",
-            "hab_units": "Wb21w",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
+            "hab_color": "1F7L5c",
+            "hab_units": "MsaSB",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
             "recurrences": [
                 {
-                    "hab_rec_id": "1815d4e5-4b35-4bb8-81ac-1b5eb212d8bf",
-                    "hab_id": "1eb73165-56e8-477e-b9cc-49cef3064d85",
-                    "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "1986-03-03",
-                    "data": [
-                        {
-                            "hab_dat_id": "f9f33671-5e4e-4a48-93cf-f71379205be1",
-                            "hab_dat_amount": "84.61",
-                            "hab_dat_collected_at": "2023-09-11T17:11:27.964652",
-                            "hab_rec_id": "1815d4e5-4b35-4bb8-81ac-1b5eb212d8bf"
-                        },
-                        {
-                            "hab_dat_id": "38e6f850-53ee-4870-8784-81abb97473b8",
-                            "hab_dat_amount": "15.29",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.414509",
-                            "hab_rec_id": "1815d4e5-4b35-4bb8-81ac-1b5eb212d8bf"
-                        },
-                        {
-                            "hab_dat_id": "7a960b6b-5f4f-4ec8-b750-2a009c50b20b",
-                            "hab_dat_amount": "45.17",
-                            "hab_dat_collected_at": "2023-09-11T17:11:40.419940",
-                            "hab_rec_id": "1815d4e5-4b35-4bb8-81ac-1b5eb212d8bf"
-                        },
-                        {
-                            "hab_dat_id": "e8644a24-272a-42ff-8947-f3c5f76e89a0",
-                            "hab_dat_amount": "67.17",
-                            "hab_dat_collected_at": "2023-09-11T17:11:55.564620",
-                            "hab_rec_id": "1815d4e5-4b35-4bb8-81ac-1b5eb212d8bf"
-                        },
-                        {
-                            "hab_dat_id": "3b5e944a-e15d-400d-aae3-2b394450d66b",
-                            "hab_dat_amount": "15.01",
-                            "hab_dat_collected_at": "2023-09-11T17:12:07.773540",
-                            "hab_rec_id": "1815d4e5-4b35-4bb8-81ac-1b5eb212d8bf"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "1e2ca779-893b-4dd2-84d8-93fdc4db5a5d",
-                    "hab_id": "1eb73165-56e8-477e-b9cc-49cef3064d85",
+                    "hab_rec_id": "675e1c16-f7f5-407e-8486-86e536743ab3",
+                    "hab_id": "66d2948e-e365-49bd-b8d8-99ab6b14af21",
                     "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "0337-06-02",
+                    "hab_rec_freq_data": "0529-03-01",
+                    "hab_rec_goal": "17.46",
                     "data": [
                         {
-                            "hab_dat_id": "86196ea9-9fcd-4087-85f3-0b2a903744b0",
-                            "hab_dat_amount": "82.30",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.370082",
-                            "hab_rec_id": "1e2ca779-893b-4dd2-84d8-93fdc4db5a5d"
+                            "hab_dat_id": "ed7a949d-92fa-44e5-9e81-0d0e43d79123",
+                            "hab_dat_amount": "55.18",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.171835",
+                            "hab_rec_id": "675e1c16-f7f5-407e-8486-86e536743ab3"
                         },
                         {
-                            "hab_dat_id": "8b7b99b3-9fd9-41f9-9e62-6f83913c3ac3",
-                            "hab_dat_amount": "21.71",
-                            "hab_dat_collected_at": "2023-09-11T17:11:35.690985",
-                            "hab_rec_id": "1e2ca779-893b-4dd2-84d8-93fdc4db5a5d"
+                            "hab_dat_id": "07a0cc65-6a64-4405-a7c1-961a8ec07cb5",
+                            "hab_dat_amount": "65.46",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.698464",
+                            "hab_rec_id": "675e1c16-f7f5-407e-8486-86e536743ab3"
                         },
                         {
-                            "hab_dat_id": "cbc5c08a-012b-4bc3-9096-2b61b286de96",
-                            "hab_dat_amount": "19.88",
-                            "hab_dat_collected_at": "2023-09-11T17:11:46.030490",
-                            "hab_rec_id": "1e2ca779-893b-4dd2-84d8-93fdc4db5a5d"
+                            "hab_dat_id": "938d2ea6-7c89-4e7f-a956-41cd38b69e73",
+                            "hab_dat_amount": "34.88",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.654911",
+                            "hab_rec_id": "675e1c16-f7f5-407e-8486-86e536743ab3"
                         },
                         {
-                            "hab_dat_id": "8007f904-32f8-468b-ba90-1d9896fedefe",
-                            "hab_dat_amount": "88.46",
-                            "hab_dat_collected_at": "2023-09-11T17:12:02.243421",
-                            "hab_rec_id": "1e2ca779-893b-4dd2-84d8-93fdc4db5a5d"
+                            "hab_dat_id": "a329aef0-8fd2-4d4a-93d3-18e902d62e58",
+                            "hab_dat_amount": "77.87",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.328654",
+                            "hab_rec_id": "675e1c16-f7f5-407e-8486-86e536743ab3"
                         },
                         {
-                            "hab_dat_id": "7710982f-fcd9-4286-a3ec-af69692a8012",
-                            "hab_dat_amount": "60.62",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.261861",
-                            "hab_rec_id": "1e2ca779-893b-4dd2-84d8-93fdc4db5a5d"
+                            "hab_dat_id": "b53cb8b9-37ba-47c9-bdff-bdc9af38178a",
+                            "hab_dat_amount": "23.69",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.109954",
+                            "hab_rec_id": "675e1c16-f7f5-407e-8486-86e536743ab3"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "99fbf9c5-6b9c-42ba-b2ea-f2ae4dd1e310",
+                    "hab_id": "66d2948e-e365-49bd-b8d8-99ab6b14af21",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "2520-07-15",
+                    "hab_rec_goal": "78.24",
+                    "data": [
+                        {
+                            "hab_dat_id": "eb250789-5445-44fc-a34f-00e75c82cd0f",
+                            "hab_dat_amount": "98.49",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.928804",
+                            "hab_rec_id": "99fbf9c5-6b9c-42ba-b2ea-f2ae4dd1e310"
+                        },
+                        {
+                            "hab_dat_id": "3fe3e51b-48e4-4a1e-8a96-96cff5791e99",
+                            "hab_dat_amount": "53.28",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.799483",
+                            "hab_rec_id": "99fbf9c5-6b9c-42ba-b2ea-f2ae4dd1e310"
+                        },
+                        {
+                            "hab_dat_id": "f9c4d181-7c46-43b2-9f53-6b4ce0956c3f",
+                            "hab_dat_amount": "31.16",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.490238",
+                            "hab_rec_id": "99fbf9c5-6b9c-42ba-b2ea-f2ae4dd1e310"
+                        },
+                        {
+                            "hab_dat_id": "cf775963-c98d-4210-b5bb-c3963f15a9d0",
+                            "hab_dat_amount": "93.45",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.281529",
+                            "hab_rec_id": "99fbf9c5-6b9c-42ba-b2ea-f2ae4dd1e310"
+                        },
+                        {
+                            "hab_dat_id": "63a9f13c-ef2d-40ea-ae8c-7eb5f378edb0",
+                            "hab_dat_amount": "24.85",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.941187",
+                            "hab_rec_id": "99fbf9c5-6b9c-42ba-b2ea-f2ae4dd1e310"
                         }
                     ]
                 }
             ]
         },
         {
-            "hab_id": "da7e8f70-4ba5-4b4e-bc27-7c4cf1b10c2a",
-            "hab_name": "eXral70f",
-            "hab_description": "qWlx5qYdabO",
-            "hab_is_favorite": true,
-            "hab_is_yn": true,
-            "hab_color": "6X5A1o",
-            "hab_units": "k8hzt",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
+            "hab_id": "81d9a805-fd30-40a3-9cac-ca7e5b1e7e5d",
+            "hab_name": "3RPYBf",
+            "hab_description": "PkV4TKO38y8v",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "QqmtzM",
+            "hab_units": "Vmskh",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
             "recurrences": [
                 {
-                    "hab_rec_id": "0d94fb87-017d-4592-b710-0581ffaa40a9",
-                    "hab_id": "da7e8f70-4ba5-4b4e-bc27-7c4cf1b10c2a",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "0646-09-23",
-                    "data": [
-                        {
-                            "hab_dat_id": "0f9690d9-2b80-4b5f-89a2-fbdd61d881e6",
-                            "hab_dat_amount": "34.99",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.010742",
-                            "hab_rec_id": "0d94fb87-017d-4592-b710-0581ffaa40a9"
-                        },
-                        {
-                            "hab_dat_id": "b9e8d124-1df7-4540-990c-b3a696f7d182",
-                            "hab_dat_amount": "34.93",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.459818",
-                            "hab_rec_id": "0d94fb87-017d-4592-b710-0581ffaa40a9"
-                        },
-                        {
-                            "hab_dat_id": "ba6ee255-2530-4426-9d54-bdbf8e92c05a",
-                            "hab_dat_amount": "23.54",
-                            "hab_dat_collected_at": "2023-09-11T17:11:40.660126",
-                            "hab_rec_id": "0d94fb87-017d-4592-b710-0581ffaa40a9"
-                        },
-                        {
-                            "hab_dat_id": "03bdbff4-b12e-4f1f-9182-d02d3d18ea7f",
-                            "hab_dat_amount": "60.02",
-                            "hab_dat_collected_at": "2023-09-11T17:11:55.971928",
-                            "hab_rec_id": "0d94fb87-017d-4592-b710-0581ffaa40a9"
-                        },
-                        {
-                            "hab_dat_id": "69432bb3-680b-462a-ba49-c504380d219b",
-                            "hab_dat_amount": "42.35",
-                            "hab_dat_collected_at": "2023-09-11T17:12:08.012993",
-                            "hab_rec_id": "0d94fb87-017d-4592-b710-0581ffaa40a9"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "45c744ab-d303-40c6-9e8a-928ac3497ef6",
-                    "hab_id": "da7e8f70-4ba5-4b4e-bc27-7c4cf1b10c2a",
+                    "hab_rec_id": "43ff8669-b2bc-44fc-8cc5-030c5e67c4ed",
+                    "hab_id": "81d9a805-fd30-40a3-9cac-ca7e5b1e7e5d",
                     "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "1583-10-28",
+                    "hab_rec_freq_data": "0619-05-10",
+                    "hab_rec_goal": "51.04",
                     "data": [
                         {
-                            "hab_dat_id": "06ca71b1-1219-4f20-8457-6b4ecb99630a",
-                            "hab_dat_amount": "31.76",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.423485",
-                            "hab_rec_id": "45c744ab-d303-40c6-9e8a-928ac3497ef6"
+                            "hab_dat_id": "325087c9-fb25-43d3-aab6-9198d29c52d9",
+                            "hab_dat_amount": "43.88",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.209010",
+                            "hab_rec_id": "43ff8669-b2bc-44fc-8cc5-030c5e67c4ed"
                         },
                         {
-                            "hab_dat_id": "4b2cf1a8-c1a3-4661-8208-48c3e39a83bf",
-                            "hab_dat_amount": "71.54",
-                            "hab_dat_collected_at": "2023-09-11T17:11:36.034805",
-                            "hab_rec_id": "45c744ab-d303-40c6-9e8a-928ac3497ef6"
+                            "hab_dat_id": "fd4a6b9a-99a9-4125-9471-4e55b9824cbf",
+                            "hab_dat_amount": "88.26",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.734200",
+                            "hab_rec_id": "43ff8669-b2bc-44fc-8cc5-030c5e67c4ed"
                         },
                         {
-                            "hab_dat_id": "7fcddac0-9b6b-4228-a628-2982e09c9698",
-                            "hab_dat_amount": "39.18",
-                            "hab_dat_collected_at": "2023-09-11T17:11:46.200566",
-                            "hab_rec_id": "45c744ab-d303-40c6-9e8a-928ac3497ef6"
+                            "hab_dat_id": "aafc847d-133b-4fcb-8ce0-847f994e80ad",
+                            "hab_dat_amount": "29.94",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.691494",
+                            "hab_rec_id": "43ff8669-b2bc-44fc-8cc5-030c5e67c4ed"
                         },
                         {
-                            "hab_dat_id": "6878e69b-b9a8-48a7-9fef-b6e2e6e69da6",
-                            "hab_dat_amount": "89.51",
-                            "hab_dat_collected_at": "2023-09-11T17:12:02.493599",
-                            "hab_rec_id": "45c744ab-d303-40c6-9e8a-928ac3497ef6"
+                            "hab_dat_id": "496205a2-3615-45e6-bfac-c1063fbd34e3",
+                            "hab_dat_amount": "78.39",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.372354",
+                            "hab_rec_id": "43ff8669-b2bc-44fc-8cc5-030c5e67c4ed"
                         },
                         {
-                            "hab_dat_id": "33bed563-2aef-45ca-ae26-a4dd760dc39a",
-                            "hab_dat_amount": "85.02",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.298202",
-                            "hab_rec_id": "45c744ab-d303-40c6-9e8a-928ac3497ef6"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hab_id": "922e2122-62c4-4085-9ae5-19f5c21f9f02",
-            "hab_name": "He8wImQ",
-            "hab_description": "DCp8fMx",
-            "hab_is_favorite": true,
-            "hab_is_yn": true,
-            "hab_color": "YpuipQ",
-            "hab_units": "67SBJ",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
-            "recurrences": [
-                {
-                    "hab_rec_id": "93811aae-927f-4a99-bc93-d37cd9956f26",
-                    "hab_id": "922e2122-62c4-4085-9ae5-19f5c21f9f02",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "2244-09-30",
-                    "data": [
-                        {
-                            "hab_dat_id": "b0787061-8919-44ea-ac07-981f03afcd7c",
-                            "hab_dat_amount": "73.39",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.061011",
-                            "hab_rec_id": "93811aae-927f-4a99-bc93-d37cd9956f26"
-                        },
-                        {
-                            "hab_dat_id": "4086d56e-6a33-4067-9b22-19b201bc9dd7",
-                            "hab_dat_amount": "14.00",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.501775",
-                            "hab_rec_id": "93811aae-927f-4a99-bc93-d37cd9956f26"
-                        },
-                        {
-                            "hab_dat_id": "6cae85e1-cc67-4410-ada6-cc6cfcc9fbac",
-                            "hab_dat_amount": "66.64",
-                            "hab_dat_collected_at": "2023-09-11T17:11:42.831738",
-                            "hab_rec_id": "93811aae-927f-4a99-bc93-d37cd9956f26"
-                        },
-                        {
-                            "hab_dat_id": "6a5e57f7-41aa-4454-8c47-806321d8767e",
-                            "hab_dat_amount": "58.46",
-                            "hab_dat_collected_at": "2023-09-11T17:11:56.293179",
-                            "hab_rec_id": "93811aae-927f-4a99-bc93-d37cd9956f26"
-                        },
-                        {
-                            "hab_dat_id": "46abb7ce-8cf9-48c0-ba8c-d55733234a34",
-                            "hab_dat_amount": "78.90",
-                            "hab_dat_collected_at": "2023-09-11T17:12:08.258329",
-                            "hab_rec_id": "93811aae-927f-4a99-bc93-d37cd9956f26"
+                            "hab_dat_id": "a0ac8ee5-5092-4c4e-a885-41c08a427241",
+                            "hab_dat_amount": "38.59",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.148968",
+                            "hab_rec_id": "43ff8669-b2bc-44fc-8cc5-030c5e67c4ed"
                         }
                     ]
                 },
                 {
-                    "hab_rec_id": "4a59a798-cf1a-41fb-9d45-b5756ca61004",
-                    "hab_id": "922e2122-62c4-4085-9ae5-19f5c21f9f02",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "1787-09-15",
+                    "hab_rec_id": "c620acdc-d5f3-44a8-81a2-1ff711c90392",
+                    "hab_id": "81d9a805-fd30-40a3-9cac-ca7e5b1e7e5d",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "1967-07-15",
+                    "hab_rec_goal": "59.74",
                     "data": [
                         {
-                            "hab_dat_id": "7d2c8739-f24d-4067-8735-a56aa3488364",
-                            "hab_dat_amount": "36.48",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.471739",
-                            "hab_rec_id": "4a59a798-cf1a-41fb-9d45-b5756ca61004"
+                            "hab_dat_id": "77f9fa57-bb66-4769-8de2-f85066fd9690",
+                            "hab_dat_amount": "27.40",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.972114",
+                            "hab_rec_id": "c620acdc-d5f3-44a8-81a2-1ff711c90392"
                         },
                         {
-                            "hab_dat_id": "e5ef810f-d436-4d00-93f5-d864bf788e87",
-                            "hab_dat_amount": "55.61",
-                            "hab_dat_collected_at": "2023-09-11T17:11:36.467975",
-                            "hab_rec_id": "4a59a798-cf1a-41fb-9d45-b5756ca61004"
+                            "hab_dat_id": "e77f4277-a6c0-4a80-a31f-7e838ca139e5",
+                            "hab_dat_amount": "68.35",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.840253",
+                            "hab_rec_id": "c620acdc-d5f3-44a8-81a2-1ff711c90392"
                         },
                         {
-                            "hab_dat_id": "b22de553-b44d-4fce-a637-c0c6a9ec1679",
-                            "hab_dat_amount": "93.43",
-                            "hab_dat_collected_at": "2023-09-11T17:11:46.370774",
-                            "hab_rec_id": "4a59a798-cf1a-41fb-9d45-b5756ca61004"
+                            "hab_dat_id": "c063db46-5756-4885-857a-8f134cc23e6b",
+                            "hab_dat_amount": "26.90",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.528796",
+                            "hab_rec_id": "c620acdc-d5f3-44a8-81a2-1ff711c90392"
                         },
                         {
-                            "hab_dat_id": "beabd477-5428-421e-9906-27b5dbe00241",
-                            "hab_dat_amount": "21.91",
-                            "hab_dat_collected_at": "2023-09-11T17:12:02.582747",
-                            "hab_rec_id": "4a59a798-cf1a-41fb-9d45-b5756ca61004"
+                            "hab_dat_id": "5cd9d911-e93e-4ebb-9b34-a1453feb794c",
+                            "hab_dat_amount": "74.04",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.331157",
+                            "hab_rec_id": "c620acdc-d5f3-44a8-81a2-1ff711c90392"
                         },
                         {
-                            "hab_dat_id": "12dcbec8-1b76-4a30-ab0d-7447a1201ad3",
-                            "hab_dat_amount": "58.19",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.334466",
-                            "hab_rec_id": "4a59a798-cf1a-41fb-9d45-b5756ca61004"
+                            "hab_dat_id": "b799e8be-7af3-4468-8f58-733aa1fb8f58",
+                            "hab_dat_amount": "60.24",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.986683",
+                            "hab_rec_id": "c620acdc-d5f3-44a8-81a2-1ff711c90392"
                         }
                     ]
                 }
             ]
         },
         {
-            "hab_id": "e647176e-0ce7-4382-94d4-9398b7d80022",
-            "hab_name": "zdd7hJ2",
-            "hab_description": "SGBN0c66QvDEDm49",
+            "hab_id": "4be474d2-4715-411f-a763-84f0d8c3e2bd",
+            "hab_name": "TXTxdmT2w",
+            "hab_description": "xGslI",
             "hab_is_favorite": false,
             "hab_is_yn": true,
-            "hab_color": "NiYWHM",
-            "hab_units": "WRdA5",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
+            "hab_color": "HR88md",
+            "hab_units": "4sHS2",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
             "recurrences": [
                 {
-                    "hab_rec_id": "f9eefcab-ffdb-43b0-a910-59bc6298090d",
-                    "hab_id": "e647176e-0ce7-4382-94d4-9398b7d80022",
-                    "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "2623-08-28",
+                    "hab_rec_id": "9343da18-de19-4800-b937-44afc42c24d2",
+                    "hab_id": "4be474d2-4715-411f-a763-84f0d8c3e2bd",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "0872-05-11",
+                    "hab_rec_goal": "28.82",
                     "data": [
                         {
-                            "hab_dat_id": "2f6b1d72-1681-4e01-9631-3a7eaf303e25",
-                            "hab_dat_amount": "7.54",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.131056",
-                            "hab_rec_id": "f9eefcab-ffdb-43b0-a910-59bc6298090d"
+                            "hab_dat_id": "9aa8e028-42ed-4c2c-9a22-95178a478ffb",
+                            "hab_dat_amount": "59.17",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.246529",
+                            "hab_rec_id": "9343da18-de19-4800-b937-44afc42c24d2"
                         },
                         {
-                            "hab_dat_id": "0663fdef-92c5-4135-afc1-920577d273eb",
-                            "hab_dat_amount": "55.57",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.551839",
-                            "hab_rec_id": "f9eefcab-ffdb-43b0-a910-59bc6298090d"
+                            "hab_dat_id": "33b8e364-3e75-4e97-83cf-5859b3fd0cff",
+                            "hab_dat_amount": "22.77",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.834907",
+                            "hab_rec_id": "9343da18-de19-4800-b937-44afc42c24d2"
                         },
                         {
-                            "hab_dat_id": "607b0960-36ae-4902-8858-0f93022d49b3",
+                            "hab_dat_id": "9b4c3bb5-8713-4a0f-9fc1-dc57ffb17107",
+                            "hab_dat_amount": "78.15",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.728155",
+                            "hab_rec_id": "9343da18-de19-4800-b937-44afc42c24d2"
+                        },
+                        {
+                            "hab_dat_id": "464f4679-dd71-4288-abe2-2e91ac7cdf0c",
+                            "hab_dat_amount": "88.47",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.415940",
+                            "hab_rec_id": "9343da18-de19-4800-b937-44afc42c24d2"
+                        },
+                        {
+                            "hab_dat_id": "69db8f0e-9b93-4e95-8fef-aa4830482866",
+                            "hab_dat_amount": "15.81",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.190247",
+                            "hab_rec_id": "9343da18-de19-4800-b937-44afc42c24d2"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "ace456d1-61f9-4977-a3fe-794443f119ed",
+                    "hab_id": "4be474d2-4715-411f-a763-84f0d8c3e2bd",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "0976-04-17",
+                    "hab_rec_goal": "15.15",
+                    "data": [
+                        {
+                            "hab_dat_id": "e2c39f69-ecd4-4241-8701-5894230d6612",
+                            "hab_dat_amount": "90.88",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.011409",
+                            "hab_rec_id": "ace456d1-61f9-4977-a3fe-794443f119ed"
+                        },
+                        {
+                            "hab_dat_id": "f2daeeaf-ba47-4f8e-97c9-6f41f6354bd2",
+                            "hab_dat_amount": "24.60",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.882293",
+                            "hab_rec_id": "ace456d1-61f9-4977-a3fe-794443f119ed"
+                        },
+                        {
+                            "hab_dat_id": "208c754c-baa9-413a-a567-6eda305d83b9",
+                            "hab_dat_amount": "83.79",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.570875",
+                            "hab_rec_id": "ace456d1-61f9-4977-a3fe-794443f119ed"
+                        },
+                        {
+                            "hab_dat_id": "d1835a5e-e7fe-48b6-9d99-a2fac22d75b9",
+                            "hab_dat_amount": "99.72",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.372618",
+                            "hab_rec_id": "ace456d1-61f9-4977-a3fe-794443f119ed"
+                        },
+                        {
+                            "hab_dat_id": "1e0209a6-2f21-455a-b71f-1c86ca02f815",
+                            "hab_dat_amount": "87.25",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.022267",
+                            "hab_rec_id": "ace456d1-61f9-4977-a3fe-794443f119ed"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "3252aa0f-3441-4283-badc-8c35ef0177bd",
+            "hab_name": "ofr5wZfBXmYFw",
+            "hab_description": "Pr3gQAPq",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "eN6Ax4",
+            "hab_units": "6aHbc",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
+            "recurrences": [
+                {
+                    "hab_rec_id": "d5dd5629-a9f0-433e-8e65-ca1dbc8778c4",
+                    "hab_id": "3252aa0f-3441-4283-badc-8c35ef0177bd",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "1392-06-12",
+                    "hab_rec_goal": "23.28",
+                    "data": [
+                        {
+                            "hab_dat_id": "6753da8b-8e3e-4cd3-a783-56bc247031bf",
+                            "hab_dat_amount": "22.16",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.285984",
+                            "hab_rec_id": "d5dd5629-a9f0-433e-8e65-ca1dbc8778c4"
+                        },
+                        {
+                            "hab_dat_id": "20a27a84-b09c-4bf4-a329-b818ea0c2ff1",
+                            "hab_dat_amount": "45.04",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.935292",
+                            "hab_rec_id": "d5dd5629-a9f0-433e-8e65-ca1dbc8778c4"
+                        },
+                        {
+                            "hab_dat_id": "5ae608c4-7ce9-467c-a7bd-0bdd78526c2c",
+                            "hab_dat_amount": "28.55",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.765667",
+                            "hab_rec_id": "d5dd5629-a9f0-433e-8e65-ca1dbc8778c4"
+                        },
+                        {
+                            "hab_dat_id": "fe7b2945-8b10-4987-899f-36d310724934",
+                            "hab_dat_amount": "42.84",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.475544",
+                            "hab_rec_id": "d5dd5629-a9f0-433e-8e65-ca1dbc8778c4"
+                        },
+                        {
+                            "hab_dat_id": "7a0ceb6a-b331-4a6c-8042-e209ee722557",
+                            "hab_dat_amount": "24.59",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.228376",
+                            "hab_rec_id": "d5dd5629-a9f0-433e-8e65-ca1dbc8778c4"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "867a7e1b-d8f2-4bb4-8c7e-8316a720878c",
+                    "hab_id": "3252aa0f-3441-4283-badc-8c35ef0177bd",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "0247-02-10",
+                    "hab_rec_goal": "11.01",
+                    "data": [
+                        {
+                            "hab_dat_id": "76c3eabe-f209-443d-aa06-6431079ddc00",
+                            "hab_dat_amount": "72.71",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.047139",
+                            "hab_rec_id": "867a7e1b-d8f2-4bb4-8c7e-8316a720878c"
+                        },
+                        {
+                            "hab_dat_id": "e254d83a-1386-46fb-ba41-1716f9bfc7c6",
+                            "hab_dat_amount": "49.14",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.943063",
+                            "hab_rec_id": "867a7e1b-d8f2-4bb4-8c7e-8316a720878c"
+                        },
+                        {
+                            "hab_dat_id": "da930ca7-a519-42c8-8ec3-031ad68dc4d2",
+                            "hab_dat_amount": "31.05",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.610967",
+                            "hab_rec_id": "867a7e1b-d8f2-4bb4-8c7e-8316a720878c"
+                        },
+                        {
+                            "hab_dat_id": "71d34129-2e73-4eec-a123-cf42a23d79f0",
+                            "hab_dat_amount": "13.63",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.413628",
+                            "hab_rec_id": "867a7e1b-d8f2-4bb4-8c7e-8316a720878c"
+                        },
+                        {
+                            "hab_dat_id": "c1aecc6d-9548-4bb6-9c4d-268b99fc8629",
+                            "hab_dat_amount": "33.30",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.064572",
+                            "hab_rec_id": "867a7e1b-d8f2-4bb4-8c7e-8316a720878c"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "26dbd19c-4800-4bfb-b72a-13d680f34ce7",
+            "hab_name": "a56I6zzDwnJI",
+            "hab_description": "yMkzR1D",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "l0EssB",
+            "hab_units": "2L24c",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
+            "recurrences": [
+                {
+                    "hab_rec_id": "8a49e15e-c923-4a75-8d5c-281a0da7279e",
+                    "hab_id": "26dbd19c-4800-4bfb-b72a-13d680f34ce7",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "0187-01-09",
+                    "hab_rec_goal": "3.18",
+                    "data": [
+                        {
+                            "hab_dat_id": "2e8afb96-fc4f-41c9-968c-4df654479ba6",
+                            "hab_dat_amount": "59.69",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.321226",
+                            "hab_rec_id": "8a49e15e-c923-4a75-8d5c-281a0da7279e"
+                        },
+                        {
+                            "hab_dat_id": "34ae2e16-eb5c-485d-bf69-400e3ff9b12d",
+                            "hab_dat_amount": "85.82",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.994534",
+                            "hab_rec_id": "8a49e15e-c923-4a75-8d5c-281a0da7279e"
+                        },
+                        {
+                            "hab_dat_id": "1a3359d2-fd3c-42b8-983f-1b8ac55b2d76",
+                            "hab_dat_amount": "15.58",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.816587",
+                            "hab_rec_id": "8a49e15e-c923-4a75-8d5c-281a0da7279e"
+                        },
+                        {
+                            "hab_dat_id": "34ff585b-47bc-4f98-a318-e29e5416cf6e",
+                            "hab_dat_amount": "78.58",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.528661",
+                            "hab_rec_id": "8a49e15e-c923-4a75-8d5c-281a0da7279e"
+                        },
+                        {
+                            "hab_dat_id": "e6861d29-7e50-4eb8-89ab-e57a1cf9f707",
+                            "hab_dat_amount": "95.48",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.271620",
+                            "hab_rec_id": "8a49e15e-c923-4a75-8d5c-281a0da7279e"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "3232180c-2850-4fd0-ab7e-12d59d628a55",
+                    "hab_id": "26dbd19c-4800-4bfb-b72a-13d680f34ce7",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "1171-07-06",
+                    "hab_rec_goal": "41.04",
+                    "data": [
+                        {
+                            "hab_dat_id": "9b2628b0-ce57-4c18-b6e0-690843f58692",
+                            "hab_dat_amount": "76.86",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.083370",
+                            "hab_rec_id": "3232180c-2850-4fd0-ab7e-12d59d628a55"
+                        },
+                        {
+                            "hab_dat_id": "e98e10bf-9009-4bef-86b3-49f90866f5a9",
+                            "hab_dat_amount": "29.81",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.989381",
+                            "hab_rec_id": "3232180c-2850-4fd0-ab7e-12d59d628a55"
+                        },
+                        {
+                            "hab_dat_id": "5aee2707-ddce-4fdc-b8bd-4d425cac4ef7",
+                            "hab_dat_amount": "16.88",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.649358",
+                            "hab_rec_id": "3232180c-2850-4fd0-ab7e-12d59d628a55"
+                        },
+                        {
+                            "hab_dat_id": "20e98b0f-ff64-4caf-b268-bb8ae82a50af",
                             "hab_dat_amount": "14.94",
-                            "hab_dat_collected_at": "2023-09-11T17:11:43.087710",
-                            "hab_rec_id": "f9eefcab-ffdb-43b0-a910-59bc6298090d"
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.455738",
+                            "hab_rec_id": "3232180c-2850-4fd0-ab7e-12d59d628a55"
                         },
                         {
-                            "hab_dat_id": "0b0f0967-7899-4bfd-9ba6-539f461dcfcf",
-                            "hab_dat_amount": "99.31",
-                            "hab_dat_collected_at": "2023-09-11T17:11:56.680881",
-                            "hab_rec_id": "f9eefcab-ffdb-43b0-a910-59bc6298090d"
-                        },
-                        {
-                            "hab_dat_id": "dbe684c4-a4bd-417a-a5aa-c826580b11e2",
-                            "hab_dat_amount": "22.45",
-                            "hab_dat_collected_at": "2023-09-11T17:12:08.392734",
-                            "hab_rec_id": "f9eefcab-ffdb-43b0-a910-59bc6298090d"
-                        }
-                    ]
-                },
-                {
-                    "hab_rec_id": "092a1f52-7de1-4853-b7a8-d9bc35342234",
-                    "hab_id": "e647176e-0ce7-4382-94d4-9398b7d80022",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "1816-12-04",
-                    "data": [
-                        {
-                            "hab_dat_id": "9e35f422-589d-4997-ad2d-d87b82b9c730",
-                            "hab_dat_amount": "38.78",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.513409",
-                            "hab_rec_id": "092a1f52-7de1-4853-b7a8-d9bc35342234"
-                        },
-                        {
-                            "hab_dat_id": "5bcbd055-322e-427b-9079-df01e2eca7c3",
-                            "hab_dat_amount": "78.49",
-                            "hab_dat_collected_at": "2023-09-11T17:11:36.871357",
-                            "hab_rec_id": "092a1f52-7de1-4853-b7a8-d9bc35342234"
-                        },
-                        {
-                            "hab_dat_id": "f5bee7e7-b9a9-4d55-af1f-dc3e69626e98",
-                            "hab_dat_amount": "81.60",
-                            "hab_dat_collected_at": "2023-09-11T17:11:46.539248",
-                            "hab_rec_id": "092a1f52-7de1-4853-b7a8-d9bc35342234"
-                        },
-                        {
-                            "hab_dat_id": "74278263-53f9-48ff-a888-2399a617e987",
-                            "hab_dat_amount": "4.93",
-                            "hab_dat_collected_at": "2023-09-11T17:12:02.636459",
-                            "hab_rec_id": "092a1f52-7de1-4853-b7a8-d9bc35342234"
-                        },
-                        {
-                            "hab_dat_id": "b07d774a-9090-43e2-8a63-e71ebff9d486",
-                            "hab_dat_amount": "37.18",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.377496",
-                            "hab_rec_id": "092a1f52-7de1-4853-b7a8-d9bc35342234"
+                            "hab_dat_id": "76ecb948-7ea8-41e3-9611-21a44a53c277",
+                            "hab_dat_amount": "25.55",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.106116",
+                            "hab_rec_id": "3232180c-2850-4fd0-ab7e-12d59d628a55"
                         }
                     ]
                 }
             ]
         },
         {
-            "hab_id": "ed48bfc6-d7df-47fe-97b2-06e2d9d51891",
-            "hab_name": "EPZqbcQXK6eIjD4btPY",
-            "hab_description": "YNQeiu7gcphobsl67",
+            "hab_id": "bfb1ee9c-a31a-42bf-8024-f2657648d1f6",
+            "hab_name": "7wWFTmeodGfVeZR9aX",
+            "hab_description": "GdXdudKO4MFTnZDKy",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "kI7PTP",
+            "hab_units": "VWPc2",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
+            "recurrences": [
+                {
+                    "hab_rec_id": "584baa1a-638a-46ac-9948-4229c9e0f859",
+                    "hab_id": "bfb1ee9c-a31a-42bf-8024-f2657648d1f6",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "0138-12-18",
+                    "hab_rec_goal": "67.63",
+                    "data": [
+                        {
+                            "hab_dat_id": "e5e1a8a3-a797-4d76-8d81-9cc66a8a2b16",
+                            "hab_dat_amount": "39.68",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.355776",
+                            "hab_rec_id": "584baa1a-638a-46ac-9948-4229c9e0f859"
+                        },
+                        {
+                            "hab_dat_id": "fabb4168-5792-4d30-b12a-63903c96d0df",
+                            "hab_dat_amount": "69.27",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.077180",
+                            "hab_rec_id": "584baa1a-638a-46ac-9948-4229c9e0f859"
+                        },
+                        {
+                            "hab_dat_id": "540189fd-7e91-4e5a-9bfe-d6bfe28edcdd",
+                            "hab_dat_amount": "25.32",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.874691",
+                            "hab_rec_id": "584baa1a-638a-46ac-9948-4229c9e0f859"
+                        },
+                        {
+                            "hab_dat_id": "4f3aaa72-ddf2-49d6-9c39-ce4027657374",
+                            "hab_dat_amount": "58.68",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.583023",
+                            "hab_rec_id": "584baa1a-638a-46ac-9948-4229c9e0f859"
+                        },
+                        {
+                            "hab_dat_id": "25a1b6ac-128e-4639-9fbf-e1362407680b",
+                            "hab_dat_amount": "75.47",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.315495",
+                            "hab_rec_id": "584baa1a-638a-46ac-9948-4229c9e0f859"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "883d35dc-c894-4e89-9d61-6bf1eb21199c",
+                    "hab_id": "bfb1ee9c-a31a-42bf-8024-f2657648d1f6",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "2393-03-04",
+                    "hab_rec_goal": "51.50",
+                    "data": [
+                        {
+                            "hab_dat_id": "35b638d6-6230-4169-a7f3-8d364bab18a0",
+                            "hab_dat_amount": "25.60",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.120161",
+                            "hab_rec_id": "883d35dc-c894-4e89-9d61-6bf1eb21199c"
+                        },
+                        {
+                            "hab_dat_id": "083ab565-d980-458f-a67b-b57ca3e5ef45",
+                            "hab_dat_amount": "36.87",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.028456",
+                            "hab_rec_id": "883d35dc-c894-4e89-9d61-6bf1eb21199c"
+                        },
+                        {
+                            "hab_dat_id": "88b7ba80-cb45-4464-bbb4-3c9b8ef6c71d",
+                            "hab_dat_amount": "3.09",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.687824",
+                            "hab_rec_id": "883d35dc-c894-4e89-9d61-6bf1eb21199c"
+                        },
+                        {
+                            "hab_dat_id": "4583853d-b5ce-4c0a-af92-c93cc72d9dca",
+                            "hab_dat_amount": "26.23",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.498659",
+                            "hab_rec_id": "883d35dc-c894-4e89-9d61-6bf1eb21199c"
+                        },
+                        {
+                            "hab_dat_id": "e9182a08-8a5b-4daf-872d-f12f0177a806",
+                            "hab_dat_amount": "12.74",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.148056",
+                            "hab_rec_id": "883d35dc-c894-4e89-9d61-6bf1eb21199c"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "16b45ad9-2824-4953-8024-d861cb0b15f0",
+            "hab_name": "8sVsQ6dVm0B2zvXDr",
+            "hab_description": "0aJrBFD",
             "hab_is_favorite": true,
             "hab_is_yn": true,
-            "hab_color": "S1mxPS",
-            "hab_units": "dASBd",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "f8e152ae-98d1-4878-a870-0952f3504d8d",
+            "hab_color": "AgiB9T",
+            "hab_units": "b6hab",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
             "recurrences": [
                 {
-                    "hab_rec_id": "573c7ab1-e12d-4b9a-b05c-956bc643d47d",
-                    "hab_id": "ed48bfc6-d7df-47fe-97b2-06e2d9d51891",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "2572-01-15",
+                    "hab_rec_id": "fa26bf55-4b10-4cff-ad62-6acd0792d789",
+                    "hab_id": "16b45ad9-2824-4953-8024-d861cb0b15f0",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "1153-02-08",
+                    "hab_rec_goal": "8.45",
                     "data": [
                         {
-                            "hab_dat_id": "41f5266d-74d9-4fe7-8702-2c26df552bd6",
-                            "hab_dat_amount": "40.90",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.282086",
-                            "hab_rec_id": "573c7ab1-e12d-4b9a-b05c-956bc643d47d"
+                            "hab_dat_id": "75768f7e-7f5d-41ce-be0d-5689f69542ae",
+                            "hab_dat_amount": "33.86",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.389741",
+                            "hab_rec_id": "fa26bf55-4b10-4cff-ad62-6acd0792d789"
                         },
                         {
-                            "hab_dat_id": "0c086025-61ce-4204-bbb1-27f0bb2748d7",
-                            "hab_dat_amount": "85.19",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.613244",
-                            "hab_rec_id": "573c7ab1-e12d-4b9a-b05c-956bc643d47d"
+                            "hab_dat_id": "839b98d9-3013-4a41-b2b5-f84ca7ad33a8",
+                            "hab_dat_amount": "53.96",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.133250",
+                            "hab_rec_id": "fa26bf55-4b10-4cff-ad62-6acd0792d789"
                         },
                         {
-                            "hab_dat_id": "8b0bb1f7-6b30-4fee-9cfa-aeea601ff972",
-                            "hab_dat_amount": "10.43",
-                            "hab_dat_collected_at": "2023-09-11T17:11:43.246682",
-                            "hab_rec_id": "573c7ab1-e12d-4b9a-b05c-956bc643d47d"
+                            "hab_dat_id": "02d798cd-b584-4acd-be4d-5ee3620c058a",
+                            "hab_dat_amount": "25.51",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.911822",
+                            "hab_rec_id": "fa26bf55-4b10-4cff-ad62-6acd0792d789"
                         },
                         {
-                            "hab_dat_id": "b9044e76-01f0-43e4-968c-15fe600fa720",
-                            "hab_dat_amount": "65.78",
-                            "hab_dat_collected_at": "2023-09-11T17:11:59.355218",
-                            "hab_rec_id": "573c7ab1-e12d-4b9a-b05c-956bc643d47d"
+                            "hab_dat_id": "ae6bf2af-3329-4a36-b810-715a2b9d83b6",
+                            "hab_dat_amount": "29.86",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.640548",
+                            "hab_rec_id": "fa26bf55-4b10-4cff-ad62-6acd0792d789"
                         },
                         {
-                            "hab_dat_id": "90ab27c8-620c-4a57-b50f-efc3ec9397a1",
-                            "hab_dat_amount": "71.94",
-                            "hab_dat_collected_at": "2023-09-11T17:12:08.596950",
-                            "hab_rec_id": "573c7ab1-e12d-4b9a-b05c-956bc643d47d"
+                            "hab_dat_id": "cd785e54-e649-46fd-965d-7889be1a1f90",
+                            "hab_dat_amount": "20.24",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.356986",
+                            "hab_rec_id": "fa26bf55-4b10-4cff-ad62-6acd0792d789"
                         }
                     ]
                 },
                 {
-                    "hab_rec_id": "6ec5d2df-5472-4348-8c2b-04d3a0bc1629",
-                    "hab_id": "ed48bfc6-d7df-47fe-97b2-06e2d9d51891",
-                    "hab_rec_freq_type": "monthly",
-                    "hab_rec_freq_data": "1825-02-06",
+                    "hab_rec_id": "855e6a41-4639-4dea-b6b6-100bc5141d00",
+                    "hab_id": "16b45ad9-2824-4953-8024-d861cb0b15f0",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "1585-07-12",
+                    "hab_rec_goal": "38.11",
                     "data": [
                         {
-                            "hab_dat_id": "2eac17e6-0cfd-4a04-ac11-fca2862d3753",
-                            "hab_dat_amount": "0.87",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.564688",
-                            "hab_rec_id": "6ec5d2df-5472-4348-8c2b-04d3a0bc1629"
+                            "hab_dat_id": "f60c5349-d02d-4555-a49a-7eef04d30fa6",
+                            "hab_dat_amount": "50.87",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.155778",
+                            "hab_rec_id": "855e6a41-4639-4dea-b6b6-100bc5141d00"
                         },
                         {
-                            "hab_dat_id": "231e5e7f-b16f-4880-9734-bd6b1b06d4e2",
-                            "hab_dat_amount": "95.53",
-                            "hab_dat_collected_at": "2023-09-11T17:11:37.107641",
-                            "hab_rec_id": "6ec5d2df-5472-4348-8c2b-04d3a0bc1629"
+                            "hab_dat_id": "092361d7-c72a-4241-b246-1759920c2acc",
+                            "hab_dat_amount": "16.23",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.066206",
+                            "hab_rec_id": "855e6a41-4639-4dea-b6b6-100bc5141d00"
                         },
                         {
-                            "hab_dat_id": "d467385a-ff27-4c3d-9cbf-33810fbfaedc",
-                            "hab_dat_amount": "12.60",
-                            "hab_dat_collected_at": "2023-09-11T17:11:46.684495",
-                            "hab_rec_id": "6ec5d2df-5472-4348-8c2b-04d3a0bc1629"
+                            "hab_dat_id": "7fc3f68f-c18c-4308-8e20-889588f2612e",
+                            "hab_dat_amount": "0.40",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.724885",
+                            "hab_rec_id": "855e6a41-4639-4dea-b6b6-100bc5141d00"
                         },
                         {
-                            "hab_dat_id": "3f65112f-e4cb-49f5-ab3d-d955616c3b36",
-                            "hab_dat_amount": "27.29",
-                            "hab_dat_collected_at": "2023-09-11T17:12:02.684208",
-                            "hab_rec_id": "6ec5d2df-5472-4348-8c2b-04d3a0bc1629"
+                            "hab_dat_id": "4b6773a0-776b-4b2f-9dd7-f6ccc3da68c7",
+                            "hab_dat_amount": "69.21",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.540687",
+                            "hab_rec_id": "855e6a41-4639-4dea-b6b6-100bc5141d00"
                         },
                         {
-                            "hab_dat_id": "adfc64e2-4f31-46d1-9834-b2672effe559",
-                            "hab_dat_amount": "8.93",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.420683",
-                            "hab_rec_id": "6ec5d2df-5472-4348-8c2b-04d3a0bc1629"
+                            "hab_dat_id": "28d7a0f8-1150-4066-a5f3-92c40c02c4f7",
+                            "hab_dat_amount": "80.28",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.189234",
+                            "hab_rec_id": "855e6a41-4639-4dea-b6b6-100bc5141d00"
                         }
                     ]
                 }
             ]
         },
         {
-            "hab_id": "a666facb-4a20-4de6-a7e7-1455f745b04e",
-            "hab_name": "sVt7erwJ",
-            "hab_description": "FOj4mt6OoX2mgFxr",
+            "hab_id": "972c67a4-bc43-4f09-abb2-d8952081450e",
+            "hab_name": "BfLnCbfXlp",
+            "hab_description": "3A8bOl",
             "hab_is_favorite": true,
             "hab_is_yn": false,
-            "hab_color": "ahQvD8",
-            "hab_units": "iyP3d",
-            "usr_id": "iq5vrI8vgvII1FZx",
-            "cat_id": "89c1cdd7-ee7f-4e70-bff5-1e22eb91c49d",
+            "hab_color": "NK1nYZ",
+            "hab_units": "4a977",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
             "recurrences": [
                 {
-                    "hab_rec_id": "fd9288f2-ff67-4ecc-8c1d-b864f5b9849d",
-                    "hab_id": "a666facb-4a20-4de6-a7e7-1455f745b04e",
-                    "hab_rec_freq_type": "daily",
-                    "hab_rec_freq_data": "2632-02-17",
+                    "hab_rec_id": "90f85305-9c9b-4d75-af1f-14c739fccb5f",
+                    "hab_id": "972c67a4-bc43-4f09-abb2-d8952081450e",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "1301-07-26",
+                    "hab_rec_goal": "8.25",
                     "data": [
                         {
-                            "hab_dat_id": "cdb9e866-bc1b-4b70-bd7e-a313555462b2",
-                            "hab_dat_amount": "79.38",
-                            "hab_dat_collected_at": "2023-09-11T17:11:28.332313",
-                            "hab_rec_id": "fd9288f2-ff67-4ecc-8c1d-b864f5b9849d"
+                            "hab_dat_id": "6191754a-0e28-41b1-bce6-83baa0a4b050",
+                            "hab_dat_amount": "67.14",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.424470",
+                            "hab_rec_id": "90f85305-9c9b-4d75-af1f-14c739fccb5f"
                         },
                         {
-                            "hab_dat_id": "df2d6c25-a594-4e08-a768-5dd9dda1e279",
-                            "hab_dat_amount": "11.27",
-                            "hab_dat_collected_at": "2023-09-11T17:11:30.666038",
-                            "hab_rec_id": "fd9288f2-ff67-4ecc-8c1d-b864f5b9849d"
+                            "hab_dat_id": "3605d257-3fef-4bd3-a496-a1172ad9b6e0",
+                            "hab_dat_amount": "73.77",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.184340",
+                            "hab_rec_id": "90f85305-9c9b-4d75-af1f-14c739fccb5f"
                         },
                         {
-                            "hab_dat_id": "4e682e5a-7cf8-465a-b724-561e4addfa59",
-                            "hab_dat_amount": "95.36",
-                            "hab_dat_collected_at": "2023-09-11T17:11:43.415396",
-                            "hab_rec_id": "fd9288f2-ff67-4ecc-8c1d-b864f5b9849d"
+                            "hab_dat_id": "e47a30af-3e8f-47cd-9b48-8807f1362e5c",
+                            "hab_dat_amount": "5.60",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.958132",
+                            "hab_rec_id": "90f85305-9c9b-4d75-af1f-14c739fccb5f"
                         },
                         {
-                            "hab_dat_id": "5aeff2bb-e3a8-42d4-8164-de394f06d670",
-                            "hab_dat_amount": "66.87",
-                            "hab_dat_collected_at": "2023-09-11T17:11:59.733283",
-                            "hab_rec_id": "fd9288f2-ff67-4ecc-8c1d-b864f5b9849d"
+                            "hab_dat_id": "fce655ce-c882-409d-a877-04bc8ba4a8d7",
+                            "hab_dat_amount": "39.52",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.682099",
+                            "hab_rec_id": "90f85305-9c9b-4d75-af1f-14c739fccb5f"
                         },
                         {
-                            "hab_dat_id": "dc04577f-c0cb-4073-94ca-c15f6c291d68",
-                            "hab_dat_amount": "10.37",
-                            "hab_dat_collected_at": "2023-09-11T17:12:08.852944",
-                            "hab_rec_id": "fd9288f2-ff67-4ecc-8c1d-b864f5b9849d"
+                            "hab_dat_id": "c6958340-6b65-436d-aaba-1344a670906f",
+                            "hab_dat_amount": "30.16",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.398113",
+                            "hab_rec_id": "90f85305-9c9b-4d75-af1f-14c739fccb5f"
                         }
                     ]
                 },
                 {
-                    "hab_rec_id": "d25f2245-6073-4f4b-ae13-f98229aa71e2",
-                    "hab_id": "a666facb-4a20-4de6-a7e7-1455f745b04e",
-                    "hab_rec_freq_type": "weekly",
-                    "hab_rec_freq_data": "2910-01-04",
+                    "hab_rec_id": "9da1a95c-fe7b-4005-95f1-cf1ed00a23b7",
+                    "hab_id": "972c67a4-bc43-4f09-abb2-d8952081450e",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "1257-12-29",
+                    "hab_rec_goal": "71.01",
                     "data": [
                         {
-                            "hab_dat_id": "97bca88c-207b-41e3-aa0c-2e00064f15b7",
-                            "hab_dat_amount": "33.92",
-                            "hab_dat_collected_at": "2023-09-11T17:11:29.604632",
-                            "hab_rec_id": "d25f2245-6073-4f4b-ae13-f98229aa71e2"
+                            "hab_dat_id": "8a74f6be-d31d-426b-81bb-e23ee2f1aceb",
+                            "hab_dat_amount": "90.82",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.192175",
+                            "hab_rec_id": "9da1a95c-fe7b-4005-95f1-cf1ed00a23b7"
                         },
                         {
-                            "hab_dat_id": "a1782dc9-444e-40c3-99b4-348b7f933ac0",
-                            "hab_dat_amount": "34.13",
-                            "hab_dat_collected_at": "2023-09-11T17:11:37.340704",
-                            "hab_rec_id": "d25f2245-6073-4f4b-ae13-f98229aa71e2"
+                            "hab_dat_id": "2b1d5bd9-6876-494f-8bed-4ae47136bb98",
+                            "hab_dat_amount": "12.67",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.105514",
+                            "hab_rec_id": "9da1a95c-fe7b-4005-95f1-cf1ed00a23b7"
                         },
                         {
-                            "hab_dat_id": "3db5584f-2a49-4cf6-b69f-1730f31394c8",
-                            "hab_dat_amount": "67.96",
-                            "hab_dat_collected_at": "2023-09-11T17:11:46.827758",
-                            "hab_rec_id": "d25f2245-6073-4f4b-ae13-f98229aa71e2"
+                            "hab_dat_id": "a03ca683-f50d-462a-b1d9-370c76be871d",
+                            "hab_dat_amount": "60.29",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.764597",
+                            "hab_rec_id": "9da1a95c-fe7b-4005-95f1-cf1ed00a23b7"
                         },
                         {
-                            "hab_dat_id": "75a78fa1-df30-4191-a433-d0f00956abe2",
-                            "hab_dat_amount": "45.62",
-                            "hab_dat_collected_at": "2023-09-11T17:12:03.017095",
-                            "hab_rec_id": "d25f2245-6073-4f4b-ae13-f98229aa71e2"
+                            "hab_dat_id": "4e7ed363-c64a-462f-be5c-1b4ae1c0a3e4",
+                            "hab_dat_amount": "96.82",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.581866",
+                            "hab_rec_id": "9da1a95c-fe7b-4005-95f1-cf1ed00a23b7"
                         },
                         {
-                            "hab_dat_id": "f8082fd1-0c0a-4445-8f1f-bc6c76b937c7",
-                            "hab_dat_amount": "53.93",
-                            "hab_dat_collected_at": "2023-09-11T17:12:12.462965",
-                            "hab_rec_id": "d25f2245-6073-4f4b-ae13-f98229aa71e2"
+                            "hab_dat_id": "a9657559-c7ec-4841-be46-806319e29a5e",
+                            "hab_dat_amount": "11.90",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.231445",
+                            "hab_rec_id": "9da1a95c-fe7b-4005-95f1-cf1ed00a23b7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "8259f706-0499-4fcf-a6b4-4e82605e1f82",
+            "hab_name": "tnuVVzUk",
+            "hab_description": "OnFqjAny4a4nQSWrB3V",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "ZqOz1g",
+            "hab_units": "BxLR1",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
+            "recurrences": [
+                {
+                    "hab_rec_id": "a4078e11-a4ff-4ae7-9941-85e93e1d4819",
+                    "hab_id": "8259f706-0499-4fcf-a6b4-4e82605e1f82",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "1441-07-04",
+                    "hab_rec_goal": "93.85",
+                    "data": [
+                        {
+                            "hab_dat_id": "bc498e8d-6ea2-4e93-b4b5-426bac1fd0c4",
+                            "hab_dat_amount": "12.11",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.464877",
+                            "hab_rec_id": "a4078e11-a4ff-4ae7-9941-85e93e1d4819"
+                        },
+                        {
+                            "hab_dat_id": "ec9f11f0-4ab0-4f74-931a-025710ddcc93",
+                            "hab_dat_amount": "71.92",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.233877",
+                            "hab_rec_id": "a4078e11-a4ff-4ae7-9941-85e93e1d4819"
+                        },
+                        {
+                            "hab_dat_id": "347c8efe-d486-4cc3-b94b-a26ddcf2b24c",
+                            "hab_dat_amount": "92.49",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.998241",
+                            "hab_rec_id": "a4078e11-a4ff-4ae7-9941-85e93e1d4819"
+                        },
+                        {
+                            "hab_dat_id": "f586eac8-54fa-4e63-acfe-1987cf55e2c4",
+                            "hab_dat_amount": "53.75",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.758366",
+                            "hab_rec_id": "a4078e11-a4ff-4ae7-9941-85e93e1d4819"
+                        },
+                        {
+                            "hab_dat_id": "48abe179-8edb-43e5-ba25-71b62a3cca87",
+                            "hab_dat_amount": "27.10",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.440685",
+                            "hab_rec_id": "a4078e11-a4ff-4ae7-9941-85e93e1d4819"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "7d5d84ff-7248-4bbe-909f-d7f6308cabe0",
+                    "hab_id": "8259f706-0499-4fcf-a6b4-4e82605e1f82",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "0469-08-12",
+                    "hab_rec_goal": "67.12",
+                    "data": [
+                        {
+                            "hab_dat_id": "0e1a8be5-2a86-41ce-8a04-97eaa45e488b",
+                            "hab_dat_amount": "28.21",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.228642",
+                            "hab_rec_id": "7d5d84ff-7248-4bbe-909f-d7f6308cabe0"
+                        },
+                        {
+                            "hab_dat_id": "b7e672cd-ad32-4510-9e1f-e75e0d498cdb",
+                            "hab_dat_amount": "50.63",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.147594",
+                            "hab_rec_id": "7d5d84ff-7248-4bbe-909f-d7f6308cabe0"
+                        },
+                        {
+                            "hab_dat_id": "bbeff208-34ba-48c6-a1ac-65dab16463d0",
+                            "hab_dat_amount": "30.60",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.815319",
+                            "hab_rec_id": "7d5d84ff-7248-4bbe-909f-d7f6308cabe0"
+                        },
+                        {
+                            "hab_dat_id": "52391af8-8612-446a-9d94-ab500da93ab7",
+                            "hab_dat_amount": "30.68",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.623420",
+                            "hab_rec_id": "7d5d84ff-7248-4bbe-909f-d7f6308cabe0"
+                        },
+                        {
+                            "hab_dat_id": "70ed8a9f-4a5b-477c-b0fe-9e5f13725843",
+                            "hab_dat_amount": "36.84",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.272159",
+                            "hab_rec_id": "7d5d84ff-7248-4bbe-909f-d7f6308cabe0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "bc2b7675-154b-4dee-8376-05a7c0693788",
+            "hab_name": "4VtRO9Zr",
+            "hab_description": "kPDDxxgUBBh",
+            "hab_is_favorite": true,
+            "hab_is_yn": false,
+            "hab_color": "vsdiJy",
+            "hab_units": "ch2d7",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
+            "recurrences": [
+                {
+                    "hab_rec_id": "389d0f94-c567-4f7a-936d-c7af40b31ab0",
+                    "hab_id": "bc2b7675-154b-4dee-8376-05a7c0693788",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "0719-02-02",
+                    "hab_rec_goal": "32.22",
+                    "data": [
+                        {
+                            "hab_dat_id": "e74c0c79-a14c-4b4d-8a63-3161ca82dd71",
+                            "hab_dat_amount": "0.05",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.504746",
+                            "hab_rec_id": "389d0f94-c567-4f7a-936d-c7af40b31ab0"
+                        },
+                        {
+                            "hab_dat_id": "66bcbd4e-7af1-4c37-a5ca-c4d3f3ed5215",
+                            "hab_dat_amount": "70.78",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.286010",
+                            "hab_rec_id": "389d0f94-c567-4f7a-936d-c7af40b31ab0"
+                        },
+                        {
+                            "hab_dat_id": "099ad4e8-52f2-45e0-b1a4-80a5c5a228dd",
+                            "hab_dat_amount": "66.58",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.039004",
+                            "hab_rec_id": "389d0f94-c567-4f7a-936d-c7af40b31ab0"
+                        },
+                        {
+                            "hab_dat_id": "843c4f1b-9230-40c2-80f0-73feaafc6301",
+                            "hab_dat_amount": "75.24",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.824954",
+                            "hab_rec_id": "389d0f94-c567-4f7a-936d-c7af40b31ab0"
+                        },
+                        {
+                            "hab_dat_id": "37b18219-ff3d-4aa5-b3d5-3d46b65963b0",
+                            "hab_dat_amount": "97.46",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.481538",
+                            "hab_rec_id": "389d0f94-c567-4f7a-936d-c7af40b31ab0"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "f002f109-1e1b-4d95-8876-cd04b89b33e8",
+                    "hab_id": "bc2b7675-154b-4dee-8376-05a7c0693788",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "0185-06-13",
+                    "hab_rec_goal": "32.08",
+                    "data": [
+                        {
+                            "hab_dat_id": "5c7b1aff-c865-413a-b9a9-89bb3fccd8eb",
+                            "hab_dat_amount": "23.04",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.266916",
+                            "hab_rec_id": "f002f109-1e1b-4d95-8876-cd04b89b33e8"
+                        },
+                        {
+                            "hab_dat_id": "0bfffdd5-7e7c-4f13-8106-8703ffd8614d",
+                            "hab_dat_amount": "58.24",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.188562",
+                            "hab_rec_id": "f002f109-1e1b-4d95-8876-cd04b89b33e8"
+                        },
+                        {
+                            "hab_dat_id": "9cbab448-f99f-4b2c-8865-7e43219abcb7",
+                            "hab_dat_amount": "7.97",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.856070",
+                            "hab_rec_id": "f002f109-1e1b-4d95-8876-cd04b89b33e8"
+                        },
+                        {
+                            "hab_dat_id": "9afd3ce1-5401-497f-939e-9929d69deadc",
+                            "hab_dat_amount": "64.07",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.667427",
+                            "hab_rec_id": "f002f109-1e1b-4d95-8876-cd04b89b33e8"
+                        },
+                        {
+                            "hab_dat_id": "337e26e4-3dc3-430d-8b69-82071b116e63",
+                            "hab_dat_amount": "81.49",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.314930",
+                            "hab_rec_id": "f002f109-1e1b-4d95-8876-cd04b89b33e8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "9acd173c-66fc-4a0d-a394-2e8a70f284f6",
+            "hab_name": "o74LnfIUlsz",
+            "hab_description": "mTvV5Prfx8XUZ9lIQM",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "2zzcrM",
+            "hab_units": "tD0tv",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
+            "recurrences": [
+                {
+                    "hab_rec_id": "d72ecf78-21a7-40ac-bae2-73f15f632272",
+                    "hab_id": "9acd173c-66fc-4a0d-a394-2e8a70f284f6",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "0772-11-12",
+                    "hab_rec_goal": "25.90",
+                    "data": [
+                        {
+                            "hab_dat_id": "1655d89c-bf0e-470b-bce6-0c4e17136398",
+                            "hab_dat_amount": "36.33",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.543693",
+                            "hab_rec_id": "d72ecf78-21a7-40ac-bae2-73f15f632272"
+                        },
+                        {
+                            "hab_dat_id": "c9436587-6ec0-4afa-b54b-35f7d76b75c8",
+                            "hab_dat_amount": "45.65",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.327234",
+                            "hab_rec_id": "d72ecf78-21a7-40ac-bae2-73f15f632272"
+                        },
+                        {
+                            "hab_dat_id": "5c7e9903-f979-4896-bc8f-1b0a08c35da0",
+                            "hab_dat_amount": "13.28",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.078074",
+                            "hab_rec_id": "d72ecf78-21a7-40ac-bae2-73f15f632272"
+                        },
+                        {
+                            "hab_dat_id": "f4577435-8fa0-46ea-86ba-8c0f1cc67d9a",
+                            "hab_dat_amount": "85.60",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.865800",
+                            "hab_rec_id": "d72ecf78-21a7-40ac-bae2-73f15f632272"
+                        },
+                        {
+                            "hab_dat_id": "bdaa9b7c-9c5e-46f0-a0e0-a2f0b97f265e",
+                            "hab_dat_amount": "90.05",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.523275",
+                            "hab_rec_id": "d72ecf78-21a7-40ac-bae2-73f15f632272"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "e5ba2125-a5ef-4463-be6a-4a8facd6a779",
+                    "hab_id": "9acd173c-66fc-4a0d-a394-2e8a70f284f6",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "0854-10-24",
+                    "hab_rec_goal": "74.48",
+                    "data": [
+                        {
+                            "hab_dat_id": "deaca8db-a281-41c1-8543-d781f68e6cb0",
+                            "hab_dat_amount": "66.14",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.305001",
+                            "hab_rec_id": "e5ba2125-a5ef-4463-be6a-4a8facd6a779"
+                        },
+                        {
+                            "hab_dat_id": "c1ced4d5-eff3-4123-8e8c-5264b2212553",
+                            "hab_dat_amount": "78.27",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.232482",
+                            "hab_rec_id": "e5ba2125-a5ef-4463-be6a-4a8facd6a779"
+                        },
+                        {
+                            "hab_dat_id": "59fe4162-b79c-48ac-88d4-023d22cab64e",
+                            "hab_dat_amount": "60.50",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.895379",
+                            "hab_rec_id": "e5ba2125-a5ef-4463-be6a-4a8facd6a779"
+                        },
+                        {
+                            "hab_dat_id": "8e26cc11-f2ef-4549-8e61-3aabda404e79",
+                            "hab_dat_amount": "30.83",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.705993",
+                            "hab_rec_id": "e5ba2125-a5ef-4463-be6a-4a8facd6a779"
+                        },
+                        {
+                            "hab_dat_id": "22859253-2e29-4402-9846-c660f323519f",
+                            "hab_dat_amount": "7.06",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.355833",
+                            "hab_rec_id": "e5ba2125-a5ef-4463-be6a-4a8facd6a779"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "0ddf19d4-2007-4808-a4c9-c7987d9ae46b",
+            "hab_name": "OMvvEuoOnp",
+            "hab_description": "WY1B8Ix0UoNGJk9Qj49",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "DBW8PP",
+            "hab_units": "aVfBT",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
+            "recurrences": [
+                {
+                    "hab_rec_id": "84d5eb89-b729-46d8-8620-283c36d143dc",
+                    "hab_id": "0ddf19d4-2007-4808-a4c9-c7987d9ae46b",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "2778-05-14",
+                    "hab_rec_goal": "85.13",
+                    "data": [
+                        {
+                            "hab_dat_id": "21d199a6-8cea-462c-8214-58c626205886",
+                            "hab_dat_amount": "32.76",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.578713",
+                            "hab_rec_id": "84d5eb89-b729-46d8-8620-283c36d143dc"
+                        },
+                        {
+                            "hab_dat_id": "3acb948a-c49b-472b-893d-c0b329eca6d2",
+                            "hab_dat_amount": "41.29",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.378663",
+                            "hab_rec_id": "84d5eb89-b729-46d8-8620-283c36d143dc"
+                        },
+                        {
+                            "hab_dat_id": "557dcb4c-da74-4520-a8ec-da4e9fbcc6b0",
+                            "hab_dat_amount": "49.55",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.119731",
+                            "hab_rec_id": "84d5eb89-b729-46d8-8620-283c36d143dc"
+                        },
+                        {
+                            "hab_dat_id": "d72769fc-6346-481c-9a01-501593e6f90e",
+                            "hab_dat_amount": "72.10",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.905721",
+                            "hab_rec_id": "84d5eb89-b729-46d8-8620-283c36d143dc"
+                        },
+                        {
+                            "hab_dat_id": "dd0fb9ee-4543-467d-8683-8724c6e83324",
+                            "hab_dat_amount": "18.08",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.562138",
+                            "hab_rec_id": "84d5eb89-b729-46d8-8620-283c36d143dc"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "213bc406-b299-4e97-994f-70931f8dd983",
+                    "hab_id": "0ddf19d4-2007-4808-a4c9-c7987d9ae46b",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "2182-12-22",
+                    "hab_rec_goal": "83.33",
+                    "data": [
+                        {
+                            "hab_dat_id": "b547a745-136e-4c4b-bf18-c357d03a2f0c",
+                            "hab_dat_amount": "87.77",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.341564",
+                            "hab_rec_id": "213bc406-b299-4e97-994f-70931f8dd983"
+                        },
+                        {
+                            "hab_dat_id": "3161f15b-17de-4f9e-a258-573d0c09eb9e",
+                            "hab_dat_amount": "85.25",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.273274",
+                            "hab_rec_id": "213bc406-b299-4e97-994f-70931f8dd983"
+                        },
+                        {
+                            "hab_dat_id": "16bbe83d-f36d-46a3-b2ff-79f1d9d7aaa3",
+                            "hab_dat_amount": "22.14",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.936948",
+                            "hab_rec_id": "213bc406-b299-4e97-994f-70931f8dd983"
+                        },
+                        {
+                            "hab_dat_id": "5df02a85-4e9a-4e26-a341-9b575a3c7ada",
+                            "hab_dat_amount": "44.87",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.746995",
+                            "hab_rec_id": "213bc406-b299-4e97-994f-70931f8dd983"
+                        },
+                        {
+                            "hab_dat_id": "de086a52-de2a-4252-a9ab-0e9a663f0fb0",
+                            "hab_dat_amount": "30.92",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.395343",
+                            "hab_rec_id": "213bc406-b299-4e97-994f-70931f8dd983"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "a2af58f3-c00c-4f17-9ad5-dbe5cfea705d",
+            "hab_name": "UapzoP",
+            "hab_description": "FWF2yJRM3nBMpb",
+            "hab_is_favorite": false,
+            "hab_is_yn": true,
+            "hab_color": "jnY3Lw",
+            "hab_units": "YlNPV",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
+            "recurrences": [
+                {
+                    "hab_rec_id": "e23a8a01-924d-4f56-b935-2a5ca0ddb680",
+                    "hab_id": "a2af58f3-c00c-4f17-9ad5-dbe5cfea705d",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "2154-10-16",
+                    "hab_rec_goal": "95.70",
+                    "data": [
+                        {
+                            "hab_dat_id": "ae077edb-69b2-4f0c-9aff-4c786cfca5e8",
+                            "hab_dat_amount": "36.76",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.614752",
+                            "hab_rec_id": "e23a8a01-924d-4f56-b935-2a5ca0ddb680"
+                        },
+                        {
+                            "hab_dat_id": "65644543-3eea-4939-a5bb-f49538c4b622",
+                            "hab_dat_amount": "28.28",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.432614",
+                            "hab_rec_id": "e23a8a01-924d-4f56-b935-2a5ca0ddb680"
+                        },
+                        {
+                            "hab_dat_id": "2a9e0aa9-1c43-4102-b6f5-eb6d6a3a19f0",
+                            "hab_dat_amount": "68.97",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.160773",
+                            "hab_rec_id": "e23a8a01-924d-4f56-b935-2a5ca0ddb680"
+                        },
+                        {
+                            "hab_dat_id": "884956b8-f0f3-4a51-a4c9-d993de93ac3e",
+                            "hab_dat_amount": "62.69",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.943837",
+                            "hab_rec_id": "e23a8a01-924d-4f56-b935-2a5ca0ddb680"
+                        },
+                        {
+                            "hab_dat_id": "19942cc2-1549-4b54-a4f3-ed07496458eb",
+                            "hab_dat_amount": "35.55",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.605524",
+                            "hab_rec_id": "e23a8a01-924d-4f56-b935-2a5ca0ddb680"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "31d4fee5-b9f6-41db-b5a8-422ed34a9be8",
+                    "hab_id": "a2af58f3-c00c-4f17-9ad5-dbe5cfea705d",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "2218-05-27",
+                    "hab_rec_goal": "23.28",
+                    "data": [
+                        {
+                            "hab_dat_id": "fd330e82-6ab7-42bd-9918-97da64df56ef",
+                            "hab_dat_amount": "54.04",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.378186",
+                            "hab_rec_id": "31d4fee5-b9f6-41db-b5a8-422ed34a9be8"
+                        },
+                        {
+                            "hab_dat_id": "d933ab32-fd02-4c1a-8883-7e9e94c33c97",
+                            "hab_dat_amount": "84.08",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.313592",
+                            "hab_rec_id": "31d4fee5-b9f6-41db-b5a8-422ed34a9be8"
+                        },
+                        {
+                            "hab_dat_id": "7e12be4c-88ae-4c5b-b87e-be05c1a72cf9",
+                            "hab_dat_amount": "43.68",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.978387",
+                            "hab_rec_id": "31d4fee5-b9f6-41db-b5a8-422ed34a9be8"
+                        },
+                        {
+                            "hab_dat_id": "3bd8f647-52b8-455c-b5e7-329cf3f364a9",
+                            "hab_dat_amount": "23.68",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.790477",
+                            "hab_rec_id": "31d4fee5-b9f6-41db-b5a8-422ed34a9be8"
+                        },
+                        {
+                            "hab_dat_id": "7bd1f8b3-05eb-4cb2-a3c3-85e55020966c",
+                            "hab_dat_amount": "75.99",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.437682",
+                            "hab_rec_id": "31d4fee5-b9f6-41db-b5a8-422ed34a9be8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "d49f108a-bb28-4652-86fa-4468e048fa3a",
+            "hab_name": "ERbF2EcmNxG",
+            "hab_description": "exprRxdfK7awXi0FIy",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "62LpbS",
+            "hab_units": "foUwB",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
+            "recurrences": [
+                {
+                    "hab_rec_id": "1843b2db-c376-401e-bd01-305e80f89fcf",
+                    "hab_id": "d49f108a-bb28-4652-86fa-4468e048fa3a",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "2225-08-15",
+                    "hab_rec_goal": "63.12",
+                    "data": [
+                        {
+                            "hab_dat_id": "e826613c-f271-4109-ba53-126e0e53d5ec",
+                            "hab_dat_amount": "75.07",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.654343",
+                            "hab_rec_id": "1843b2db-c376-401e-bd01-305e80f89fcf"
+                        },
+                        {
+                            "hab_dat_id": "d74b0241-bc25-41c8-84d1-02c00365707a",
+                            "hab_dat_amount": "58.29",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.475785",
+                            "hab_rec_id": "1843b2db-c376-401e-bd01-305e80f89fcf"
+                        },
+                        {
+                            "hab_dat_id": "ba3ad48a-f315-41d9-ad28-780053a3160a",
+                            "hab_dat_amount": "68.86",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.198668",
+                            "hab_rec_id": "1843b2db-c376-401e-bd01-305e80f89fcf"
+                        },
+                        {
+                            "hab_dat_id": "9bf6d0c8-d81c-4d7f-817a-a56480849dc6",
+                            "hab_dat_amount": "41.02",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.983125",
+                            "hab_rec_id": "1843b2db-c376-401e-bd01-305e80f89fcf"
+                        },
+                        {
+                            "hab_dat_id": "0fad7f0e-8ad9-4cf2-820e-85d7def0ef5e",
+                            "hab_dat_amount": "37.77",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.647884",
+                            "hab_rec_id": "1843b2db-c376-401e-bd01-305e80f89fcf"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "76eb8a36-2269-487c-955d-e70bc0ad2f94",
+                    "hab_id": "d49f108a-bb28-4652-86fa-4468e048fa3a",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "2053-01-28",
+                    "hab_rec_goal": "31.63",
+                    "data": [
+                        {
+                            "hab_dat_id": "786e17b3-1bf0-46ba-95d0-3e9e7c0d473f",
+                            "hab_dat_amount": "8.48",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.415562",
+                            "hab_rec_id": "76eb8a36-2269-487c-955d-e70bc0ad2f94"
+                        },
+                        {
+                            "hab_dat_id": "0fdd8f3f-1a7c-41d4-aaa5-a91a56b5c8b0",
+                            "hab_dat_amount": "67.92",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.351045",
+                            "hab_rec_id": "76eb8a36-2269-487c-955d-e70bc0ad2f94"
+                        },
+                        {
+                            "hab_dat_id": "c55e7306-5cd1-4784-9883-0c2464d4955e",
+                            "hab_dat_amount": "55.66",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.022507",
+                            "hab_rec_id": "76eb8a36-2269-487c-955d-e70bc0ad2f94"
+                        },
+                        {
+                            "hab_dat_id": "94d4b3f3-1af2-4c62-8234-3fc8a33a69f7",
+                            "hab_dat_amount": "17.47",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.829922",
+                            "hab_rec_id": "76eb8a36-2269-487c-955d-e70bc0ad2f94"
+                        },
+                        {
+                            "hab_dat_id": "d124f312-07e4-41f5-9089-b350cc8d6847",
+                            "hab_dat_amount": "91.48",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.474924",
+                            "hab_rec_id": "76eb8a36-2269-487c-955d-e70bc0ad2f94"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "6da8cbcd-2711-4ebb-9a75-c4ccced8ea1c",
+            "hab_name": "9K0xEDdM2L8Zssokkzq",
+            "hab_description": "P6wZvRNL",
+            "hab_is_favorite": false,
+            "hab_is_yn": false,
+            "hab_color": "6jtAjS",
+            "hab_units": "lYHHA",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "751de67d-018f-4674-9c27-58dd71ed02bd",
+            "recurrences": [
+                {
+                    "hab_rec_id": "c6c2d872-ce48-49e2-9bf7-d9cf4de2df5d",
+                    "hab_id": "6da8cbcd-2711-4ebb-9a75-c4ccced8ea1c",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "1980-12-11",
+                    "hab_rec_goal": "87.94",
+                    "data": [
+                        {
+                            "hab_dat_id": "5e19a2be-2746-4dbf-8c86-f6d7a6544454",
+                            "hab_dat_amount": "88.99",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.689417",
+                            "hab_rec_id": "c6c2d872-ce48-49e2-9bf7-d9cf4de2df5d"
+                        },
+                        {
+                            "hab_dat_id": "19a68c2e-111a-43da-9163-bd48eea05a21",
+                            "hab_dat_amount": "50.23",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.525777",
+                            "hab_rec_id": "c6c2d872-ce48-49e2-9bf7-d9cf4de2df5d"
+                        },
+                        {
+                            "hab_dat_id": "04ef1749-6c74-4d30-84e8-f3a1657f6dd9",
+                            "hab_dat_amount": "90.94",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.239510",
+                            "hab_rec_id": "c6c2d872-ce48-49e2-9bf7-d9cf4de2df5d"
+                        },
+                        {
+                            "hab_dat_id": "77a01d2b-8a1c-412a-b6de-b26d50e0eca2",
+                            "hab_dat_amount": "67.40",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.023018",
+                            "hab_rec_id": "c6c2d872-ce48-49e2-9bf7-d9cf4de2df5d"
+                        },
+                        {
+                            "hab_dat_id": "b9cf9cd5-bfc2-43a7-8637-a9c6f114882d",
+                            "hab_dat_amount": "47.65",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.684615",
+                            "hab_rec_id": "c6c2d872-ce48-49e2-9bf7-d9cf4de2df5d"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "0d1a867d-4efc-497f-8ccf-133f65b535ec",
+                    "hab_id": "6da8cbcd-2711-4ebb-9a75-c4ccced8ea1c",
+                    "hab_rec_freq_type": "monthly",
+                    "hab_rec_freq_data": "2804-06-09",
+                    "hab_rec_goal": "86.08",
+                    "data": [
+                        {
+                            "hab_dat_id": "5efb7a43-1738-405e-a0c3-ab4c8f9b1499",
+                            "hab_dat_amount": "93.40",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.456021",
+                            "hab_rec_id": "0d1a867d-4efc-497f-8ccf-133f65b535ec"
+                        },
+                        {
+                            "hab_dat_id": "16d5bf50-49b0-42bd-b9e2-2769d70801fb",
+                            "hab_dat_amount": "15.45",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.434056",
+                            "hab_rec_id": "0d1a867d-4efc-497f-8ccf-133f65b535ec"
+                        },
+                        {
+                            "hab_dat_id": "5a23c1bc-5688-4288-a897-1c9db7d3e486",
+                            "hab_dat_amount": "15.02",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.065351",
+                            "hab_rec_id": "0d1a867d-4efc-497f-8ccf-133f65b535ec"
+                        },
+                        {
+                            "hab_dat_id": "0624a21f-b7f5-484d-a0f6-1443b8fe0c85",
+                            "hab_dat_amount": "87.35",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.872394",
+                            "hab_rec_id": "0d1a867d-4efc-497f-8ccf-133f65b535ec"
+                        },
+                        {
+                            "hab_dat_id": "307807bc-d002-41e3-bd6f-c5c4437c762a",
+                            "hab_dat_amount": "11.27",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.511588",
+                            "hab_rec_id": "0d1a867d-4efc-497f-8ccf-133f65b535ec"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hab_id": "15a80a67-3055-4bc8-a6c6-c7f19182b8a9",
+            "hab_name": "5922euLc",
+            "hab_description": "Tloeqdj7qBK",
+            "hab_is_favorite": true,
+            "hab_is_yn": true,
+            "hab_color": "00rJVG",
+            "hab_units": "EpYve",
+            "usr_id": "8HYSRHE7824HB0iEQ",
+            "cat_id": "6ff5a497-1c52-47dd-b325-17ff667cdf39",
+            "recurrences": [
+                {
+                    "hab_rec_id": "04446efb-6072-4b15-9fcf-eeb02905cc1f",
+                    "hab_id": "15a80a67-3055-4bc8-a6c6-c7f19182b8a9",
+                    "hab_rec_freq_type": "daily",
+                    "hab_rec_freq_data": "2974-07-18",
+                    "hab_rec_goal": "10.01",
+                    "data": [
+                        {
+                            "hab_dat_id": "10914edc-3da0-43cd-9ad8-936eaf8a049a",
+                            "hab_dat_amount": "56.94",
+                            "hab_dat_collected_at": "2023-09-11T23:33:19.726341",
+                            "hab_rec_id": "04446efb-6072-4b15-9fcf-eeb02905cc1f"
+                        },
+                        {
+                            "hab_dat_id": "6cccffcd-e793-475d-8738-e52a0687c93f",
+                            "hab_dat_amount": "32.54",
+                            "hab_dat_collected_at": "2023-09-11T23:33:21.573634",
+                            "hab_rec_id": "04446efb-6072-4b15-9fcf-eeb02905cc1f"
+                        },
+                        {
+                            "hab_dat_id": "83ddc9b0-a0b2-4ba3-9432-3f813d7b55f6",
+                            "hab_dat_amount": "49.87",
+                            "hab_dat_collected_at": "2023-09-11T23:33:23.278628",
+                            "hab_rec_id": "04446efb-6072-4b15-9fcf-eeb02905cc1f"
+                        },
+                        {
+                            "hab_dat_id": "fe1ff26f-8def-4fc0-ab30-7fe092cb7cf7",
+                            "hab_dat_amount": "14.89",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.073744",
+                            "hab_rec_id": "04446efb-6072-4b15-9fcf-eeb02905cc1f"
+                        },
+                        {
+                            "hab_dat_id": "35755070-40b3-4875-8dea-f665911291bf",
+                            "hab_dat_amount": "55.18",
+                            "hab_dat_collected_at": "2023-09-11T23:33:26.723673",
+                            "hab_rec_id": "04446efb-6072-4b15-9fcf-eeb02905cc1f"
+                        }
+                    ]
+                },
+                {
+                    "hab_rec_id": "8bdcdf87-e899-44a4-b009-c9aa741ef221",
+                    "hab_id": "15a80a67-3055-4bc8-a6c6-c7f19182b8a9",
+                    "hab_rec_freq_type": "weekly",
+                    "hab_rec_freq_data": "1910-01-01",
+                    "hab_rec_goal": "6.59",
+                    "data": [
+                        {
+                            "hab_dat_id": "f087e24c-27c4-4a74-bc46-b027d2a64d72",
+                            "hab_dat_amount": "74.66",
+                            "hab_dat_collected_at": "2023-09-11T23:33:20.504808",
+                            "hab_rec_id": "8bdcdf87-e899-44a4-b009-c9aa741ef221"
+                        },
+                        {
+                            "hab_dat_id": "a3b14248-5707-45f8-bd87-272105383eb2",
+                            "hab_dat_amount": "27.21",
+                            "hab_dat_collected_at": "2023-09-11T23:33:22.469177",
+                            "hab_rec_id": "8bdcdf87-e899-44a4-b009-c9aa741ef221"
+                        },
+                        {
+                            "hab_dat_id": "3eb34e39-59c6-4cae-a451-dc0f5871ebe5",
+                            "hab_dat_amount": "64.19",
+                            "hab_dat_collected_at": "2023-09-11T23:33:24.106560",
+                            "hab_rec_id": "8bdcdf87-e899-44a4-b009-c9aa741ef221"
+                        },
+                        {
+                            "hab_dat_id": "076a6f27-b6f2-4a49-bc84-c63aee9abf0a",
+                            "hab_dat_amount": "34.73",
+                            "hab_dat_collected_at": "2023-09-11T23:33:25.915032",
+                            "hab_rec_id": "8bdcdf87-e899-44a4-b009-c9aa741ef221"
+                        },
+                        {
+                            "hab_dat_id": "aeb08336-c0fb-4bb6-a278-fdfa668a6b76",
+                            "hab_dat_amount": "90.04",
+                            "hab_dat_collected_at": "2023-09-11T23:33:27.549644",
+                            "hab_rec_id": "8bdcdf87-e899-44a4-b009-c9aa741ef221"
                         }
                     ]
                 }
