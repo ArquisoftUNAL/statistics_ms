@@ -18,7 +18,7 @@ class DataFrameModel(BaseModel):
         return value
 
 class HabRec(BaseModel):
-    hab_rec_id: int
+    hab_rec_id: str
     hab_rec_freq_type: str
     hab_rec_goal: float
 

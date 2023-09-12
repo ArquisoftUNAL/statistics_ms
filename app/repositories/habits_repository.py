@@ -83,6 +83,9 @@ class HabitRepository:
         data[['year', 'week', 'weekday']] = data['hab_dat_collected_at'].apply(lambda x: pd.Series(x.isocalendar()))
         data['month'] = data['hab_dat_collected_at'].apply(lambda x: x.month)
         
+        data = data.sort_values(by=['hab_dat_collected_at'])
+        data = rm.DataFrameModel(data=data)
+
         return rm.HabData(
             hab_rec=hab_rec,
             data=data

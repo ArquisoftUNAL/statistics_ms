@@ -29,7 +29,7 @@ class HabitReport:
         today = date.today()
         habit_data = self.repo.get_habit_data(hab_id)
         freq_type = habit_data.hab_rec.hab_rec_freq_type
-        freq_types[freq_type] = habit_data.hab_rec.hab_rec_freq_types[freq_type]
+        freq_types[freq_type] = habit_data.hab_rec.hab_rec_freq_type
         df = habit_data.data
 
         report = md.HabitMeasureResumeReportModel()
