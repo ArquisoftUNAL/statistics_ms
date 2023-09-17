@@ -1,6 +1,6 @@
 from pydantic import BaseModel
-from typing import Dict, Tuple, Optional
-from datetime import date
+from typing import Dict, Tuple, Optional, Union
+from datetime import datetime, date
 
 class DataReportModel(BaseModel):
     percentage: float
@@ -8,17 +8,18 @@ class DataReportModel(BaseModel):
     remaining: float
 
 class DateFloatDir(BaseModel):
-    data: Dict[date, float]
+    data: Dict[Tuple[int, int], float]
 
 class DateIntDir(BaseModel):
-    data: Dict[date, int]
+    #data: Dict[datetime, int]
+    data: Dict[Union[int, Tuple[int, int]], int]
 
 class HabitMeasureResumeReportModel(BaseModel):
     toDay: Optional[DataReportModel] = None
     week: Optional[DataReportModel] = None
-    month: DataReportModel
-    semester: DataReportModel
-    year: DataReportModel
+    month: Optional[DataReportModel] = None
+    semester: Optional[DataReportModel] = None
+    year: Optional[DataReportModel] = None
 
 class HabitMeasureHistoryReportModel(BaseModel):
     day: DateFloatDir
@@ -40,11 +41,21 @@ class HabitYNHistoryReportModel(BaseModel):
     semester: DateIntDir
     year: DateIntDir
 
-class HabitYNBestStreakReportModel(BaseModel):
+class HabitYNStreakReportModel(BaseModel):
     #data: {(<start date>, <end date>): <quantity>}
-    data: Dict[Tuple[date, date], int]
+    data: Dict[Tuple[datetime, datetime], int]
 
 class HabitFreqWeekDayReportModel(BaseModel):
     #data: {(<year>, <month>): {<day of week>: <quantity>}}
     data: Dict[Tuple[int, int], Dict[int, int]]
 
+class HabitYNReportModel(BaseModel):
+    resume: HabitYNResumeReportModel
+    history: HabitYNHistoryReportModel
+    streaks: HabitYNStreakReportModel
+    days_frequency: HabitFreqWeekDayReportModel
+
+class HabitMeasureReportModel(BaseModel):
+    resume: HabitMeasureResumeReportModel
+    history: HabitMeasureHistoryReportModel
+    days_frequency: HabitFreqWeekDayReportModel
