@@ -29,23 +29,15 @@ router = APIRouter()
 
 @router.get("/yn_report/{hab_id}", response_model=md.HabitYNResumeReportModel)
 async def get_habit_yn_report(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
-    response =  await hs.get_habit_yn_report(hab_id)
-    return response
+    return await hs.get_habit_yn_report(hab_id)
 
+@router.get("/measure_report/{hab_id}", response_model=md.HabitMeasureReportModel)
+async def get_habit_measure_report(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
+    return await hs.get_habit_measure_report(hab_id)
 
 @router.get("/measure/resume/{hab_id}", response_model=md.HabitMeasureResumeReportModel)
 async def get_habit_measure_resume(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
     body = hs.get_habit_measure_resume(hab_id)
-    """
-    try:
-        body = hs.get_habit_measure_resume(hab_id)
-
-        if body is None:
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Habit not found")
-        
-    except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
-    """
     return body
 
 @router.get("/measure/history/{hab_id}", response_model=md.HabitMeasureHistoryReportModel)
