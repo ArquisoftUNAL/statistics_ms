@@ -1,35 +1,69 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
 from app.models import report_models as md
+from app.models.endpoint_arguments_model import IdModel
 from app.services.habit_report import HabitReport
 from app.repositories.habits_repository import HabitRepository
+from sqlalchemy import  URL
+from sqlalchemy.ext.asyncio import create_async_engine
+from dotenv import load_dotenv
+import os
 
-router = APIRouter()
+load_dotenv()
+url = URL.create(
+    drivername="postgresql",
+    username=os.getenv("POSTGRES_USER"),
+    password=os.getenv("POSTGRES_PASSWORD"),
+    host=os.getenv("POSTGRES_HOST"),
+    port=os.getenv("POSTGRES_PORT"),
+    database=os.getenv("POSTGRES_DB"),
+)
+
+engine = create_async_engine(url)
 
 def get_hs():
-    repo = HabitRepository()
+    repo = HabitRepository(engine)
     return HabitReport(repo)
 
 
+router = APIRouter()
+
+@router.get("/yn_report/{hab_id}", response_model=md.HabitYNResumeReportModel)
+async def get_habit_yn_report(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
+    response =  await hs.get_habit_yn_report(hab_id)
+    return response
+
+
 @router.get("/measure/resume/{hab_id}", response_model=md.HabitMeasureResumeReportModel)
-async def get_habit_measure_resume(hab_id: int, hs: HabitReport = Depends(get_hs)):
-    return hs.get_habit_measure_resume(hab_id)
+async def get_habit_measure_resume(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
+    body = hs.get_habit_measure_resume(hab_id)
+    """
+    try:
+        body = hs.get_habit_measure_resume(hab_id)
+
+        if body is None:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Habit not found")
+        
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
+    """
+    return body
 
 @router.get("/measure/history/{hab_id}", response_model=md.HabitMeasureHistoryReportModel)
-async def get_habit_measure_history(hab_id: int, hs: HabitReport = Depends(get_hs)):
+async def get_habit_measure_history(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_measure_history(hab_id)
 
 @router.get("/yn/resume/{hab_id}", response_model=md.HabitYNResumeReportModel)
-async def get_habit_yn_resume(hab_id: int, hs: HabitReport = Depends(get_hs)):
+async def get_habit_yn_resume(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_yn_resume(hab_id)
 
 @router.get("/yn/history/{hab_id}", response_model=md.HabitYNHistoryReportModel)
-async def get_habit_yn_history(hab_id: int, hs: HabitReport = Depends(get_hs)):
+async def get_habit_yn_history(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_yn_history(hab_id)
 
-@router.get("/yn/streaks/{hab_id}", response_model=md.HabitYNBestStreakReportModel)
-async def get_habit_yn_streaks(hab_id: int, hs: HabitReport = Depends(get_hs)):
+@router.get("/yn/streaks/{hab_id}", response_model=md.HabitYNStreakReportModel)
+async def get_habit_yn_streaks(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_yn_streaks(hab_id)
 
 @router.get("/freq_week_day/{hab_id}", response_model=md.HabitFreqWeekDayReportModel)
-async def get_habit_freq_week_day(hab_id: int, hs: HabitReport = Depends(get_hs)):
+async def get_habit_freq_week_day(hab_id: IdModel, hs: HabitReport = Depends(get_hs)):
     return hs.get_habit_freq_week_day(hab_id)
