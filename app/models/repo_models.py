@@ -1,8 +1,15 @@
 from pydantic import BaseModel
-import pandas as pd
+from pandas import DataFrame
+from uuid import UUID
 
-class DataFrameModel(BaseModel):
-    data: pd.DataFrame
+class HabRec(BaseModel):
+    hab_rec_id: str
+    hab_rec_freq_type: str
+    hab_rec_goal: float
+
+class HabData(BaseModel):
+    hab_rec: HabRec
+    data: DataFrame
 
     class Config:
         arbitrary_types_allowed = True
@@ -13,15 +20,6 @@ class DataFrameModel(BaseModel):
 
     @classmethod
     def validate(cls, value):
-        if not isinstance(value, pd.DataFrame):
+        if not isinstance(value, DataFrame):
             raise ValueError('data must be a Pandas DataFrame')
         return value
-
-class HabRec(BaseModel):
-    hab_rec_id: int
-    hab_rec_freq_type: str
-    hab_rec_goal: float
-
-class HabData(BaseModel):
-    hab_rec: HabRec
-    data: DataFrameModel
