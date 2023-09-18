@@ -1,5 +1,5 @@
 """ a class to read from postgresql database using sqlalchemy"""
-from sqlalchemy import MetaData, Table, select
+from sqlalchemy import text
 from sqlalchemy.engine import Engine
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import sessionmaker
@@ -15,37 +15,23 @@ class HabitRepository:
         self.logger = logging.getLogger(__name__)
         self.engine = engine
         self.sessionmaker = sessionmaker(bind=self.engine, class_=AsyncSession, expire_on_commit=False)
-        self.metadata = MetaData()
 
-        self.cat = Table('Category', self.metadata, autoload=True)
-        self.hab = Table('Habit', self.metadata, autoload=True)
-        self.hab_rec = Table('Habit_Recurrency', self.metadata, autoload=True)
-        self.hab_data = Table('Habit_data_Collected', self.metadata, autoload=True)
-    
     async def get_hab_is_yn(self, hab_id: UUID, session: AsyncSession):
-        query = select([
-            self.hab.c.hab_is_yn,
-        ]).select_from(
-            self.hab
-        ).where(
-            self.hab.c.hab_id == hab_id
-        )
-
-        result = await session.execute(query)
+        query = text("""
+                     SELECT hab_is_yn 
+                     FROM Habit 
+                     WHERE hab_id = :hab_id
+                     """)
+        result = await session.execute(query, {"hab_id": hab_id})
         return result.scalar()
-    
-    async def get_hab_rec(self, hab_id: UUID, session: AsyncSession) -> rm.HabRec:
-        query = select([
-            self.hab_rec.c.hab_rec_id,
-            self.hab_rec.c.hab_rec_freq_type,
-            self.hab_rec.c.hab_rec_goal,
-        ]).select_from(
-            self.hab_rec
-        ).where(
-            self.hab_rec.c.hab_id == hab_id
-        )
 
-        result = await session.execute(query)
+    async def get_hab_rec(self, hab_id: UUID, session: AsyncSession) -> rm.HabRec:
+        query = text("""
+                     SELECT hab_rec_id, hab_rec_freq_type, hab_rec_goal 
+                     FROM Habit_Recurrency 
+                     WHERE hab_id = :hab_id
+                     """)
+        result = await session.execute(query, {"hab_id": hab_id})
         data = result.fetchone()
 
         if data is not None:
@@ -55,27 +41,25 @@ class HabitRepository:
                 hab_rec_goal=data[2],
             )
         return data
-        
+
     async def get_habit_data(self, hab_id: UUID) -> rm.HabData:
         try:
             async with self.sessionmaker() as session:
-                #is_yn = await self.get_hab_is_yn(hab_id)
                 hab_rec = await self.get_hab_rec(hab_id, session)
-                
+
                 if hab_rec is None:
                     raise HabitNotFoundError("Habit not found")
-                
-                query = select([
-                    self.hab_data.c.hab_dat_id,
-                    self.hab_data.c.hab_dat_amount,
-                    self.hab_data.c.hab_dat_collected_at,
-                ]).select_from(
-                    self.hab_data
-                ).where(
-                    self.hab.c.hab_rec_id == hab_rec[0]
-                ).order_by(self.hab_data.c.hab_dat_collected_at.desc())
 
-                response = await session.execute(query).fetchall()
+                query = text("""
+                             SELECT hab_dat_id, hab_dat_amount, hab_dat_collected_at
+                             FROM Habit_data_Collected
+                             WHERE hab_rec_id = (
+                                SELECT hab_rec_id FROM Habit_Recurrency WHERE hab_id = :hab_id
+                             )
+                             ORDER BY hab_dat_collected_at DESC
+                            """)
+                result = await session.execute(query, {"hab_id": hab_id})
+                response = result.fetchall()
                 data = pd.DataFrame(response, columns=response[0].keys())
 
                 if data.empty:
@@ -92,4 +76,4 @@ class HabitRepository:
         except SQLAlchemyError as e:
             self.logger.error(str(e))
             raise AppDatabaseError("Database error") from e
-            
+        
