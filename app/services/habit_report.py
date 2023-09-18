@@ -1,7 +1,7 @@
 from app.repositories.habits_repository import HabitRepository
 from app.models.repo_models import HabData
-from app.models.endpoint_arguments_model import IdModel
 from datetime import date
+from uuid import UUID
 from . import functions as fn
 import app.models.report_models as md
 
@@ -18,7 +18,7 @@ class HabitReport:
     def __init__(self, habit_repository: HabitRepository):
         self.repo = habit_repository
 
-    async def get_habit_yn_report(self, hab_id: IdModel) -> md.HabitYNReportModel:
+    async def get_habit_yn_report(self, hab_id: UUID) -> md.HabitYNReportModel:
         habit_data = await self.repo.get_habit_data(hab_id)
 
         return md.HabitYNReportModel(
@@ -28,7 +28,7 @@ class HabitReport:
             days_frequency = await self.get_habit_freq_week_day(habit_data)
         )
 
-    async def get_habit_measure_report(self, hab_id: IdModel) -> md.HabitMeasureReportModel:
+    async def get_habit_measure_report(self, hab_id: UUID) -> md.HabitMeasureReportModel:
         habit_data = await self.repo.get_habit_data(hab_id)
 
         return md.HabitMeasureReportModel(
