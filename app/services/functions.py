@@ -13,17 +13,24 @@ def day_progress(df: pd.DataFrame, goal: int, today: date) -> rm.DataReportModel
             remaining=goal - progress,
         )
     else:
-        return None
+        return rm.DataReportModel(
+            percentage=0,
+            progress=0,
+            remaining=goal,
+        )
     
 def week_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataReportModel:
     year, week, _ = today.isocalendar()
     df = data_frame[(data_frame['year'] == year) & (data_frame['week'] == week)]
-
     if goal == 0:
         return None
 
     if df.empty:
-        return None
+        return rm.DataReportModel(
+            percentage=0,
+            progress=0,
+            remaining=goal,
+        )
     
     progress = df['hab_dat_amount'].sum()
 
@@ -124,8 +131,6 @@ def year_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> r
     if freq_type == 6:
         goal = goal * 6
 
-    print("GOAL: ", goal)
-    print("PROGRESS: ", progress)
     return rm.DataReportModel(
         percentage=progress / goal,
         progress=progress,
@@ -167,7 +172,6 @@ def ms_year_history(df: pd.DataFrame) -> rm.DateFloatDir:
     #old_dates = df.groupby('year').min()['hab_dat_collected_at'].astype(str)
     df = df.groupby(df['year'])['hab_dat_amount'].sum()
     data = df.to_dict()
-    print(data)
     return rm.DateFloatDir(data=data)
 
 #Functions for get_habit_yn_resume report:
@@ -235,8 +239,8 @@ def year_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
     return progress/goal
 
 def total_yn_resume(df: pd.DataFrame, today:date) -> int:
-    df = df[df['hab_dat_collected_at'] == today.year]
-    return df['hab_dat_amount'].count()
+    df = df[df['year'] == today.year]
+    return df.shape[0]
 
 #Functions for get_habit_yn_history report:
 def yn_week_history(df: pd.DataFrame) -> rm.DateIntDir:
@@ -278,9 +282,8 @@ def yn_streaks(df: pd.DataFrame, today: date) -> rm.HabitYNStreakReportModel:
     df['diff_days'] = df['hab_dat_collected_at'].diff().dt.days
     df['streak'] = (df['diff_days'] != 1).cumsum()
     streaks = df.groupby('streak')['hab_dat_collected_at'].count()
-    streak_start_end = df.groupby('streak')['hab_dat_collected_at'].agg(['min', 'max'])
+    streak_start_end = df.groupby('streak')['hab_dat_collected_at'].agg(['min', 'max']).rename(columns={'min': 'start_date', 'max': 'end_date'})
     streaks = streaks.to_frame(name='count').join(streak_start_end)
-    streaks.rename(columns={'min': 'start_date', 'max': 'end_date'}, inplace=True)
     streaks.set_index(['start_date', 'end_date'], inplace=True)
     streaks = streaks.sort_index(ascending=False)
     streaks = streaks.to_dict()['count']
