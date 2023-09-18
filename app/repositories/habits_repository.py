@@ -81,6 +81,7 @@ class HabitRepository:
                 if data.empty:
                     return None
                 data['hab_dat_collected_at'] = pd.to_datetime(data['hab_dat_collected_at'])
+                data['hab_dat_amount'] = data['hab_dat_amount'].astype(float)
                 data[['year', 'week', 'weekday']] = data['hab_dat_collected_at'].apply(lambda x: pd.Series(x.isocalendar()))
                 data['month'] = data['hab_dat_collected_at'].apply(lambda x: x.month)
 
