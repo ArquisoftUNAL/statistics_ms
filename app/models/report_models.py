@@ -8,7 +8,7 @@ class DataReportModel(BaseModel):
     remaining: float
 
 class DateFloatDir(BaseModel):
-    data: Dict[Tuple[int, int], float]
+    data: Dict[Union[int, Tuple[int, int], datetime], float]
 
 class DateIntDir(BaseModel):
     #data: Dict[datetime, int]
