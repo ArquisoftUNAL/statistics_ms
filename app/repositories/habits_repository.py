@@ -4,8 +4,8 @@ from sqlalchemy.engine import Engine
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError, SQLAlchemyError
-from app.models.endpoint_arguments_model import IdModel
 from app.exceptions.exceptions import AppConnectionError, AppDatabaseError, HabitNotFoundError
+from uuid import UUID
 import logging
 import pandas as pd
 import app.models.repo_models as rm
@@ -22,7 +22,7 @@ class HabitRepository:
         self.hab_rec = Table('Habit_Recurrency', self.metadata, autoload=True)
         self.hab_data = Table('Habit_data_Collected', self.metadata, autoload=True)
     
-    async def get_hab_is_yn(self, hab_id: IdModel, session: AsyncSession):
+    async def get_hab_is_yn(self, hab_id: UUID, session: AsyncSession):
         query = select([
             self.hab.c.hab_is_yn,
         ]).select_from(
@@ -34,7 +34,7 @@ class HabitRepository:
         result = await session.execute(query)
         return result.scalar()
     
-    async def get_hab_rec(self, hab_id: IdModel, session: AsyncSession) -> rm.HabRec:
+    async def get_hab_rec(self, hab_id: UUID, session: AsyncSession) -> rm.HabRec:
         query = select([
             self.hab_rec.c.hab_rec_id,
             self.hab_rec.c.hab_rec_freq_type,
@@ -56,7 +56,7 @@ class HabitRepository:
             )
         return data
         
-    async def get_habit_data(self, hab_id: IdModel) -> rm.HabData:
+    async def get_habit_data(self, hab_id: UUID) -> rm.HabData:
         try:
             async with self.sessionmaker() as session:
                 #is_yn = await self.get_hab_is_yn(hab_id)
