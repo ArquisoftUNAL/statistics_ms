@@ -76,4 +76,10 @@ class HabitRepository:
         except SQLAlchemyError as e:
             self.logger.error(str(e))
             raise AppDatabaseError("Database error") from e
+        except Exception as e:
+            self.logger.error(str(e))
+            raise AppDatabaseError("Database error") from e
+        finally:
+            await session.close()
+            logging.info("Session closed")
         
