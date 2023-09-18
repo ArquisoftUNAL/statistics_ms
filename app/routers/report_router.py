@@ -27,7 +27,7 @@ def get_hs():
 
 router = APIRouter()
 
-@router.get("/yn_report/{hab_id}", response_model=md.HabitYNResumeReportModel)
+@router.get("/yn_report/{hab_id}", response_model=md.HabitYNReportModel)
 async def get_habit_yn_report(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
     return await hs.get_habit_yn_report(hab_id)
 
