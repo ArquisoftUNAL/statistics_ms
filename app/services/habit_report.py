@@ -47,6 +47,7 @@ class HabitReport:
         Returns:
             HabitMeasureResumeReportModel: The report with the progress of the habit.
         """
+        #TODO: Add exception error for none goal
         today = date.today()
         goal = habit_data.hab_rec.hab_rec_goal
         freq_type = freq_types[habit_data.hab_rec.hab_rec_freq_type]
@@ -54,8 +55,8 @@ class HabitReport:
 
         year = fn.year_progress(df, goal, today, freq_type)
         semester = fn.semester_progress(df, goal, today, freq_type)
-        month = fn.month_progress(df, goal, today, freq_type)
-        week = fn.week_progress(df, goal, today, freq_type) if freq_type < 3 else None
+        month = fn.month_progress(df, goal, today, freq_type) if freq_type < 6 else None
+        week = fn.week_progress(df, goal, today, freq_type) if freq_type < 4 else None
         today = fn.day_progress(df, goal, today) if freq_type == 1 else None
 
         report = md.HabitMeasureResumeReportModel(toDay=today, week=week, month=month, semester=semester, year=year)
