@@ -147,14 +147,12 @@ def ms_day_history(df: pd.DataFrame) -> rm.DateFloatDir:
 
 def ms_week_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'week']]
-    #old_dates = df.groupby(['year', 'week']).min()['hab_dat_collected_at'].astype(str)
     df = df.groupby(['year', 'week'])['hab_dat_amount'].sum()
     data = df.to_dict()
     return rm.DateFloatDir(data=data)
 
 def ms_month_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'month']]
-    #old_dates = df.groupby(['year', 'month']).min()['hab_dat_collected_at'].astype(str)
     df = df.groupby(['year', 'month'])['hab_dat_amount'].sum()
     data = df.to_dict()
     return rm.DateFloatDir(data=data)
@@ -162,14 +160,12 @@ def ms_month_history(df: pd.DataFrame) -> rm.DateFloatDir:
 def ms_semester_history(df: pd.DataFrame) -> rm.DateFloatDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'month']]
     df['semester'] = df['month'].apply(lambda x: 1 if x <= 6 else 2)
-    #old_dates = df.groupby(['year', 'semester']).min()['hab_dat_collected_at'].astype(str)
     df = df.groupby(['year', 'semester'])['hab_dat_amount'].sum()
     data = df.to_dict()
     return rm.DateFloatDir(data=data)
 
 def ms_year_history(df: pd.DataFrame) -> rm.DateFloatDir:
-    df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year']]
-    #old_dates = df.groupby('year').min()['hab_dat_collected_at'].astype(str)
+    df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year']].astype(str)
     df = df.groupby(df['year'])['hab_dat_amount'].sum()
     data = df.to_dict()
     return rm.DateFloatDir(data=data)
@@ -245,34 +241,26 @@ def total_yn_resume(df: pd.DataFrame, today:date) -> int:
 #Functions for get_habit_yn_history report:
 def yn_week_history(df: pd.DataFrame) -> rm.DateIntDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'week']]
-    #old_dates = df.groupby(['year', 'week']).min()['hab_dat_collected_at']
     df = df.groupby(['year', 'week']).count()
-    #df.set_index(#old_dates, inplace=True)
     data = df.to_dict()['hab_dat_collected_at']
     return rm.DateIntDir(data=data)
 
 def yn_month_history(df: pd.DataFrame) -> rm.DateIntDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'month']]
-    #old_dates = df.groupby(['year', 'month']).min()['hab_dat_collected_at']
     df = df.groupby(['year', 'month']).count()
-    #df.set_index(#old_dates, inplace=True)
     data = df.to_dict()['hab_dat_collected_at']
     return rm.DateIntDir(data=data)
 
 def yn_semester_history(df: pd.DataFrame) -> rm.DateIntDir:
     df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year', 'month']]
     df['semester'] = df['month'].apply(lambda x: 1 if x <= 6 else 2)
-    #old_dates = df.groupby(['year', 'semester']).min()['hab_dat_collected_at']
     df = df.groupby(['year', 'semester']).count()
-    #df.set_index(#old_dates, inplace=True)
     data = df.to_dict()['hab_dat_collected_at']
     return rm.DateIntDir(data=data)
 
 def yn_year_history(df: pd.DataFrame) -> rm.DateIntDir:
     df = df[['hab_dat_collected_at', 'year']]
-    #old_dates = df.groupby('year').min()['hab_dat_collected_at']
     df = df.groupby('year').count()
-    #df.set_index(#old_dates, inplace=True)
     data = df.to_dict()['hab_dat_collected_at']
     return rm.DateIntDir(data=data)
 
