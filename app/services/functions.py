@@ -189,7 +189,7 @@ def month_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
     if freq == 6:
         goal = 0.5
 
-    progress = df[(df['month'] == month) & (df['year'] == year)].size
+    progress = df[(df['month'] == month) & (df['year'] == year)].shape[0]
 
     return progress/goal
 
@@ -210,7 +210,7 @@ def semester_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
     if freq == 6:
         goal = 3
 
-    progress = df[(df['month'] == month) & (df['year'] == year)].size
+    progress = df[(df['month'] == month) & (df['year'] == year)].shape[0]
 
     return progress/goal
 
@@ -230,7 +230,7 @@ def year_yn_resume(df: pd.DataFrame, freq: int, today: date) -> float:
         goal = 12
     if freq == 6:
         goal = 6
-    progress = df[(df['month'] == month) & (df['year'] == year)].size
+    progress = df[(df['month'] == month) & (df['year'] == year)].shape[0]
 
     return progress/goal
 
@@ -267,7 +267,7 @@ def yn_year_history(df: pd.DataFrame) -> rm.DateIntDir:
 #Functions for get_habit_yn_best_streak report:
 def yn_streaks(df: pd.DataFrame, today: date) -> rm.HabitYNStreakReportModel:
     df = df[['hab_dat_collected_at', 'hab_dat_amount']].where(df['year'] == today.year).dropna()
-    df['diff_days'] = df['hab_dat_collected_at'].diff().dt.days
+    df['diff_days'] = df['hab_dat_collected_at'].diff()
     df['streak'] = (df['diff_days'] != 1).cumsum()
     streaks = df.groupby('streak')['hab_dat_collected_at'].count()
     streak_start_end = df.groupby('streak')['hab_dat_collected_at'].agg(['min', 'max']).rename(columns={'min': 'start_date', 'max': 'end_date'})
