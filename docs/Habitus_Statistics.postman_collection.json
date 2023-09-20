@@ -1,0 +1,1079 @@
+{
+	"info": {
+		"_postman_id": "965bca8a-acd2-41be-97fc-23e02929f50f",
+		"name": "Habitus_Statistics",
+		"description": "All endpoints enabled for Statitics microservice of Habitus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29575925"
+	},
+	"item": [
+		{
+			"name": "measure",
+			"item": [
+				{
+					"name": "Get Habit Measure Resume",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/stats/measure/resume/:hab_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"stats",
+								"measure",
+								"resume",
+								":hab_id"
+							],
+							"variable": [
+								{
+									"key": "hab_id",
+									"value": "<uuid>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/measure/resume/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"measure",
+										"resume",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"toDay\": {\n    \"percentage\": \"<number>\",\n    \"progress\": \"<number>\",\n    \"remaining\": \"<number>\"\n  },\n  \"week\": {\n    \"percentage\": \"<number>\",\n    \"progress\": \"<number>\",\n    \"remaining\": \"<number>\"\n  },\n  \"month\": {\n    \"percentage\": \"<number>\",\n    \"progress\": \"<number>\",\n    \"remaining\": \"<number>\"\n  },\n  \"semester\": {\n    \"percentage\": \"<number>\",\n    \"progress\": \"<number>\",\n    \"remaining\": \"<number>\"\n  },\n  \"year\": {\n    \"percentage\": \"<number>\",\n    \"progress\": \"<number>\",\n    \"remaining\": \"<number>\"\n  }\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/measure/resume/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"measure",
+										"resume",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Habit Measure History",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/stats/measure/history/:hab_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"stats",
+								"measure",
+								"history",
+								":hab_id"
+							],
+							"variable": [
+								{
+									"key": "hab_id",
+									"value": "<uuid>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/measure/history/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"measure",
+										"history",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"day\": {\n    \"data\": {\n      \"do0a\": \"<number>\",\n      \"Excepteur_a0\": \"<number>\"\n    }\n  },\n  \"week\": {\n    \"data\": {\n      \"in6\": \"<number>\",\n      \"adipisicing_2\": \"<number>\",\n      \"commodo_d00\": \"<number>\"\n    }\n  },\n  \"month\": {\n    \"data\": {\n      \"pariatur_9b2\": \"<number>\",\n      \"ut_2b\": \"<number>\",\n      \"reprehenderit4fd\": \"<number>\"\n    }\n  },\n  \"semester\": {\n    \"data\": {\n      \"minim_c5\": \"<number>\",\n      \"ipsuma77\": \"<number>\"\n    }\n  },\n  \"year\": {\n    \"data\": {\n      \"dolore9b2\": \"<number>\"\n    }\n  }\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/measure/history/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"measure",
+										"history",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Endpoints for measure habits statistics"
+		},
+		{
+			"name": "yn",
+			"item": [
+				{
+					"name": "Get Habit Yn Resume",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/stats/yn/resume/:hab_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"stats",
+								"yn",
+								"resume",
+								":hab_id"
+							],
+							"variable": [
+								{
+									"key": "hab_id",
+									"value": "<uuid>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn/resume/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn",
+										"resume",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"month\": \"<number>\",\n  \"semester\": \"<number>\",\n  \"year\": \"<number>\",\n  \"total\": \"<integer>\"\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn/resume/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn",
+										"resume",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Habit Yn History",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/stats/yn/history/:hab_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"stats",
+								"yn",
+								"history",
+								":hab_id"
+							],
+							"variable": [
+								{
+									"key": "hab_id",
+									"value": "<uuid>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn/history/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn",
+										"history",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"week\": {\n    \"data\": {\n      \"ad_973\": \"<integer>\",\n      \"nisi78d\": \"<integer>\"\n    }\n  },\n  \"month\": {\n    \"data\": {\n      \"incididunt35\": \"<integer>\"\n    }\n  },\n  \"semester\": {\n    \"data\": {\n      \"labore_ace\": \"<integer>\"\n    }\n  },\n  \"year\": {\n    \"data\": {\n      \"irure_73\": \"<integer>\",\n      \"ad__\": \"<integer>\"\n    }\n  }\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn/history/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn",
+										"history",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Habit Yn Streaks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/stats/yn/streaks/:hab_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"stats",
+								"yn",
+								"streaks",
+								":hab_id"
+							],
+							"variable": [
+								{
+									"key": "hab_id",
+									"value": "<uuid>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn/streaks/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn",
+										"streaks",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"consequat_5e\": \"<integer>\"\n  }\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn/streaks/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn",
+										"streaks",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Endpoints for yes_no habits statistics"
+		},
+		{
+			"name": "report",
+			"item": [
+				{
+					"name": "Get Habit Measure Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/stats/report/measure/:hab_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"stats",
+								"report",
+								"measure",
+								":hab_id"
+							],
+							"variable": [
+								{
+									"key": "hab_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/measure_report/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"measure_report",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"resume\": {\n    \"toDay\": {\n      \"percentage\": \"<number>\",\n      \"progress\": \"<number>\",\n      \"remaining\": \"<number>\"\n    },\n    \"week\": {\n      \"percentage\": \"<number>\",\n      \"progress\": \"<number>\",\n      \"remaining\": \"<number>\"\n    },\n    \"month\": {\n      \"percentage\": \"<number>\",\n      \"progress\": \"<number>\",\n      \"remaining\": \"<number>\"\n    },\n    \"semester\": {\n      \"percentage\": \"<number>\",\n      \"progress\": \"<number>\",\n      \"remaining\": \"<number>\"\n    },\n    \"year\": {\n      \"percentage\": \"<number>\",\n      \"progress\": \"<number>\",\n      \"remaining\": \"<number>\"\n    }\n  },\n  \"history\": {\n    \"day\": {\n      \"data\": {\n        \"dolordcf\": \"<number>\",\n        \"officia7c\": \"<number>\"\n      }\n    },\n    \"week\": {\n      \"data\": {\n        \"aliquip754\": \"<number>\",\n        \"et41\": \"<number>\",\n        \"occaecat0a7\": \"<number>\"\n      }\n    },\n    \"month\": {\n      \"data\": {\n        \"ullamco_7\": \"<number>\",\n        \"nostrud0a\": \"<number>\"\n      }\n    },\n    \"semester\": {\n      \"data\": {\n        \"ut_c9\": \"<number>\",\n        \"Lorem28_\": \"<number>\"\n      }\n    },\n    \"year\": {\n      \"data\": {\n        \"est_1_\": \"<number>\",\n        \"aute_2\": \"<number>\",\n        \"et536\": \"<number>\"\n      }\n    }\n  },\n  \"days_frequency\": {\n    \"data\": {\n      \"fugiat3fb\": {\n        \"Duisa\": \"<integer>\",\n        \"in_7d\": \"<integer>\"\n      },\n      \"reprehenderit_0\": {\n        \"sed1\": \"<integer>\",\n        \"velitf\": \"<integer>\",\n        \"in54\": \"<integer>\"\n      }\n    }\n  }\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/measure_report/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"measure_report",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Habit Yn Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/stats/report/yn/:hab_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"stats",
+								"report",
+								"yn",
+								":hab_id"
+							],
+							"variable": [
+								{
+									"key": "hab_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn_report/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn_report",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"resume\": {\n    \"month\": \"<number>\",\n    \"semester\": \"<number>\",\n    \"year\": \"<number>\",\n    \"total\": \"<integer>\"\n  },\n  \"history\": {\n    \"week\": {\n      \"data\": {\n        \"aliquip_a\": \"<integer>\"\n      }\n    },\n    \"month\": {\n      \"data\": {\n        \"Excepteuref4\": \"<integer>\",\n        \"fugiatad\": \"<integer>\"\n      }\n    },\n    \"semester\": {\n      \"data\": {\n        \"irure__b6\": \"<integer>\",\n        \"commodo_1d\": \"<integer>\",\n        \"ullamco_8\": \"<integer>\"\n      }\n    },\n    \"year\": {\n      \"data\": {\n        \"elit_ee\": \"<integer>\"\n      }\n    }\n  },\n  \"streaks\": {\n    \"data\": {\n      \"Excepteur_ca5\": \"<integer>\"\n    }\n  },\n  \"days_frequency\": {\n    \"data\": {\n      \"proident03f\": {\n        \"in34\": \"<integer>\"\n      },\n      \"Duis_8be\": {\n        \"ipsum_71\": \"<integer>\",\n        \"do_44\": \"<integer>\"\n      }\n    }\n  }\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn_report/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn_report",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Endpoints for report of measure and yes_no habits with complete statistics"
+		},
+		{
+			"name": "common",
+			"item": [
+				{
+					"name": "Get Habit Freq Week Day",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/stats/freq_week_day/:hab_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"stats",
+								"freq_week_day",
+								":hab_id"
+							],
+							"variable": [
+								{
+									"key": "hab_id",
+									"value": "<uuid>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/freq_week_day/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"freq_week_day",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"eiusmod_1_9\": {\n      \"sed_95a\": \"<integer>\",\n      \"deserunt_a8\": \"<integer>\"\n    },\n    \"consecteturd\": {\n      \"id_57\": \"<integer>\"\n    },\n    \"ipsum3\": {\n      \"consequatd\": \"<integer>\",\n      \"cupidatat_2\": \"<integer>\",\n      \"quis_f5\": \"<integer>\"\n    }\n  }\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/freq_week_day/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"freq_week_day",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Common endpoints for measure and yes_no habits statistics"
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
