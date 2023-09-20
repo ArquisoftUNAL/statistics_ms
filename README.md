@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 Finally, run the microservice:
 ```bash
-uvicorn main:app --host 0.0.0.0 --port 8080
+uvicorn app/main:app --host 0.0.0.0 --port 8080
 ```
 
 You can also use the 'make' comand
