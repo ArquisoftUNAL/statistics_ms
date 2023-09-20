@@ -128,7 +128,7 @@
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
 						},
 						{
-							"name": "Get Habit Measure Resume",
+							"name": "Succesfull Response Example",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -302,7 +302,7 @@
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
 						},
 						{
-							"name": "Get Habit Measure History",
+							"name": "Succesfull Response Example",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -482,7 +482,7 @@
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
 						},
 						{
-							"name": "Get Habit Yn Resume",
+							"name": "Succesfull Response Example",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -656,7 +656,7 @@
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
 						},
 						{
-							"name": "Get Habit Yn History",
+							"name": "Succesfull Response Example",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -831,7 +831,7 @@
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
 						},
 						{
-							"name": "Get Habit Yn Streaks",
+							"name": "Succesfull Response Example",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -1009,7 +1009,7 @@
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
 						},
 						{
-							"name": "Get Habit Measure Report",
+							"name": "Succesfull Response Example",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -1180,7 +1180,7 @@
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
 						},
 						{
-							"name": "Get Habit Yn Report",
+							"name": "Succesfull Response Example",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -1368,7 +1368,7 @@
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
 						},
 						{
-							"name": "Get Habit Freq Week Day",
+							"name": "Succesfull Response Example",
 							"originalRequest": {
 								"method": "GET",
 								"header": [

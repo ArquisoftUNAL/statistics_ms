@@ -69,7 +69,7 @@ paths:
                       progress: <number>
                       remaining: <number>
                 example-1:
-                  summary: Get Habit Measure Resume
+                  summary: Succesfull Response Example
                   value:
                     toDay: null
                     week:
@@ -167,7 +167,7 @@ paths:
                       data:
                         dolore9b2: <number>
                 example-1:
-                  summary: Get Habit Measure History
+                  summary: Succesfull Response Example
                   value:
                     day:
                       data:
@@ -245,7 +245,7 @@ paths:
                     year: <number>
                     total: <integer>
                 example-1:
-                  summary: Get Habit Yn Resume
+                  summary: Succesfull Response Example
                   value:
                     month: 0.03333333333333333
                     semester: 0.005479452054794521
@@ -323,7 +323,7 @@ paths:
                         irure_73: <integer>
                         ad__: <integer>
                 example-1:
-                  summary: Get Habit Yn History
+                  summary: Succesfull Response Example
                   value:
                     week:
                       data:
@@ -397,7 +397,7 @@ paths:
                     data:
                       consequat_5e: <integer>
                 example-1:
-                  summary: Get Habit Yn Streaks
+                  summary: Succesfull Response Example
                   value:
                     data:
                       2023-09-19,2023-09-19: 1
@@ -511,7 +511,7 @@ paths:
                           velitf: <integer>
                           in54: <integer>
                 example-1:
-                  summary: Get Habit Measure Report
+                  summary: Succesfull Response Example
                   value:
                     resume:
                       toDay: null
@@ -639,7 +639,7 @@ paths:
                           ipsum_71: <integer>
                           do_44: <integer>
                 example-1:
-                  summary: Get Habit Yn Report
+                  summary: Succesfull Response Example
                   value:
                     resume:
                       month: 0.03333333333333333
@@ -734,7 +734,7 @@ paths:
                         cupidatat_2: <integer>
                         quis_f5: <integer>
                 example-1:
-                  summary: Get Habit Freq Week Day
+                  summary: Succesfull Response Example
                   value:
                     data:
                       2023,9:
