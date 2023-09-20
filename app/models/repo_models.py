@@ -3,7 +3,7 @@ from pandas import DataFrame
 from uuid import UUID
 
 class HabRec(BaseModel):
-    hab_rec_id: str
+    hab_rec_id: UUID
     hab_rec_freq_type: str
     hab_rec_goal: float
 
