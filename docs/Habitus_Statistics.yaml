@@ -1,0 +1,795 @@
+openapi: 3.0.0
+info:
+  title: Habitus_Statistics
+  description: All endpoints enabled for Statitics microservice of Habitus
+  version: 1.0.0
+servers:
+  - url: http://{{baseurl}}
+tags:
+  - name: measure
+    description: Endpoints for measure habits statistics
+  - name: yn
+    description: Endpoints for yes_no habits statistics
+  - name: report
+    description: Endpoints for report of measure and yes_no habits with complete statistics
+  - name: common
+    description: Common endpoints for measure and yes_no habits statistics
+paths:
+  /api/stats/measure/resume/{hab_id}:
+    get:
+      tags:
+        - measure
+      summary: Get Habit Measure Resume
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: hab_id
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{measure_id}}'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Successful Response
+                  value:
+                    toDay:
+                      percentage: <number>
+                      progress: <number>
+                      remaining: <number>
+                    week:
+                      percentage: <number>
+                      progress: <number>
+                      remaining: <number>
+                    month:
+                      percentage: <number>
+                      progress: <number>
+                      remaining: <number>
+                    semester:
+                      percentage: <number>
+                      progress: <number>
+                      remaining: <number>
+                    year:
+                      percentage: <number>
+                      progress: <number>
+                      remaining: <number>
+                example-1:
+                  summary: Get Habit Measure Resume
+                  value:
+                    toDay: null
+                    week:
+                      percentage: 0.7164562379627648
+                      progress: 66.96
+                      remaining: 26.5
+                    month:
+                      percentage: 0.1671731221913118
+                      progress: 66.96
+                      remaining: 333.5828571428571
+                    semester:
+                      percentage: 0.02755600915241403
+                      progress: 66.96
+                      remaining: 2363
+                    year:
+                      percentage: 0.013778004576207014
+                      progress: 66.96
+                      remaining: 4792.96
+        '422':
+          description: Unprocessable Entity (WebDAV) (RFC 4918)
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail:
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+  /api/stats/measure/history/{hab_id}:
+    get:
+      tags:
+        - measure
+      summary: Get Habit Measure History
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: hab_id
+          in: path
+          schema:
+            type: string
+          required: true
+          description: '(Required) '
+          example: '{{measure_id}}'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Successful Response
+                  value:
+                    day:
+                      data:
+                        do0a: <number>
+                        Excepteur_a0: <number>
+                    week:
+                      data:
+                        in6: <number>
+                        adipisicing_2: <number>
+                        commodo_d00: <number>
+                    month:
+                      data:
+                        pariatur_9b2: <number>
+                        ut_2b: <number>
+                        reprehenderit4fd: <number>
+                    semester:
+                      data:
+                        minim_c5: <number>
+                        ipsuma77: <number>
+                    year:
+                      data:
+                        dolore9b2: <number>
+                example-1:
+                  summary: Get Habit Measure History
+                  value:
+                    day:
+                      data:
+                        '2023-09-19': 66.96
+                    week:
+                      data:
+                        2023,38: 66.96
+                    month:
+                      data:
+                        2023,9: 66.96
+                    semester:
+                      data:
+                        2023,2: 66.96
+                    year:
+                      data:
+                        '2023': 66.96
+        '422':
+          description: Unprocessable Entity (WebDAV) (RFC 4918)
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail:
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+  /api/stats/yn/resume/{hab_id}:
+    get:
+      tags:
+        - yn
+      summary: Get Habit Yn Resume
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: hab_id
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{yn_id}}'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Successful Response
+                  value:
+                    month: <number>
+                    semester: <number>
+                    year: <number>
+                    total: <integer>
+                example-1:
+                  summary: Get Habit Yn Resume
+                  value:
+                    month: 0.03333333333333333
+                    semester: 0.005479452054794521
+                    year: 0.0027397260273972603
+                    total: 1
+        '422':
+          description: Unprocessable Entity (WebDAV) (RFC 4918)
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail:
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+  /api/stats/yn/history/{hab_id}:
+    get:
+      tags:
+        - yn
+      summary: Get Habit Yn History
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: hab_id
+          in: path
+          schema:
+            type: string
+          required: true
+          description: '(Required) '
+          example: '{{yn_id}}'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Successful Response
+                  value:
+                    week:
+                      data:
+                        ad_973: <integer>
+                        nisi78d: <integer>
+                    month:
+                      data:
+                        incididunt35: <integer>
+                    semester:
+                      data:
+                        labore_ace: <integer>
+                    year:
+                      data:
+                        irure_73: <integer>
+                        ad__: <integer>
+                example-1:
+                  summary: Get Habit Yn History
+                  value:
+                    week:
+                      data:
+                        2023,38: 1
+                    month:
+                      data:
+                        2023,9: 1
+                    semester:
+                      data:
+                        2023,2: 1
+                    year:
+                      data:
+                        '2023': 1
+        '422':
+          description: Unprocessable Entity (WebDAV) (RFC 4918)
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail:
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+  /api/stats/yn/streaks/{hab_id}:
+    get:
+      tags:
+        - yn
+      summary: Get Habit Yn Streaks
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: hab_id
+          in: path
+          schema:
+            type: string
+          required: true
+          description: '(Required) '
+          example: '{{yn_id}}'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Successful Response
+                  value:
+                    data:
+                      consequat_5e: <integer>
+                example-1:
+                  summary: Get Habit Yn Streaks
+                  value:
+                    data:
+                      2023-09-19,2023-09-19: 1
+        '422':
+          description: Unprocessable Entity (WebDAV) (RFC 4918)
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail:
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+  /api/stats/report/measure/{hab_id}:
+    get:
+      tags:
+        - report
+      summary: Get Habit Measure Report
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: hab_id
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{measure_id}}'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Successful Response
+                  value:
+                    resume:
+                      toDay:
+                        percentage: <number>
+                        progress: <number>
+                        remaining: <number>
+                      week:
+                        percentage: <number>
+                        progress: <number>
+                        remaining: <number>
+                      month:
+                        percentage: <number>
+                        progress: <number>
+                        remaining: <number>
+                      semester:
+                        percentage: <number>
+                        progress: <number>
+                        remaining: <number>
+                      year:
+                        percentage: <number>
+                        progress: <number>
+                        remaining: <number>
+                    history:
+                      day:
+                        data:
+                          dolordcf: <number>
+                          officia7c: <number>
+                      week:
+                        data:
+                          aliquip754: <number>
+                          et41: <number>
+                          occaecat0a7: <number>
+                      month:
+                        data:
+                          ullamco_7: <number>
+                          nostrud0a: <number>
+                      semester:
+                        data:
+                          ut_c9: <number>
+                          Lorem28_: <number>
+                      year:
+                        data:
+                          est_1_: <number>
+                          aute_2: <number>
+                          et536: <number>
+                    days_frequency:
+                      data:
+                        fugiat3fb:
+                          Duisa: <integer>
+                          in_7d: <integer>
+                        reprehenderit_0:
+                          sed1: <integer>
+                          velitf: <integer>
+                          in54: <integer>
+                example-1:
+                  summary: Get Habit Measure Report
+                  value:
+                    resume:
+                      toDay: null
+                      week:
+                        percentage: 0.7164562379627648
+                        progress: 66.96
+                        remaining: 26.5
+                      month:
+                        percentage: 0.1671731221913118
+                        progress: 66.96
+                        remaining: 333.5828571428571
+                      semester:
+                        percentage: 0.02755600915241403
+                        progress: 66.96
+                        remaining: 2363
+                      year:
+                        percentage: 0.013778004576207014
+                        progress: 66.96
+                        remaining: 4792.96
+                    history:
+                      day:
+                        data:
+                          '2023-09-19': 66.96
+                      week:
+                        data:
+                          2023,38: 66.96
+                      month:
+                        data:
+                          2023,9: 66.96
+                      semester:
+                        data:
+                          2023,2: 66.96
+                      year:
+                        data:
+                          '2023': 66.96
+                    days_frequency:
+                      data:
+                        2023,9:
+                          '2': 1
+        '422':
+          description: Unprocessable Entity (WebDAV) (RFC 4918)
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail:
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+  /api/stats/report/yn/{hab_id}:
+    get:
+      tags:
+        - report
+      summary: Get Habit Yn Report
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: hab_id
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{yn_id}}'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Successful Response
+                  value:
+                    resume:
+                      month: <number>
+                      semester: <number>
+                      year: <number>
+                      total: <integer>
+                    history:
+                      week:
+                        data:
+                          aliquip_a: <integer>
+                      month:
+                        data:
+                          Excepteuref4: <integer>
+                          fugiatad: <integer>
+                      semester:
+                        data:
+                          irure__b6: <integer>
+                          commodo_1d: <integer>
+                          ullamco_8: <integer>
+                      year:
+                        data:
+                          elit_ee: <integer>
+                    streaks:
+                      data:
+                        Excepteur_ca5: <integer>
+                    days_frequency:
+                      data:
+                        proident03f:
+                          in34: <integer>
+                        Duis_8be:
+                          ipsum_71: <integer>
+                          do_44: <integer>
+                example-1:
+                  summary: Get Habit Yn Report
+                  value:
+                    resume:
+                      month: 0.03333333333333333
+                      semester: 0.005479452054794521
+                      year: 0.0027397260273972603
+                      total: 1
+                    history:
+                      week:
+                        data:
+                          2023,38: 1
+                      month:
+                        data:
+                          2023,9: 1
+                      semester:
+                        data:
+                          2023,2: 1
+                      year:
+                        data:
+                          '2023': 1
+                    streaks:
+                      data:
+                        2023-09-19,2023-09-19: 1
+                    days_frequency:
+                      data:
+                        2023,9:
+                          '2': 1
+        '422':
+          description: Unprocessable Entity (WebDAV) (RFC 4918)
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail:
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+  /api/stats/freq_week_day/{hab_id}:
+    get:
+      tags:
+        - common
+      summary: Get Habit Freq Week Day
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: hab_id
+          in: path
+          schema:
+            type: string
+          required: true
+          description: '(Required) '
+          example: '{{measure_id}}'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Successful Response
+                  value:
+                    data:
+                      eiusmod_1_9:
+                        sed_95a: <integer>
+                        deserunt_a8: <integer>
+                      consecteturd:
+                        id_57: <integer>
+                      ipsum3:
+                        consequatd: <integer>
+                        cupidatat_2: <integer>
+                        quis_f5: <integer>
+                example-1:
+                  summary: Get Habit Freq Week Day
+                  value:
+                    data:
+                      2023,9:
+                        '2': 1
+        '422':
+          description: Unprocessable Entity (WebDAV) (RFC 4918)
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                detail:
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+                  - loc:
+                      - <string>
+                      - <string>
+                    msg: <string>
+                    type: <string>
+  /:
+    get:
+      tags:
+        - default
+      summary: Health
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Successful Response
+                  value: {}
+                example-1:
+                  summary: Health
+                  value:
+                    message: Ok
