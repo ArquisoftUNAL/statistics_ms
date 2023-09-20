@@ -28,7 +28,7 @@ class HabitRepository:
     async def get_hab_rec(self, hab_id: UUID, session: AsyncSession) -> rm.HabRec:
         query = text("""
                      SELECT hab_rec_id, hab_rec_freq_type, hab_rec_goal 
-                     FROM Habit_Recurrency 
+                     FROM habit_recurrence 
                      WHERE hab_id = :hab_id
                      """)
         result = await session.execute(query, {"hab_id": hab_id})
@@ -51,20 +51,20 @@ class HabitRepository:
                     raise HabitNotFoundError("Habit not found")
 
                 query = text("""
-                             SELECT hab_dat_id, hab_dat_amount, hab_dat_collected_at
+                             SELECT hab_dat_amount, hab_dat_collected_at
                              FROM Habit_data_Collected
                              WHERE hab_rec_id = (
-                                SELECT hab_rec_id FROM Habit_Recurrency WHERE hab_id = :hab_id
+                                SELECT hab_rec_id FROM habit_recurrence WHERE hab_id = :hab_id
                              )
                              ORDER BY hab_dat_collected_at DESC
                             """)
                 result = await session.execute(query, {"hab_id": hab_id})
                 response = result.fetchall()
-                data = pd.DataFrame(response, columns=response[0].keys())
+                data = pd.DataFrame(response)
 
                 if data.empty:
                     return None
-                data['hab_dat_collected_at'] = pd.to_datetime(data['hab_dat_collected_at'])
+                data['hab_dat_collected_at'] = pd.to_datetime(data['hab_dat_collected_at']).dt.date
                 data['hab_dat_amount'] = data['hab_dat_amount'].astype(float)
                 data[['year', 'week', 'weekday']] = data['hab_dat_collected_at'].apply(lambda x: pd.Series(x.isocalendar()))
                 data['month'] = data['hab_dat_collected_at'].apply(lambda x: x.month)
