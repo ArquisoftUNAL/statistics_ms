@@ -35,8 +35,7 @@
 							"variable": [
 								{
 									"key": "hab_id",
-									"value": "<uuid>",
-									"description": "(Required) "
+									"value": "{{measure_id}}"
 								}
 							]
 						}
@@ -127,6 +126,60 @@
 							],
 							"cookie": [],
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Get Habit Measure Resume",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/measure/resume/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"measure",
+										"resume",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "{{measure_id}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Wed, 20 Sep 2023 04:02:40 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "340"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"toDay\": null,\n    \"week\": {\n        \"percentage\": 0.7164562379627648,\n        \"progress\": 66.96,\n        \"remaining\": 26.5\n    },\n    \"month\": {\n        \"percentage\": 0.1671731221913118,\n        \"progress\": 66.96,\n        \"remaining\": 333.5828571428571\n    },\n    \"semester\": {\n        \"percentage\": 0.02755600915241403,\n        \"progress\": 66.96,\n        \"remaining\": 2363\n    },\n    \"year\": {\n        \"percentage\": 0.013778004576207014,\n        \"progress\": 66.96,\n        \"remaining\": 4792.96\n    }\n}"
 						}
 					]
 				},
@@ -155,7 +208,7 @@
 							"variable": [
 								{
 									"key": "hab_id",
-									"value": "<uuid>",
+									"value": "{{measure_id}}",
 									"description": "(Required) "
 								}
 							]
@@ -247,6 +300,61 @@
 							],
 							"cookie": [],
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Get Habit Measure History",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/measure/history/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"measure",
+										"history",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "{{measure_id}}",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Wed, 20 Sep 2023 03:52:35 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "173"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"day\": {\n        \"data\": {\n            \"2023-09-19\": 66.96\n        }\n    },\n    \"week\": {\n        \"data\": {\n            \"2023,38\": 66.96\n        }\n    },\n    \"month\": {\n        \"data\": {\n            \"2023,9\": 66.96\n        }\n    },\n    \"semester\": {\n        \"data\": {\n            \"2023,2\": 66.96\n        }\n    },\n    \"year\": {\n        \"data\": {\n            \"2023\": 66.96\n        }\n    }\n}"
 						}
 					]
 				}
@@ -281,8 +389,7 @@
 							"variable": [
 								{
 									"key": "hab_id",
-									"value": "<uuid>",
-									"description": "(Required) "
+									"value": "{{yn_id}}"
 								}
 							]
 						}
@@ -373,6 +480,60 @@
 							],
 							"cookie": [],
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Get Habit Yn Resume",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn/resume/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn",
+										"resume",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "{{yn_id}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Wed, 20 Sep 2023 04:01:56 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "100"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"month\": 0.03333333333333333,\n    \"semester\": 0.005479452054794521,\n    \"year\": 0.0027397260273972603,\n    \"total\": 1\n}"
 						}
 					]
 				},
@@ -401,7 +562,7 @@
 							"variable": [
 								{
 									"key": "hab_id",
-									"value": "<uuid>",
+									"value": "{{yn_id}}",
 									"description": "(Required) "
 								}
 							]
@@ -493,6 +654,61 @@
 							],
 							"cookie": [],
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Get Habit Yn History",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn/history/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn",
+										"history",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "{{yn_id}}",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Wed, 20 Sep 2023 04:04:36 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "121"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"week\": {\n        \"data\": {\n            \"2023,38\": 1\n        }\n    },\n    \"month\": {\n        \"data\": {\n            \"2023,9\": 1\n        }\n    },\n    \"semester\": {\n        \"data\": {\n            \"2023,2\": 1\n        }\n    },\n    \"year\": {\n        \"data\": {\n            \"2023\": 1\n        }\n    }\n}"
 						}
 					]
 				},
@@ -521,7 +737,7 @@
 							"variable": [
 								{
 									"key": "hab_id",
-									"value": "<uuid>",
+									"value": "{{yn_id}}",
 									"description": "(Required) "
 								}
 							]
@@ -613,6 +829,61 @@
 							],
 							"cookie": [],
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Get Habit Yn Streaks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/yn/streaks/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"yn",
+										"streaks",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "{{yn_id}}",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Wed, 20 Sep 2023 04:07:10 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "36"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"2023-09-19,2023-09-19\": 1\n    }\n}"
 						}
 					]
 				}
@@ -647,7 +918,7 @@
 							"variable": [
 								{
 									"key": "hab_id",
-									"value": ""
+									"value": "{{measure_id}}"
 								}
 							]
 						}
@@ -736,6 +1007,60 @@
 							],
 							"cookie": [],
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Get Habit Measure Report",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/report/measure/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"report",
+										"measure",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "{{measure_id}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Wed, 20 Sep 2023 04:15:50 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "580"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resume\": {\n        \"toDay\": null,\n        \"week\": {\n            \"percentage\": 0.7164562379627648,\n            \"progress\": 66.96,\n            \"remaining\": 26.5\n        },\n        \"month\": {\n            \"percentage\": 0.1671731221913118,\n            \"progress\": 66.96,\n            \"remaining\": 333.5828571428571\n        },\n        \"semester\": {\n            \"percentage\": 0.02755600915241403,\n            \"progress\": 66.96,\n            \"remaining\": 2363\n        },\n        \"year\": {\n            \"percentage\": 0.013778004576207014,\n            \"progress\": 66.96,\n            \"remaining\": 4792.96\n        }\n    },\n    \"history\": {\n        \"day\": {\n            \"data\": {\n                \"2023-09-19\": 66.96\n            }\n        },\n        \"week\": {\n            \"data\": {\n                \"2023,38\": 66.96\n            }\n        },\n        \"month\": {\n            \"data\": {\n                \"2023,9\": 66.96\n            }\n        },\n        \"semester\": {\n            \"data\": {\n                \"2023,2\": 66.96\n            }\n        },\n        \"year\": {\n            \"data\": {\n                \"2023\": 66.96\n            }\n        }\n    },\n    \"days_frequency\": {\n        \"data\": {\n            \"2023,9\": {\n                \"2\": 1\n            }\n        }\n    }\n}"
 						}
 					]
 				},
@@ -764,7 +1089,7 @@
 							"variable": [
 								{
 									"key": "hab_id",
-									"value": ""
+									"value": "{{yn_id}}"
 								}
 							]
 						}
@@ -853,6 +1178,60 @@
 							],
 							"cookie": [],
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Get Habit Yn Report",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/report/yn/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"report",
+										"yn",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "{{yn_id}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Wed, 20 Sep 2023 04:16:19 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "335"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resume\": {\n        \"month\": 0.03333333333333333,\n        \"semester\": 0.005479452054794521,\n        \"year\": 0.0027397260273972603,\n        \"total\": 1\n    },\n    \"history\": {\n        \"week\": {\n            \"data\": {\n                \"2023,38\": 1\n            }\n        },\n        \"month\": {\n            \"data\": {\n                \"2023,9\": 1\n            }\n        },\n        \"semester\": {\n            \"data\": {\n                \"2023,2\": 1\n            }\n        },\n        \"year\": {\n            \"data\": {\n                \"2023\": 1\n            }\n        }\n    },\n    \"streaks\": {\n        \"data\": {\n            \"2023-09-19,2023-09-19\": 1\n        }\n    },\n    \"days_frequency\": {\n        \"data\": {\n            \"2023,9\": {\n                \"2\": 1\n            }\n        }\n    }\n}"
 						}
 					]
 				}
@@ -897,7 +1276,7 @@
 							"variable": [
 								{
 									"key": "hab_id",
-									"value": "<uuid>",
+									"value": "{{measure_id}}",
 									"description": "(Required) "
 								}
 							]
@@ -987,6 +1366,60 @@
 							],
 							"cookie": [],
 							"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}"
+						},
+						{
+							"name": "Get Habit Freq Week Day",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/stats/freq_week_day/:hab_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"stats",
+										"freq_week_day",
+										":hab_id"
+									],
+									"variable": [
+										{
+											"key": "hab_id",
+											"value": "{{measure_id}}",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "date",
+									"value": "Wed, 20 Sep 2023 04:16:47 GMT"
+								},
+								{
+									"key": "server",
+									"value": "uvicorn"
+								},
+								{
+									"key": "content-length",
+									"value": "27"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"2023,9\": {\n            \"2\": 1\n        }\n    }\n}"
 						}
 					]
 				}
@@ -1045,6 +1478,50 @@
 					],
 					"cookie": [],
 					"body": "{}"
+				},
+				{
+					"name": "Health",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 20 Sep 2023 04:17:14 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "16"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Ok\"\n}"
 				}
 			]
 		}
@@ -1072,8 +1549,16 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "/",
+			"value": "url",
 			"type": "string"
+		},
+		{
+			"key": "measure_id",
+			"value": "hab_id"
+		},
+		{
+			"key": "yn_id",
+			"value": "hab_id"
 		}
 	]
 }
