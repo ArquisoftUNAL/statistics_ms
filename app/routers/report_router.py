@@ -27,35 +27,34 @@ def get_hs():
 
 router = APIRouter()
 
-@router.get("/report/yn{hab_id}", response_model=md.HabitYNReportModel)
+@router.get("/report/yn/{hab_id}", response_model=md.HabitYNReportModel)
 async def get_habit_yn_report(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
-    return await hs.get_habit_yn_report(hab_id)
+    return await hs.get_habit_yn_report(hab_id=hab_id)
 
-@router.get("/report/measure{hab_id}", response_model=md.HabitMeasureReportModel)
+@router.get("/report/measure/{hab_id}", response_model=md.HabitMeasureReportModel)
 async def get_habit_measure_report(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
-    return await hs.get_habit_measure_report(hab_id)
+    return await hs.get_habit_measure_report(hab_id=hab_id)
 
 @router.get("/measure/resume/{hab_id}", response_model=md.HabitMeasureResumeReportModel)
 async def get_habit_measure_resume(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
-    body = hs.get_habit_measure_resume(hab_id)
-    return body
+    return await hs.get_habit_measure_resume(hab_id=hab_id)
 
 @router.get("/measure/history/{hab_id}", response_model=md.HabitMeasureHistoryReportModel)
 async def get_habit_measure_history(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
-    return hs.get_habit_measure_history(hab_id)
+    return await hs.get_habit_measure_history(hab_id=hab_id)
 
 @router.get("/yn/resume/{hab_id}", response_model=md.HabitYNResumeReportModel)
 async def get_habit_yn_resume(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
-    return hs.get_habit_yn_resume(hab_id)
+    return await hs.get_habit_yn_resume(hab_id=hab_id)
 
 @router.get("/yn/history/{hab_id}", response_model=md.HabitYNHistoryReportModel)
 async def get_habit_yn_history(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
-    return hs.get_habit_yn_history(hab_id)
+    return await hs.get_habit_yn_history(hab_id=hab_id)
 
 @router.get("/yn/streaks/{hab_id}", response_model=md.HabitYNStreakReportModel)
 async def get_habit_yn_streaks(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
-    return hs.get_habit_yn_streaks(hab_id)
+    return await hs.get_habit_yn_streaks(hab_id=hab_id)
 
 @router.get("/freq_week_day/{hab_id}", response_model=md.HabitFreqWeekDayReportModel)
 async def get_habit_freq_week_day(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
-    return hs.get_habit_freq_week_day(hab_id)
+    return await hs.get_habit_freq_week_day(hab_id=hab_id)
