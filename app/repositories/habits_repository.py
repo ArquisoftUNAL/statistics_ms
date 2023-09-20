@@ -53,7 +53,7 @@ class HabitRepository:
                 query = text("""
                              SELECT hab_dat_amount, hab_dat_collected_at
                              FROM Habit_data_Collected
-                             WHERE hab_rec_id = (
+                             WHERE hab_rec_id IN (
                                 SELECT hab_rec_id FROM habit_recurrence WHERE hab_id = :hab_id
                              )
                              ORDER BY hab_dat_collected_at DESC
