@@ -1,14 +1,13 @@
 from pydantic import BaseModel
 from pandas import DataFrame
-from uuid import UUID
 
-class HabRec(BaseModel):
-    hab_rec_id: UUID
-    hab_rec_freq_type: str
-    hab_rec_goal: float
+class Hab(BaseModel):
+    hab_is_yn: bool
+    hab_freq_type: str
+    hab_goal: float
 
 class HabData(BaseModel):
-    hab_rec: HabRec
+    hab_rec: Hab
     data: DataFrame
 
     class Config:
