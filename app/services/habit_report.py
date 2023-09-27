@@ -51,10 +51,10 @@ class HabitReport:
             habit_data = await self.repo.get_habit_data(hab_id)
 
         today = date.today()
-        goal = habit_data.hab_rec.hab_rec_goal
+        goal = habit_data.hab.hab_goal
         if goal is None:
             goal = 0
-        freq_type = freq_types[habit_data.hab_rec.hab_rec_freq_type]
+        freq_type = freq_types[habit_data.hab.hab_freq_type]
         df = habit_data.data
 
         year = fn.year_progress(df, goal, today, freq_type)
@@ -107,7 +107,7 @@ class HabitReport:
 
         today = date.today()
         df = habit_data.data
-        freq_type = freq_types[habit_data.hab_rec.hab_rec_freq_type]
+        freq_type = freq_types[habit_data.hab.hab_freq_type]
 
         year = fn.year_yn_resume(df, freq_type, today)
         semester = fn.semester_yn_resume(df, freq_type, today)

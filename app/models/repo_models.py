@@ -7,7 +7,7 @@ class Hab(BaseModel):
     hab_goal: float
 
 class HabData(BaseModel):
-    hab_rec: Hab
+    hab: Hab
     data: DataFrame
 
     class Config:
