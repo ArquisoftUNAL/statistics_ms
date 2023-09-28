@@ -8,7 +8,7 @@ from app.exceptions.exceptions import AppConnectionError, AppDatabaseError, Habi
 from uuid import UUID
 import logging
 import pandas as pd
-import app.models.repo_models as rm
+import app.models.habits_db_models as rm
 
 class HabitRepository:
     def __init__(self, engine: Engine):

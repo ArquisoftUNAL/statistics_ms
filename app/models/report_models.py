@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Dict, Tuple, Optional, Union
 from datetime import date
 
-class DataReportModel(BaseModel):
+class DataResume(BaseModel):
     percentage: float
     progress: float
     remaining: float
@@ -13,52 +13,52 @@ class DateFloatDir(BaseModel):
 class DateIntDir(BaseModel):
     data: Dict[Union[int, Tuple[int, int]], int]
 
-class HabitMeasureResumeReportModel(BaseModel):
-    toDay: Optional[DataReportModel] = None
-    week: Optional[DataReportModel] = None
-    month: Optional[DataReportModel] = None
-    semester: Optional[DataReportModel] = None
-    year: Optional[DataReportModel] = None
+class HabitMeasureResume(BaseModel):
+    toDay: Optional[DataResume] = None
+    week: Optional[DataResume] = None
+    month: Optional[DataResume] = None
+    semester: Optional[DataResume] = None
+    year: Optional[DataResume] = None
 
-class HabitMeasureHistoryReportModel(BaseModel):
+class HabitMeasureHistory(BaseModel):
     day: DateFloatDir
     week: DateFloatDir
     month: DateFloatDir
     semester: DateFloatDir
     year: DateFloatDir
 
-class HabitMeasureStreakReportModel(BaseModel):
+class HabitMeasureStreak(BaseModel):
     #data: {(<start date>, <end date>): <quantity>}
     data: Dict[Tuple[date, date], float]
 
-class HabitYNResumeReportModel(BaseModel):
+class HabitYNResume(BaseModel):
     month: float
     semester: float
     year: float
     total: int
 
-class HabitYNHistoryReportModel(BaseModel):
+class HabitYNHistory(BaseModel):
     week: DateIntDir
     month: DateIntDir
     semester: DateIntDir
     year: DateIntDir
 
-class HabitYNStreakReportModel(BaseModel):
+class HabitYNStreak(BaseModel):
     #data: {(<start date>, <end date>): <quantity>}
     data: Dict[Tuple[date, date], int]
 
-class HabitFreqWeekDayReportModel(BaseModel):
+class HabitFreqWeekDay(BaseModel):
     #data: {(<year>, <month>): {<day of week>: <quantity>}}
     data: Dict[Tuple[int, int], Dict[int, int]]
 
-class HabitYNReportModel(BaseModel):
-    resume: HabitYNResumeReportModel
-    history: HabitYNHistoryReportModel
-    streaks: HabitYNStreakReportModel
-    days_frequency: HabitFreqWeekDayReportModel
+class HabitYNReport(BaseModel):
+    resume: HabitYNResume
+    history: HabitYNHistory
+    streaks: HabitYNStreak
+    days_frequency: HabitFreqWeekDay
 
-class HabitMeasureReportModel(BaseModel):
-    resume: HabitMeasureResumeReportModel
-    history: HabitMeasureHistoryReportModel
-    streaks: HabitMeasureStreakReportModel
-    days_frequency: HabitFreqWeekDayReportModel
+class HabitMeasureReport(BaseModel):
+    resume: HabitMeasureResume
+    history: HabitMeasureHistory
+    streaks: HabitMeasureStreak
+    days_frequency: HabitFreqWeekDay

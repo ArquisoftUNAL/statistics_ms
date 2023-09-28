@@ -4,29 +4,29 @@ import calendar
 import app.models.report_models as rm
 
 #Functions for get_habit_measure_resume report:
-def day_progress(df: pd.DataFrame, goal: int, today: date) -> rm.DataReportModel:    
+def day_progress(df: pd.DataFrame, goal: int, today: date) -> rm.DataResume:    
     if df['hab_dat_collected_at'].iloc[0] == today:
         progress = df['hab_dat_amount'].iloc[0]
-        return rm.DataReportModel(
+        return rm.DataResume(
             percentage=progress / goal,
             progress=progress,
             remaining=goal - progress,
         )
     else:
-        return rm.DataReportModel(
+        return rm.DataResume(
             percentage=0,
             progress=0,
             remaining=goal,
         )
     
-def week_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataReportModel:
+def week_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataResume:
     year, week, _ = today.isocalendar()
     df = data_frame[(data_frame['year'] == year) & (data_frame['week'] == week)]
     if goal == 0:
         return None
 
     if df.empty:
-        return rm.DataReportModel(
+        return rm.DataResume(
             percentage=0,
             progress=0,
             remaining=goal,
@@ -39,13 +39,13 @@ def week_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: i
     if freq_type == 2:
         goal = goal * 7/2
 
-    return rm.DataReportModel(
+    return rm.DataResume(
         percentage=progress / goal,
         progress=progress,
         remaining=goal - progress,
     )
 
-def month_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataReportModel:
+def month_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataResume:
     year, *_ = today.isocalendar()
     month = today.month
 
@@ -67,13 +67,13 @@ def month_progress(data_frame: pd.DataFrame, goal: int, today: date, freq_type: 
     if freq_type == 4:
         goal = goal * month_days / 7 / 2
 
-    return rm.DataReportModel(
+    return rm.DataResume(
         percentage=progress / goal,
         progress=progress,
         remaining=goal - progress,
     )
 
-def semester_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataReportModel:
+def semester_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataResume:
     year, *_ = today.isocalendar()
     month = today.month
 
@@ -102,13 +102,13 @@ def semester_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) 
     if freq_type == 6:
         goal = goal * 3
 
-    return rm.DataReportModel(
+    return rm.DataResume(
         percentage=progress / goal,
         progress=progress,
         remaining=goal - progress,
     )
 
-def year_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataReportModel:
+def year_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> rm.DataResume:
     year, *_ = today.isocalendar()
     df = df[(df['year'] == year)]
 
@@ -131,7 +131,7 @@ def year_progress(df: pd.DataFrame, goal: int, today: date, freq_type: int) -> r
     if freq_type == 6:
         goal = goal * 6
 
-    return rm.DataReportModel(
+    return rm.DataResume(
         percentage=progress / goal,
         progress=progress,
         remaining=goal - progress,
@@ -265,7 +265,7 @@ def yn_year_history(df: pd.DataFrame) -> rm.DateIntDir:
     return rm.DateIntDir(data=data)
 
 #Functions for get_habit_yn_best_streak report:
-def yn_streaks(df: pd.DataFrame, today: date, freq: int) -> rm.HabitYNStreakReportModel:
+def yn_streaks(df: pd.DataFrame, today: date, freq: int) -> rm.HabitYNStreak:
     if freq == 3: #weekly
         freq = 7
     if freq == 4: #biweekly
@@ -284,9 +284,9 @@ def yn_streaks(df: pd.DataFrame, today: date, freq: int) -> rm.HabitYNStreakRepo
     streaks.set_index(['start_date', 'end_date'], inplace=True)
     streaks = streaks.sort_index(ascending=False)
     streaks = streaks.to_dict()['count']
-    return rm.HabitYNStreakReportModel(data=streaks)
+    return rm.HabitYNStreak(data=streaks)
 
-def ms_streaks(df: pd.DataFrame, today: date, freq: int) -> rm.HabitMeasureStreakReportModel:
+def ms_streaks(df: pd.DataFrame, today: date, freq: int) -> rm.HabitMeasureStreak:
     if freq == 3: #weekly
         freq = 7
     if freq == 4: #biweekly
@@ -305,12 +305,12 @@ def ms_streaks(df: pd.DataFrame, today: date, freq: int) -> rm.HabitMeasureStrea
     streaks.set_index(['start_date', 'end_date'], inplace=True)
     streaks = streaks.sort_index(ascending=False)
     streaks = streaks.to_dict()['count']
-    return rm.HabitMeasureStreakReportModel(data=streaks)
+    return rm.HabitMeasureStreak(data=streaks)
 
 #Functions for get_habit_freq_week_per_day report:
-def freq_week_day(df: pd.DataFrame) -> rm.HabitFreqWeekDayReportModel:
+def freq_week_day(df: pd.DataFrame) -> rm.HabitFreqWeekDay:
     df = df[['year', 'month', 'weekday', 'hab_dat_amount']]
     df = df.groupby(['year', 'month', 'weekday'])['hab_dat_amount'].count()
     df = df.to_frame(name='count').reset_index().groupby(['year', 'month'])[['weekday', 'count']]
     df = df.apply(lambda x: dict(x.values)).to_dict()
-    return rm.HabitFreqWeekDayReportModel(data=df)
+    return rm.HabitFreqWeekDay(data=df)

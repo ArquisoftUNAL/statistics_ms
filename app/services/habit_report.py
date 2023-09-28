@@ -1,5 +1,5 @@
 from app.repositories.habits_repository import HabitRepository
-from app.models.repo_models import HabData
+from app.models.habits_db_models import HabData
 from datetime import date
 from uuid import UUID
 from . import functions as fn
@@ -18,27 +18,27 @@ class HabitReport:
     def __init__(self, habit_repository: HabitRepository):
         self.repo = habit_repository
 
-    async def get_habit_yn_report(self, hab_id: UUID) -> md.HabitYNReportModel:
+    async def get_habit_yn_report(self, hab_id: UUID) -> md.HabitYNReport:
         habit_data = await self.repo.get_habit_data(hab_id)
 
-        return md.HabitYNReportModel(
+        return md.HabitYNReport(
             resume = await self.get_habit_yn_resume(habit_data),
             history = await self.get_habit_yn_history(habit_data),
             streaks = await self.get_habit_yn_streaks(habit_data),
             days_frequency = await self.get_habit_freq_week_day(habit_data)
         )
 
-    async def get_habit_measure_report(self, hab_id: UUID) -> md.HabitMeasureReportModel:
+    async def get_habit_measure_report(self, hab_id: UUID) -> md.HabitMeasure:
         habit_data = await self.repo.get_habit_data(hab_id)
 
-        return md.HabitMeasureReportModel(
+        return md.HabitMeasure(
             resume = await self.get_habit_measure_resume(habit_data),
             history = await self.get_habit_measure_history(habit_data),
             streaks = await self.get_habit_measure_streaks(habit_data),
             days_frequency = await self.get_habit_freq_week_day(habit_data)
         )
 
-    async def get_habit_measure_resume(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureResumeReportModel:
+    async def get_habit_measure_resume(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureResume:
         """
         Calculates the progress of a habit with a measure type frequency.
 
@@ -46,7 +46,7 @@ class HabitReport:
             hab_id (int): The id of the habit.
 
         Returns:
-            HabitMeasureResumeReportModel: The report with the progress of the habit.
+            HabitMeasureResume: The report with the progress of the habit.
         """
         if habit_data == None:
             habit_data = await self.repo.get_habit_data(hab_id)
@@ -64,11 +64,11 @@ class HabitReport:
         week = fn.week_progress(df, goal, today, freq_type) if freq_type < 4 else None
         today = fn.day_progress(df, goal, today) if freq_type == 1 else None
 
-        report = md.HabitMeasureResumeReportModel(toDay=today, week=week, month=month, semester=semester, year=year)
+        report = md.HabitMeasureResume(toDay=today, week=week, month=month, semester=semester, year=year)
 
         return report
     
-    async def get_habit_measure_history(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureHistoryReportModel:
+    async def get_habit_measure_history(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureHistory:
         """
         Calculates the history of a habit with a measure type frequency.
         
@@ -76,7 +76,7 @@ class HabitReport:
             hab_id (int): The id of the habit.
 
         Returns:
-            HabitMeasureHistoryReportModel: The report with the history of the habit.      
+            HabitMeasureHistory: The report with the history of the habit.      
         """
         if habit_data == None:
             habit_data = await self.repo.get_habit_data(hab_id)
@@ -89,11 +89,11 @@ class HabitReport:
         week = fn.ms_week_history(df)
         day = fn.ms_day_history(df)
 
-        report = md.HabitMeasureHistoryReportModel(day=day, week=week, month=month, semester=semester, year=year)
+        report = md.HabitMeasureHistory(day=day, week=week, month=month, semester=semester, year=year)
 
         return report
     
-    async def get_habit_measure_streaks(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureStreakReportModel:
+    async def get_habit_measure_streaks(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureStreak:
         """
         Calculates the best streak of a habit with a measure type frequency.
 
@@ -101,7 +101,7 @@ class HabitReport:
             hab_id (int): The id of the habit.
 
         Returns:
-            HabitMeasureStreakReportModel: The report with the best streak of the habit.
+            HabitMeasureStreak: The report with the best streak of the habit.
         """
         if habit_data == None:
             habit_data = await self.repo.get_habit_data(hab_id)
@@ -111,7 +111,7 @@ class HabitReport:
         df = habit_data.data
         return fn.ms_streaks(df, today, freq_type)
     
-    async def get_habit_yn_resume(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNResumeReportModel:
+    async def get_habit_yn_resume(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNResume:
         """
         Calculates the progress of a habit with a yes/no type.
 
@@ -119,7 +119,7 @@ class HabitReport:
             hab_id (int): The id of the habit.
 
         Returns:
-            HabitYNResumeReportModel: The report with the progress of the habit.
+            HabitYNResume: The report with the progress of the habit.
         """
         if habit_data == None:
             habit_data = await self.repo.get_habit_data(hab_id)
@@ -133,10 +133,10 @@ class HabitReport:
         month = fn.month_yn_resume(df, freq_type, today)
         total = fn.total_yn_resume(df, today)
 
-        report = md.HabitYNResumeReportModel(month=month, semester=semester, year=year, total=total)
+        report = md.HabitYNResume(month=month, semester=semester, year=year, total=total)
         return report
     
-    async def get_habit_yn_history(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNHistoryReportModel:
+    async def get_habit_yn_history(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNHistory:
         """
         Calculates the history of a habit with a yes/no type.
 
@@ -144,7 +144,7 @@ class HabitReport:
             hab_id (int): The id of the habit.
 
         Returns:
-            HabitYNHistoryReportModel: The report with the history of the habit.
+            HabitYNHistory: The report with the history of the habit.
         """
         if habit_data == None:
             habit_data = await self.repo.get_habit_data(hab_id)
@@ -156,11 +156,11 @@ class HabitReport:
         month = fn.yn_month_history(df)
         week = fn.yn_week_history(df)
 
-        report = md.HabitYNHistoryReportModel(week=week, month=month, semester=semester, year=year)
+        report = md.HabitYNHistory(week=week, month=month, semester=semester, year=year)
 
         return report
     
-    async def get_habit_yn_streaks(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNStreakReportModel:
+    async def get_habit_yn_streaks(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNStreak:
         """
         Calculates the best streak of a habit with a yes/no type.
 
@@ -168,7 +168,7 @@ class HabitReport:
             hab_id (int): The id of the habit.
 
         Returns:
-            HabitYNBestStreakReportModel: The report with the best streak of the habit.
+            HabitYNBestStreak: The report with the best streak of the habit.
         """
         if habit_data == None:
             habit_data = await self.repo.get_habit_data(hab_id)
@@ -178,7 +178,7 @@ class HabitReport:
         df = habit_data.data
         return fn.yn_streaks(df, today, freq_type)
     
-    async def get_habit_freq_week_day(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitFreqWeekDayReportModel:
+    async def get_habit_freq_week_day(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitFreqWeekDay:
         """
         Calculates the frequency of a habit with a week day type.
         
@@ -186,7 +186,7 @@ class HabitReport:
             hab_id (int): The id of the habit.
 
         Returns:
-            HabitFreqWeekDayReportModel: The report with the frequency of the habit. 
+            HabitFreqWeekDay: The report with the frequency of the habit. 
         """
         if habit_data == None:
             habit_data = await self.repo.get_habit_data(hab_id)
