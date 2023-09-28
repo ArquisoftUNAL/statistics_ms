@@ -4,6 +4,8 @@ from fastapi.responses import JSONResponse
 from app.exceptions.exceptions import AppConnectionError, AppDatabaseError, HabitNotFoundError
 from app.routers import report_router
 import uvicorn
+from sqlalchemy.ext.asyncio import create_async_engine
+from app.common.constants import habits_db_url
 
 app = FastAPI()
 
@@ -21,6 +23,14 @@ app.add_middleware(
     allow_methods=["GET"],
     allow_headers=["*"],
 )"""
+
+@app.on_event("startup")
+async def startup():
+    app.state.engine = await create_async_engine(habits_db_url)
+
+@app.on_event("shutdown")
+async def shutdown():
+    await app.state.engine.dispose()
 
 @app.exception_handler(AppConnectionError)
 async def connection_error_handler(request: Request, exc: AppConnectionError):
