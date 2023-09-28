@@ -48,6 +48,9 @@ class HabitRepository:
                              ORDER BY hab_dat_collected_at DESC
                             """)
                 result = await session.execute(query, {"hab_id": hab_id})
+
+                await session.commit()
+
                 response = result.fetchall()
                 data = pd.DataFrame(response)
 
