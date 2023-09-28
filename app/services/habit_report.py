@@ -34,6 +34,7 @@ class HabitReport:
         return md.HabitMeasureReportModel(
             resume = await self.get_habit_measure_resume(habit_data),
             history = await self.get_habit_measure_history(habit_data),
+            streaks = await self.get_habit_measure_streaks(habit_data),
             days_frequency = await self.get_habit_freq_week_day(habit_data)
         )
 
@@ -91,6 +92,24 @@ class HabitReport:
         report = md.HabitMeasureHistoryReportModel(day=day, week=week, month=month, semester=semester, year=year)
 
         return report
+    
+    async def get_habit_measure_streaks(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureStreakReportModel:
+        """
+        Calculates the best streak of a habit with a measure type frequency.
+
+        Args:
+            hab_id (int): The id of the habit.
+
+        Returns:
+            HabitMeasureStreakReportModel: The report with the best streak of the habit.
+        """
+        if habit_data == None:
+            habit_data = await self.repo.get_habit_data(hab_id)
+
+        today = date.today()
+        freq_type = freq_types[habit_data.hab.hab_freq_type]
+        df = habit_data.data
+        return fn.ms_streaks(df, today, freq_type)
     
     async def get_habit_yn_resume(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNResumeReportModel:
         """
@@ -155,8 +174,9 @@ class HabitReport:
             habit_data = await self.repo.get_habit_data(hab_id)
 
         today = date.today()
+        freq_type = freq_types[habit_data.hab.hab_freq_type]
         df = habit_data.data
-        return fn.yn_streaks(df, today)
+        return fn.yn_streaks(df, today, freq_type)
     
     async def get_habit_freq_week_day(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitFreqWeekDayReportModel:
         """

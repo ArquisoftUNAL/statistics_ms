@@ -27,6 +27,9 @@ class HabitMeasureHistoryReportModel(BaseModel):
     semester: DateFloatDir
     year: DateFloatDir
 
+class HabitMeasureStreakReportModel(BaseModel):
+    #data: {(<start date>, <end date>): <quantity>}
+    data: Dict[Tuple[date, date], float]
 
 class HabitYNResumeReportModel(BaseModel):
     month: float
@@ -57,4 +60,5 @@ class HabitYNReportModel(BaseModel):
 class HabitMeasureReportModel(BaseModel):
     resume: HabitMeasureResumeReportModel
     history: HabitMeasureHistoryReportModel
+    streaks: HabitMeasureStreakReportModel
     days_frequency: HabitFreqWeekDayReportModel
