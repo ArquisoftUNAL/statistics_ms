@@ -14,3 +14,5 @@ habits_db_url = URL.create(
 )
 
 api_gateway_url = f"http://{os.getenv('API_GATEWAY_HOST')}:{os.getenv('API_GATEWAY_PORT')}"
+
+statistics_db_url = ""
