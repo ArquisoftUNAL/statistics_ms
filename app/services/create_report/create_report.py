@@ -1,9 +1,9 @@
-from app.repositories.interfaces.habits_repository_interface import AbstractHabitReposiory
-from app.models.habits_db_models import HabData
 from datetime import date
 from uuid import UUID
-from . import functions as fn
+from app.repositories.interfaces.habits_repository_interface import AbstractHabitReposiory
+from app.models.habits_db_models import HabData
 import app.models.report_models as md
+from . import functions as fn
 
 freq_types = {
     'daily': 1,
@@ -14,7 +14,7 @@ freq_types = {
     'monthly2': 6
 }
 
-class HabitReport:
+class CreateHabitReport:
     def __init__(self, habit_repository: AbstractHabitReposiory):
         self.repo = habit_repository
 
