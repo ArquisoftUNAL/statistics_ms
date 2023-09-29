@@ -5,35 +5,33 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError, SQLAlchemyError
 from app.exceptions.exceptions import AppConnectionError, AppDatabaseError, HabitNotFoundError
+from app.models.habits_db_models import Hab, HabData
+from .interfaces.habits_repository_interface import AbstractHabitReposiory
+from app.queries.habits_queries import GET_HAB_QUERY, GET_HABIT_DATA_QUERY
 from uuid import UUID
 import logging
 import pandas as pd
-import app.models.habits_db_models as rm
 
-class HabitRepository:
+class HabitRepository(AbstractHabitReposiory):
     def __init__(self, engine: Engine):
         self.logger = logging.getLogger(__name__)
         self.engine = engine
         self.sessionmaker = sessionmaker(bind=self.engine, class_=AsyncSession, expire_on_commit=False)
 
-    async def get_hab(self, hab_id: UUID, session: AsyncSession) -> rm.Hab:
-        query = text("""
-                     SELECT hab_is_yn, hab_freq_type, hab_goal
-                     FROM habit 
-                     WHERE hab_id = :hab_id
-                     """)
+    async def get_hab(self, hab_id: UUID, session: AsyncSession) -> Hab:
+        query = text(GET_HAB_QUERY)
         result = await session.execute(query, {"hab_id": hab_id})
         data = result.fetchone()
 
         if data is not None:
-            return rm.Hab(
+            return Hab(
                 hab_is_yn=data[0],
                 hab_freq_type=data[1],
                 hab_goal=data[2],
             )
         return data
 
-    async def get_habit_data(self, hab_id: UUID) -> rm.HabData:
+    async def get_habit_data(self, hab_id: UUID) -> HabData:
         try:
             async with self.sessionmaker() as session:
                 hab = await self.get_hab(hab_id, session)
@@ -41,12 +39,7 @@ class HabitRepository:
                 if hab is None:
                     raise HabitNotFoundError("Habit not found")
 
-                query = text("""
-                             SELECT hab_dat_amount, hab_dat_collected_at
-                             FROM habit_data_collected
-                             WHERE hab_id = :hab_id
-                             ORDER BY hab_dat_collected_at DESC
-                            """)
+                query = text(GET_HAB_QUERY)
                 result = await session.execute(query, {"hab_id": hab_id})
 
                 await session.commit()
@@ -61,7 +54,7 @@ class HabitRepository:
                 data[['year', 'week', 'weekday']] = data['hab_dat_collected_at'].apply(lambda x: pd.Series(x.isocalendar()))
                 data['month'] = data['hab_dat_collected_at'].apply(lambda x: x.month)
 
-                return rm.HabData(hab=hab, data=data)
+                return HabData(hab=hab, data=data)
         except OperationalError as e:
             self.logger.error(str(e))
             raise AppConnectionError("Connection to database failed") from e

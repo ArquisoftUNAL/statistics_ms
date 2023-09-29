@@ -2,10 +2,11 @@ from fastapi import APIRouter, Depends, Request
 from app.models import report_models as md
 from app.services.habit_report import HabitReport
 from app.repositories.habits_repository import HabitRepository
+from app.repositories.interfaces.habits_repository_interface import AbstractHabitReposiory
 from uuid import UUID
 
 def get_hs(request: Request):
-    repo = HabitRepository(request.app.state.engine)
+    repo: AbstractHabitReposiory = HabitRepository(request.app.state.engine)
     return HabitReport(repo)
 
 router = APIRouter()

@@ -1,4 +1,4 @@
-from app.repositories.habits_repository import HabitRepository
+from app.repositories.interfaces.habits_repository_interface import AbstractHabitReposiory
 from app.models.habits_db_models import HabData
 from datetime import date
 from uuid import UUID
@@ -15,7 +15,7 @@ freq_types = {
 }
 
 class HabitReport:
-    def __init__(self, habit_repository: HabitRepository):
+    def __init__(self, habit_repository: AbstractHabitReposiory):
         self.repo = habit_repository
 
     async def get_habit_yn_report(self, hab_id: UUID) -> md.HabitYNReport:
@@ -28,10 +28,10 @@ class HabitReport:
             days_frequency = await self.get_habit_freq_week_day(habit_data)
         )
 
-    async def get_habit_measure_report(self, hab_id: UUID) -> md.HabitMeasure:
+    async def get_habit_measure_report(self, hab_id: UUID) -> md.HabitMeasureReport:
         habit_data = await self.repo.get_habit_data(hab_id)
 
-        return md.HabitMeasure(
+        return md.HabitMeasureReport(
             resume = await self.get_habit_measure_resume(habit_data),
             history = await self.get_habit_measure_history(habit_data),
             streaks = await self.get_habit_measure_streaks(habit_data),
