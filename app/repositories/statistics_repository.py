@@ -1,7 +1,7 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from beanie import init_beanie
 from beanie.odm.operators.update.general import Set, CurrentDate
-from app.common.constants import statistics_db_url
+from app.common.constants import STATISTICS_DB_URL
 from app.models.statistics_db_models import ReportDocument
 from app.exceptions.exceptions import (
     AppConnectionError,
@@ -14,7 +14,7 @@ from uuid import UUID
 
 class StatisticsRepository:
     def __init__(self):
-        self.client = AsyncIOMotorClient(statistics_db_url)
+        self.client = AsyncIOMotorClient(STATISTICS_DB_URL)
         self.db = self.client["statistics"]
         self.collection = self.db["reports"]
 

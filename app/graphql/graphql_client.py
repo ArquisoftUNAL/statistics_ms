@@ -1,10 +1,10 @@
 from gql import Client, gql
 from gql.transport.aiohttp import AIOHTTPTransport
-from app.common.constants import api_gateway_url
+from app.common.constants import API_GATEWAY_URL
 
 class GraphQLClient:
     def __init__(self, headers=None):
-        self.url = api_gateway_url
+        self.url = API_GATEWAY_URL
         self.headers = headers
         self.transport = AIOHTTPTransport(
             url=self.url,

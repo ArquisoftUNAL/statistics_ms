@@ -4,7 +4,7 @@ import os
 
 load_dotenv()
 
-habits_db_url = URL.create(
+HABITS_DB_URL = URL.create(
     drivername="postgresql+asyncpg",
     username=os.getenv("POSTGRES_USER"),
     password=os.getenv("POSTGRES_PASSWORD"),
@@ -13,6 +13,6 @@ habits_db_url = URL.create(
     database=os.getenv("POSTGRES_DB"),
 )
 
-api_gateway_url = f"http://{os.getenv('API_GATEWAY_HOST')}:{os.getenv('API_GATEWAY_PORT')}"
+API_GATEWAY_URL = f"http://{os.getenv('API_GATEWAY_HOST')}:{os.getenv('API_GATEWAY_PORT')}"
 
-statistics_db_url = ""
+STATISTICS_DB_URL = ""
