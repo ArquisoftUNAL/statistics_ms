@@ -1,31 +1,23 @@
+from uuid import UUID
+from typing import List, Optional, Union
 from motor.motor_asyncio import AsyncIOMotorClient
 from beanie import init_beanie
 from beanie.odm.operators.update.general import Set, CurrentDate
-from app.common.constants import STATISTICS_DB_URL
 from app.models.statistics_db_models import ReportDocument
 from app.exceptions.exceptions import (
     AppConnectionError,
     AppDatabaseError,
     HabitNotFoundError,
 )
-from typing import List, Optional, Union
 from app.models.report_models import HabitMeasureReport, HabitYNReport
-from uuid import UUID
+from .interfaces.statistic_repository_interface import AbstractStatisticRepository
 
-class StatisticsRepository:
-    def __init__(self):
-        self.client = AsyncIOMotorClient(STATISTICS_DB_URL)
+
+class StatisticsRepository(AbstractStatisticRepository):
+    def __init__(self, client: AsyncIOMotorClient):
+        self.client = client
         self.db = self.client["statistics"]
         self.collection = self.db["reports"]
-
-    async def connect(self):
-        try:
-            await init_beanie(database=self.db, document_models=[ReportDocument])
-        except Exception as e:
-            raise AppConnectionError(e)
-
-    async def disconnect(self):
-        self.client.close()
 
     async def get_all_reports(self) -> List[ReportDocument]:
         try:
