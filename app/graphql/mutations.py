@@ -1,16 +1,28 @@
 from pydantic import BaseModel
+from uuid import UUID
+from pydantic import BaseModel
+from datetime import date
 
-class TuConsultaVariables(BaseModel):
-    variable1: str
-    variable2: int
+class Streak(BaseModel):
+    date_start: date
+    date_end: date
+    data: float
+class UpdateStreak(BaseModel):
+    hab_id: UUID
+    streak: Streak
 
-class TuConsulta:
-    def __init__(self, variables: TuConsultaVariables):
+class UpDateStreakMutation(BaseModel):
+    def __init__(self, variables: UpdateStreak):
         self.query = """
-        query($variable1: String, $variable2: Int) {
-          tuConsulta(variable1: $variable1, variable2: $variable2) {
-            tuCampo
-          }
-        }
+        mutation notifyStreakUpdate($hab_id: UUID!, $streak: Streak!) {
+                notifyStreakUpdate(hab_id: $hab_id, streak: $streak) {
+                    status
+                    message
+                }
+            }
         """
         self.variables = dict(variables)
+
+    def get_query(self):
+        return self.query, self.variables
+
