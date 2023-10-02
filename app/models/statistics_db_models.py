@@ -7,6 +7,8 @@ from uuid import UUID
 
 class Report(BaseModel):
     hab_id: UUID
+    hab_is_yn: bool
+    hab_freq_type: str
     hab_data_count: int
     report: Union[HabitMeasureReport, HabitYNReport]
     updated_at: Optional[datetime]
