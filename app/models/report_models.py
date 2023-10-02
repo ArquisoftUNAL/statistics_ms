@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Dict, Tuple, Optional, Union
+from typing import Dict, Tuple, Optional, Union, List
 from datetime import date
 
 class DataResume(BaseModel):
@@ -7,11 +7,26 @@ class DataResume(BaseModel):
     progress: float
     remaining: float
 
-class DateFloatDir(BaseModel):
-    data: Dict[Union[int, Tuple[int, int], date], float]
+class DateValue(BaseModel):
+    year: int
+    month: Optional[int]
+    day: Optional[int]
+    value: float
 
-class DateIntDir(BaseModel):
-    data: Dict[Union[int, Tuple[int, int]], int]
+class ListDateValue(BaseModel): #DateFloatDir
+    data: List[DateValue]
+    #data: Dict[Union[int, Tuple[int, int], date], float]
+
+class DateCount(BaseModel):
+    year: int
+    week: Optional[int]
+    month: Optional[int]
+    semester: Optional[int]
+    count: int
+
+class ListDateCount(BaseModel):#DateIntDir(BaseModel):
+    data: List[DateCount]
+    #data: Dict[Union[int, Tuple[int, int]], int]
 
 class HabitMeasureResume(BaseModel):
     toDay: Optional[DataResume] = None
@@ -21,15 +36,11 @@ class HabitMeasureResume(BaseModel):
     year: Optional[DataResume] = None
 
 class HabitMeasureHistory(BaseModel):
-    day: DateFloatDir
-    week: DateFloatDir
-    month: DateFloatDir
-    semester: DateFloatDir
-    year: DateFloatDir
-
-class HabitMeasureStreak(BaseModel):
-    #data: {(<start date>, <end date>): <quantity>}
-    data: Dict[Tuple[date, date], float]
+    day: ListDateValue
+    week: ListDateValue
+    month: ListDateValue
+    semester: ListDateValue
+    year: ListDateValue
 
 class HabitYNResume(BaseModel):
     month: float
@@ -38,27 +49,39 @@ class HabitYNResume(BaseModel):
     total: int
 
 class HabitYNHistory(BaseModel):
-    week: DateIntDir
-    month: DateIntDir
-    semester: DateIntDir
-    year: DateIntDir
+    week: ListDateCount
+    month: ListDateCount
+    semester: ListDateCount
+    year: ListDateCount
 
-class HabitYNStreak(BaseModel):
-    #data: {(<start date>, <end date>): <quantity>}
-    data: Dict[Tuple[date, date], int]
+class HabitStreak(BaseModel):
+    start_date: date
+    end_date: date
+    quantity: float
+
+class ListHabitStreak(BaseModel):
+    data: List[HabitStreak]
+    #data: Dict[Tuple[date, date], int]
 
 class HabitFreqWeekDay(BaseModel):
+    year: int
+    month: int
+    week_day: int
+    quantity: int
+
+class ListHabitFreqWeekDay(BaseModel):
+    data: List[HabitFreqWeekDay]
     #data: {(<year>, <month>): {<day of week>: <quantity>}}
-    data: Dict[Tuple[int, int], Dict[int, int]]
+    #data: Dict[Tuple[int, int], Dict[int, int]]
 
 class HabitYNReport(BaseModel):
     resume: HabitYNResume
     history: HabitYNHistory
-    streaks: HabitYNStreak
-    days_frequency: HabitFreqWeekDay
+    streaks: ListHabitStreak
+    days_frequency: ListHabitFreqWeekDay
 
 class HabitMeasureReport(BaseModel):
     resume: HabitMeasureResume
     history: HabitMeasureHistory
-    streaks: HabitMeasureStreak
-    days_frequency: HabitFreqWeekDay
+    streaks: ListHabitStreak
+    days_frequency: ListHabitFreqWeekDay
