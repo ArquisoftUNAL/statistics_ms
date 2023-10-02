@@ -1,0 +1,25 @@
+
+version: "3.9"
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: habitus_statistics_db
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+    env_file:
+      - ./database/.env
+
+  fastapi-app:
+    build: .
+    container_name: fastapi
+    ports:
+      - 8000:8000
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app
+    command: uvicorn app.main:app --host
