@@ -8,7 +8,7 @@ from app.repositories.interfaces.habits_repository_interface import AbstractHabi
 from app.repositories.interfaces.statistic_repository_interface import AbstractStatisticRepository
 from uuid import UUID
 
-def get_hs(request: Request):
+def get_hr(request: Request):
     hab_repo: AbstractHabitReposiory = HabitRepository(request.app.state.engine)
     stat_repo: AbstractStatisticRepository = StatisticsRepository(request.app.state.client)
     return HabitReport(hab_repo, stat_repo)
@@ -16,5 +16,5 @@ def get_hs(request: Request):
 router = APIRouter()
 
 @router.get("/report/{hab_id}", response_model=Union[HabitMeasureReport, HabitYNReport])
-async def get_habit_report(hab_id: UUID, hs: HabitReport = Depends(get_hs)):
-    return await hs.get_habit_yn_report(hab_id=hab_id)
+async def get_habit_report(hab_id: UUID, hr: HabitReport = Depends(get_hr)):
+    return await hr.get_habit_report(hab_id=hab_id)
