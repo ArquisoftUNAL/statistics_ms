@@ -1,61 +1,45 @@
 from uuid import UUID
-from app.repositories.interfaces.habits_repository_interface import AbstractHabitReposiory
-from app.repositories.interfaces.statistic_repository_interface import AbstractStatisticRepository
-from app.models.habits_db_models import HabData
-import app.models.report_models as md
-
-freq_types = {
-    'daily': 1,
-    'daily2': 2,
-    'weekly': 3,
-    'weekly2': 4,
-    'monthly': 5,
-    'monthly2': 6
-}
+from typing import Union
+from app.repositories.interfaces.habits_repository_interface import (
+    AbstractHabitReposiory,
+)
+from app.repositories.interfaces.statistic_repository_interface import (
+    AbstractStatisticRepository,
+)
+from app.services.create_report.create_report import CreateHabitReport
+from app.models.report_models import HabitMeasureReport, HabitYNReport
+from app.exceptions.handle_exeptions import handle_exception
+from app.exceptions.exceptions import (
+    HabitNotFoundError,
+)
 
 class HabitReport:
-    def __init__(self, habit_repository: AbstractHabitReposiory, statistic_repository: AbstractStatisticRepository):
+    def __init__(
+        self,
+        habit_repository: AbstractHabitReposiory,
+        statistic_repository: AbstractStatisticRepository,
+    ):
         self.hab_repo = habit_repository
         self.stat_repo = statistic_repository
-        
 
-    async def get_habit_yn_report(self, hab_id: UUID) -> md.HabitYNReport:
-        habit_data = await self.hab_repo.get_habit_data(hab_id)
+    async def get_habit_report(
+        self, habit_id: UUID
+    ) -> Union[HabitMeasureReport, HabitYNReport]:
+        try:
+            report_doc = await self.stat_repo.get_report_by_id(habit_id)
 
-        return md.HabitYNReport(
-            resume = await self.get_habit_yn_resume(habit_data),
-            history = await self.get_habit_yn_history(habit_data),
-            streaks = await self.get_habit_yn_streaks(habit_data),
-            days_frequency = await self.get_habit_freq_week_day(habit_data)
-        )
+            if report_doc is None:
+                report = await CreateHabitReport(
+                    self.hab_repo, self.stat_repo
+                ).create_habit_report(habit_id)
 
-    async def get_habit_measure_report(self, hab_id: UUID) -> md.HabitMeasureReport:
-        habit_data = await self.hab_repo.get_habit_data(hab_id)
+                if report is None:
+                    raise HabitNotFoundError("Habit not found")
 
-        return md.HabitMeasureReport(
-            resume = await self.get_habit_measure_resume(habit_data),
-            history = await self.get_habit_measure_history(habit_data),
-            streaks = await self.get_habit_measure_streaks(habit_data),
-            days_frequency = await self.get_habit_freq_week_day(habit_data)
-        )
+                return report
 
-    async def get_habit_measure_resume(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureResume:
-        pass
-    
-    async def get_habit_measure_history(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureHistory:
-        pass
-    
-    async def get_habit_measure_streaks(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitMeasureStreak:
-        pass
-    
-    async def get_habit_yn_resume(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNResume:
-        pass
-    
-    async def get_habit_yn_history(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNHistory:
-        pass
-    
-    async def get_habit_yn_streaks(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitYNStreak:
-        pass
-    
-    async def get_habit_freq_week_day(self, habit_data: HabData = None, hab_id: UUID = None) -> md.HabitFreqWeekDay:
-        pass
+            return report_doc.report
+
+        except Exception as e:
+            handle_exception(e)
+            return None
