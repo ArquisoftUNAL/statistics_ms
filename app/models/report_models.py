@@ -44,6 +44,10 @@ class HabitYNStreakReportModel(BaseModel):
     #data: {(<start date>, <end date>): <quantity>}
     data: Dict[Tuple[date, date], int]
 
+class HabitMSStreakReportModel(BaseModel):
+    #data: {(<start date>, <end date>): <quantity>}
+    data: Dict[Tuple[date, date], float]
+
 class HabitFreqWeekDayReportModel(BaseModel):
     #data: {(<year>, <month>): {<day of week>: <quantity>}}
     data: Dict[Tuple[int, int], Dict[int, int]]
@@ -57,4 +61,5 @@ class HabitYNReportModel(BaseModel):
 class HabitMeasureReportModel(BaseModel):
     resume: HabitMeasureResumeReportModel
     history: HabitMeasureHistoryReportModel
+    streaks: HabitMSStreakReportModel
     days_frequency: HabitFreqWeekDayReportModel

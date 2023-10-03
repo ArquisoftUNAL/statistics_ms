@@ -1,27 +1,12 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 from app.models import report_models as md
 from app.services.habit_report import HabitReport
 from app.repositories.habits_repository import HabitRepository
-from sqlalchemy import  URL
 from uuid import UUID
-from sqlalchemy.ext.asyncio import create_async_engine
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
-url = URL.create(
-    drivername="postgresql+asyncpg",
-    username=os.getenv("POSTGRES_USER"),
-    password=os.getenv("POSTGRES_PASSWORD"),
-    host=os.getenv("POSTGRES_HOST"),
-    port=os.getenv("POSTGRES_PORT"),
-    database=os.getenv("POSTGRES_DB"),
-)
 
-engine = create_async_engine(url)
-
-def get_hs():
-    repo = HabitRepository(engine)
+def get_hs(request: Request):
+    repo = HabitRepository(request.app.state.engine)
     return HabitReport(repo)
 
 

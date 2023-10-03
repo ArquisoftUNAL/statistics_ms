@@ -165,7 +165,7 @@ def ms_semester_history(df: pd.DataFrame) -> rm.DateFloatDir:
     return rm.DateFloatDir(data=data)
 
 def ms_year_history(df: pd.DataFrame) -> rm.DateFloatDir:
-    df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year']].astype(str)
+    df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year']]#.astype(str)
     df = df.groupby(df['year'])['hab_dat_amount'].sum()
     data = df.to_dict()
     return rm.DateFloatDir(data=data)
@@ -265,17 +265,49 @@ def yn_year_history(df: pd.DataFrame) -> rm.DateIntDir:
     return rm.DateIntDir(data=data)
 
 #Functions for get_habit_yn_best_streak report:
-def yn_streaks(df: pd.DataFrame, today: date) -> rm.HabitYNStreakReportModel:
-    df = df[['hab_dat_collected_at', 'hab_dat_amount']].where(df['year'] == today.year).dropna()
-    df['diff_days'] = df['hab_dat_collected_at'].diff()
-    df['streak'] = (df['diff_days'] != 1).cumsum()
+def yn_streaks(df: pd.DataFrame, today: date, freq: int) -> rm.HabitYNStreakReportModel:
+    if freq == 3: #weekly
+        freq = 7
+    if freq == 4: #biweekly
+        freq = 14
+    if freq == 5: #monthly
+        freq = 30
+    if freq == 6: #bimonthly
+        freq = 60
+
+    df = df[['hab_dat_collected_at']]#.where(df['year'] == today.year).dropna()
+    df.sort_values(by=['hab_dat_collected_at'], inplace=True)
+    df['diff_days'] = df['hab_dat_collected_at'].diff().dt.days
+    df['streak'] = (df['diff_days'] > freq).cumsum()
     streaks = df.groupby('streak')['hab_dat_collected_at'].count()
     streak_start_end = df.groupby('streak')['hab_dat_collected_at'].agg(['min', 'max']).rename(columns={'min': 'start_date', 'max': 'end_date'})
     streaks = streaks.to_frame(name='count').join(streak_start_end)
     streaks.set_index(['start_date', 'end_date'], inplace=True)
-    streaks = streaks.sort_index(ascending=False)
+    streaks = streaks.sort_index(ascending=True)
     streaks = streaks.to_dict()['count']
     return rm.HabitYNStreakReportModel(data=streaks)
+
+def ms_streaks(df: pd.DataFrame, today: date, freq: int) -> rm.HabitMSStreakReportModel:
+    if freq == 3: #weekly
+        freq = 7
+    if freq == 4: #biweekly
+        freq = 14
+    if freq == 5: #monthly
+        freq = 30
+    if freq == 6: #bimonthly
+        freq = 60
+
+    df = df[['hab_dat_collected_at', 'hab_dat_amount']]#.where(df['year'] == today.year).dropna()
+    df.sort_values(by=['hab_dat_collected_at'], inplace=True)
+    df['diff_days'] = df['hab_dat_collected_at'].diff().dt.days
+    df['streak'] = (df['diff_days'] > freq).cumsum()
+    streaks = df.groupby('streak')['hab_dat_amount'].sum()
+    streak_start_end = df.groupby('streak')['hab_dat_collected_at'].agg(['min', 'max']).rename(columns={'min': 'start_date', 'max': 'end_date'})
+    streaks = streaks.to_frame(name='count').join(streak_start_end)
+    streaks.set_index(['start_date', 'end_date'], inplace=True)
+    streaks = streaks.sort_index(ascending=True)
+    streaks = streaks.to_dict()['count']
+    return rm.HabitMSStreakReportModel(data=streaks)
 
 #Functions for get_habit_freq_week_per_day report:
 def freq_week_day(df: pd.DataFrame) -> rm.HabitFreqWeekDayReportModel:
