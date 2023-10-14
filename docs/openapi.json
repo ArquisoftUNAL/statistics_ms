@@ -1,0 +1,308 @@
+{
+  "openapi": "3.1.0",
+  "info": { "title": "FastAPI", "version": "0.1.0" },
+  "paths": {
+    "/api/stats/{hab_id}": {
+      "get": {
+        "tags": ["statistics"],
+        "summary": "Get Habit Report",
+        "operationId": "get_habit_report_api_stats_report__hab_id__get",
+        "parameters": [
+          {
+            "name": "hab_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "format": "uuid", "title": "Hab Id" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    { "$ref": "#/components/schemas/HabitMeasureReport" },
+                    { "$ref": "#/components/schemas/HabitYNReport" }
+                  ],
+                  "title": "Response Get Habit Report Api Stats Report  Hab Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DataResume": {
+        "properties": {
+          "percentage": { "type": "number", "title": "Percentage" },
+          "progress": { "type": "number", "title": "Progress" },
+          "remaining": { "type": "number", "title": "Remaining" }
+        },
+        "type": "object",
+        "required": ["percentage", "progress", "remaining"],
+        "title": "DataResume"
+      },
+      "DateCount": {
+        "properties": {
+          "year": { "type": "integer", "title": "Year" },
+          "week": {
+            "anyOf": [{ "type": "integer" }, { "type": "null" }],
+            "title": "Week"
+          },
+          "month": {
+            "anyOf": [{ "type": "integer" }, { "type": "null" }],
+            "title": "Month"
+          },
+          "semester": {
+            "anyOf": [{ "type": "integer" }, { "type": "null" }],
+            "title": "Semester"
+          },
+          "count": { "type": "integer", "title": "Count" }
+        },
+        "type": "object",
+        "required": ["year", "week", "month", "semester", "count"],
+        "title": "DateCount"
+      },
+      "DateValue": {
+        "properties": {
+          "year": { "type": "integer", "title": "Year" },
+          "month": {
+            "anyOf": [{ "type": "integer" }, { "type": "null" }],
+            "title": "Month"
+          },
+          "day": {
+            "anyOf": [{ "type": "integer" }, { "type": "null" }],
+            "title": "Day"
+          },
+          "value": { "type": "number", "title": "Value" }
+        },
+        "type": "object",
+        "required": ["year", "month", "day", "value"],
+        "title": "DateValue"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": { "$ref": "#/components/schemas/ValidationError" },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HabitFreqWeekDay": {
+        "properties": {
+          "year": { "type": "integer", "title": "Year" },
+          "month": { "type": "integer", "title": "Month" },
+          "week_day": { "type": "integer", "title": "Week Day" },
+          "quantity": { "type": "integer", "title": "Quantity" }
+        },
+        "type": "object",
+        "required": ["year", "month", "week_day", "quantity"],
+        "title": "HabitFreqWeekDay"
+      },
+      "HabitMeasureHistory": {
+        "properties": {
+          "day": { "$ref": "#/components/schemas/ListDateValue" },
+          "week": { "$ref": "#/components/schemas/ListDateValue" },
+          "month": { "$ref": "#/components/schemas/ListDateValue" },
+          "semester": { "$ref": "#/components/schemas/ListDateValue" },
+          "year": { "$ref": "#/components/schemas/ListDateValue" }
+        },
+        "type": "object",
+        "required": ["day", "week", "month", "semester", "year"],
+        "title": "HabitMeasureHistory"
+      },
+      "HabitMeasureReport": {
+        "properties": {
+          "resume": { "$ref": "#/components/schemas/HabitMeasureResume" },
+          "history": { "$ref": "#/components/schemas/HabitMeasureHistory" },
+          "streaks": { "$ref": "#/components/schemas/ListHabitStreak" },
+          "days_frequency": {
+            "$ref": "#/components/schemas/ListHabitFreqWeekDay"
+          }
+        },
+        "type": "object",
+        "required": ["resume", "history", "streaks", "days_frequency"],
+        "title": "HabitMeasureReport"
+      },
+      "HabitMeasureResume": {
+        "properties": {
+          "toDay": {
+            "anyOf": [
+              { "$ref": "#/components/schemas/DataResume" },
+              { "type": "null" }
+            ]
+          },
+          "week": {
+            "anyOf": [
+              { "$ref": "#/components/schemas/DataResume" },
+              { "type": "null" }
+            ]
+          },
+          "month": {
+            "anyOf": [
+              { "$ref": "#/components/schemas/DataResume" },
+              { "type": "null" }
+            ]
+          },
+          "semester": {
+            "anyOf": [
+              { "$ref": "#/components/schemas/DataResume" },
+              { "type": "null" }
+            ]
+          },
+          "year": {
+            "anyOf": [
+              { "$ref": "#/components/schemas/DataResume" },
+              { "type": "null" }
+            ]
+          }
+        },
+        "type": "object",
+        "required": ["toDay", "week", "month", "semester", "year"],
+        "title": "HabitMeasureResume"
+      },
+      "HabitStreak": {
+        "properties": {
+          "start_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Start Date"
+          },
+          "end_date": {
+            "type": "string",
+            "format": "date",
+            "title": "End Date"
+          },
+          "quantity": { "type": "number", "title": "Quantity" }
+        },
+        "type": "object",
+        "required": ["start_date", "end_date", "quantity"],
+        "title": "HabitStreak"
+      },
+      "HabitYNHistory": {
+        "properties": {
+          "week": { "$ref": "#/components/schemas/ListDateCount" },
+          "month": { "$ref": "#/components/schemas/ListDateCount" },
+          "semester": { "$ref": "#/components/schemas/ListDateCount" },
+          "year": { "$ref": "#/components/schemas/ListDateCount" }
+        },
+        "type": "object",
+        "required": ["week", "month", "semester", "year"],
+        "title": "HabitYNHistory"
+      },
+      "HabitYNReport": {
+        "properties": {
+          "resume": { "$ref": "#/components/schemas/HabitYNResume" },
+          "history": { "$ref": "#/components/schemas/HabitYNHistory" },
+          "streaks": { "$ref": "#/components/schemas/ListHabitStreak" },
+          "days_frequency": {
+            "$ref": "#/components/schemas/ListHabitFreqWeekDay"
+          }
+        },
+        "type": "object",
+        "required": ["resume", "history", "streaks", "days_frequency"],
+        "title": "HabitYNReport"
+      },
+      "HabitYNResume": {
+        "properties": {
+          "month": { "type": "number", "title": "Month" },
+          "semester": { "type": "number", "title": "Semester" },
+          "year": { "type": "number", "title": "Year" },
+          "total": { "type": "integer", "title": "Total" }
+        },
+        "type": "object",
+        "required": ["month", "semester", "year", "total"],
+        "title": "HabitYNResume"
+      },
+      "ListDateCount": {
+        "properties": {
+          "data": {
+            "items": { "$ref": "#/components/schemas/DateCount" },
+            "type": "array",
+            "title": "Data"
+          }
+        },
+        "type": "object",
+        "required": ["data"],
+        "title": "ListDateCount"
+      },
+      "ListDateValue": {
+        "properties": {
+          "data": {
+            "items": { "$ref": "#/components/schemas/DateValue" },
+            "type": "array",
+            "title": "Data"
+          }
+        },
+        "type": "object",
+        "required": ["data"],
+        "title": "ListDateValue"
+      },
+      "ListHabitFreqWeekDay": {
+        "properties": {
+          "data": {
+            "items": { "$ref": "#/components/schemas/HabitFreqWeekDay" },
+            "type": "array",
+            "title": "Data"
+          }
+        },
+        "type": "object",
+        "required": ["data"],
+        "title": "ListHabitFreqWeekDay"
+      },
+      "ListHabitStreak": {
+        "properties": {
+          "data": {
+            "items": { "$ref": "#/components/schemas/HabitStreak" },
+            "type": "array",
+            "title": "Data"
+          }
+        },
+        "type": "object",
+        "required": ["data"],
+        "title": "ListHabitStreak"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": { "anyOf": [{ "type": "string" }, { "type": "integer" }] },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": { "type": "string", "title": "Message" },
+          "type": { "type": "string", "title": "Error Type" }
+        },
+        "type": "object",
+        "required": ["loc", "msg", "type"],
+        "title": "ValidationError"
+      }
+    }
+  }
+}
