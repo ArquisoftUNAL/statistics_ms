@@ -6,7 +6,7 @@
       "get": {
         "tags": ["statistics"],
         "summary": "Get Habit Report",
-        "operationId": "get_habit_report_api_stats_report__hab_id__get",
+        "operationId": "get_habit_report_api_stats__hab_id__get",
         "parameters": [
           {
             "name": "hab_id",
@@ -25,7 +25,7 @@
                     { "$ref": "#/components/schemas/HabitMeasureReport" },
                     { "$ref": "#/components/schemas/HabitYNReport" }
                   ],
-                  "title": "Response Get Habit Report Api Stats Report  Hab Id  Get"
+                  "title": "Response Get Habit Report Api Stats  Hab Id  Get"
                 }
               }
             }
@@ -90,9 +90,17 @@
       "DateValue": {
         "properties": {
           "year": { "type": "integer", "title": "Year" },
+          "semester": {
+            "anyOf": [{ "type": "integer" }, { "type": "null" }],
+            "title": "Semester"
+          },
           "month": {
             "anyOf": [{ "type": "integer" }, { "type": "null" }],
             "title": "Month"
+          },
+          "week": {
+            "anyOf": [{ "type": "integer" }, { "type": "null" }],
+            "title": "Week"
           },
           "day": {
             "anyOf": [{ "type": "integer" }, { "type": "null" }],
@@ -101,7 +109,7 @@
           "value": { "type": "number", "title": "Value" }
         },
         "type": "object",
-        "required": ["year", "month", "day", "value"],
+        "required": ["year", "semester", "month", "week", "day", "value"],
         "title": "DateValue"
       },
       "HTTPValidationError": {
