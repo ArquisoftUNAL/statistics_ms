@@ -113,8 +113,8 @@ class UpdateReport:
         pass
 
     async def update_habit_measure_streaks(
-        self, report: rm.HabitMeasureStreak, count: int, new_hab_data: HabDataCollected
-    ) -> rm.HabitMeasureStreak:
+        self, report: rm.ListHabitStreak, count: int, new_hab_data: HabDataCollected
+    ) -> rm.ListHabitStreak:
         pass
 
     async def update_habit_yn_resume(
@@ -128,8 +128,8 @@ class UpdateReport:
         pass
 
     async def update_habit_yn_streaks(
-        self, report: rm.HabitYNStreak, count: int, new_hab_data: HabDataCollected
-    ) -> rm.HabitYNStreak:
+        self, report: rm.ListHabitStreak, count: int, new_hab_data: HabDataCollected
+    ) -> rm.ListHabitStreak:
         pass
 
     async def update_habit_freq_week_day(
