@@ -1,47 +1,50 @@
-import pika
+import aio_pika
 import logging
-from pika.adapters.asyncio_connection import AsyncioConnection
+from sqlalchemy.engine import Engine
+from motor.motor_asyncio import AsyncIOMotorClient
 from app.repositories.habits_repository import HabitRepository
 from app.repositories.statistics_repository import StatisticsRepository
-from app.repositories.interfaces.habits_repository_interface import AbstractHabitReposiory
-from app.repositories.interfaces.statistic_repository_interface import AbstractStatisticRepository
 from app.services.update_report.update_report import UpdateReport
+from app.exceptions.exceptions import HabitNotFoundError
+from app.models.queue_msgs import NewHabitData
+from app.graphql.mutations import UpDateStreak, UpDateStreakMutation, Streak
+from app.graphql.graphql_client import GraphQLClient
+
 
 class RabbitMQClient:
-    def __init__(self, host: str, queue: str, username: str, password: str, sql_engine, motor_client):
-        self.host = host
+    def __init__(
+        self, url: str, queue: str, sql_engine: Engine, mongo_client: AsyncIOMotorClient
+    ):
+        self.url = url
         self.queue = queue
-        self.username = username
-        self.password = password
         self.connection = None
         self.channel = None
-        self.engine = sql_engine
-        self.client = motor_client
+        self.hab_repo = HabitRepository(sql_engine)
+        self.stat_repo = StatisticsRepository(mongo_client)
 
     async def connect(self):
-        credentials = pika.PlainCredentials(self.username, self.password)
-        self.connection = AsyncioConnection(pika.ConnectionParameters(host=self.host, credentials=credentials))
+        self.connection = await aio_pika.connect_robust(self.url)
         self.channel = await self.connection.channel()
-        await self.channel.queue_declare(queue=self.queue)
+        await self.channel.set_qos(prefetch_count=1)
+        await self.channel.declare_queue(self.queue, durable=True)
+        print("Connected to RabbitMQ")
 
     async def disconnect(self):
         await self.connection.close()
 
-    async def callback(self, ch, method, properties, body):
-        #Logic for handling messages
-        try:
-            hab_repo: AbstractHabitReposiory = HabitRepository(self.engine)
-            stat_repo: AbstractStatisticRepository = StatisticsRepository(self.client)
-            update_report = UpdateReport(hab_repo, stat_repo)
-            await update_report.update_habit_report(body.decode())
+    async def callback(self, message: aio_pika.IncomingMessage):
+        print("On callback...")
+        async with message.process():
+            # Lógica para manejar mensajes
+            try:
+                raise HabitNotFoundError
 
-        except Exception as e:
-            logging.error(f"Error processing message: {e}")
-            ch.basic_nack(delivery_tag=method.delivery_tag)
+            except Exception as e:
+                await message.nack(requeue=True)
+                logging.error(f"Error processing message: {e}")
 
-        ch.basic_ack(delivery_tag=method.delivery_tag)
+            await message.ack()
 
     async def start_consuming(self):
-        await self.channel.basic_qos(prefetch_count=1)
-        await self.channel.basic_consume(self.queue, self.callback, auto_ack=False)
-        await self.channel.start_consuming()
+        queue = await self.channel.declare_queue(self.queue, durable=True)
+        await queue.consume(self.callback)
