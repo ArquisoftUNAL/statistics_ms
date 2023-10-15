@@ -1,5 +1,5 @@
 import logging
-from datetime import date
+from datetime import date, datetime
 from uuid import UUID
 from typing import Union
 from pymongo.errors import WriteError
@@ -11,7 +11,7 @@ from app.repositories.interfaces.statistic_repository_interface import (
 )
 from app.models.habits_db_models import HabData
 from app.models.statistics_db_models import ReportDocument
-import app.models.report_models as md
+import app.models.report_models as rm
 from . import functions as fn
 
 freq_types = {
@@ -33,11 +33,11 @@ class CreateHabitReport:
         self.hab_repo = habit_repository
         self.stat_repo = statistic_repository
 
-    async def create_habit_report(self, hab_id: UUID) -> ReportDocument:
+    async def create_habit_report(self, hab_id: UUID) -> Union[rm.HabitYNReport, rm.HabitMeasureReport]:#ReportDocument:
         habit_data = await self.hab_repo.get_habit_data(hab_id)
         if habit_data is None:
             return None
-
+        
         if habit_data.hab.hab_is_yn:
             report_doc = await self.create_habit_yn_report(hab_id, habit_data)
         else:
@@ -45,13 +45,13 @@ class CreateHabitReport:
 
         try:
             await self.stat_repo.create_report(report_doc)
-            return report_doc
+            return report_doc.report
         except WriteError as e:
             logging.error(f"Error creating report on statistics database: {e}")
             return None
 
     async def create_habit_yn_report(self, hab_id: UUID, habit_data: HabData) -> ReportDocument:
-        report = md.HabitYNReport(
+        report = rm.HabitYNReport(
             resume=await self.create_habit_yn_resume(habit_data),
             history=await self.create_habit_yn_history(habit_data),
             streaks=await self.create_habit_yn_streaks(habit_data),
@@ -64,32 +64,36 @@ class CreateHabitReport:
             hab_freq_type=habit_data.hab.hab_freq_type,
             hab_data_count=habit_data.data.shape[0],
             report=report,
+            created_at=datetime.now(),
+            updated_at=datetime.now(),
         )
 
         return report_doc
         
 
     async def create_habit_measure_report(self, hab_id: UUID, habit_data: HabData) -> ReportDocument:
-        report = md.HabitMeasureReport(
+        report = rm.HabitMeasureReport(
             resume=await self.create_habit_measure_resume(habit_data),
             history=await self.create_habit_measure_history(habit_data),
             streaks=await self.create_habit_measure_streaks(habit_data),
             days_frequency=await self.create_habit_freq_week_day(habit_data),
         )
-        
+
         report_doc = ReportDocument(
             hab_id=hab_id,
             hab_is_yn=False,
             hab_freq_type=habit_data.hab.hab_freq_type,
             hab_data_count=habit_data.data.shape[0],
             report=report,
+            created_at=datetime.now(),
+            updated_at=datetime.now(),
         )
 
         return report_doc
 
     async def create_habit_measure_resume(
         self, habit_data: HabData
-    ) -> md.HabitMeasureResume:
+    ) -> rm.HabitMeasureResume:
         """
         Calculates the progress of a habit with a measure type frequency.
 
@@ -105,14 +109,14 @@ class CreateHabitReport:
             goal = 0
         freq_type = freq_types[habit_data.hab.hab_freq_type]
         df = habit_data.data
-
         year = fn.year_progress(df, goal, today, freq_type)
+
         semester = fn.semester_progress(df, goal, today, freq_type)
         month = fn.month_progress(df, goal, today, freq_type) if freq_type < 6 else None
         week = fn.week_progress(df, goal, today, freq_type) if freq_type < 4 else None
         today = fn.day_progress(df, goal, today) if freq_type == 1 else None
 
-        report = md.HabitMeasureResume(
+        report = rm.HabitMeasureResume(
             toDay=today, week=week, month=month, semester=semester, year=year
         )
 
@@ -120,7 +124,7 @@ class CreateHabitReport:
 
     async def create_habit_measure_history(
         self, habit_data: HabData
-    ) -> md.HabitMeasureHistory:
+    ) -> rm.HabitMeasureHistory:
         """
         Calculates the history of a habit with a measure type frequency.
 
@@ -138,7 +142,7 @@ class CreateHabitReport:
         week = fn.ms_week_history(df)
         day = fn.ms_day_history(df)
 
-        report = md.HabitMeasureHistory(
+        report = rm.HabitMeasureHistory(
             day=day, week=week, month=month, semester=semester, year=year
         )
 
@@ -146,7 +150,7 @@ class CreateHabitReport:
 
     async def create_habit_measure_streaks(
         self, habit_data: HabData
-    ) -> md.HabitMeasureStreak:
+    ) -> rm.ListHabitStreak:
         """
         Calculates the best streak of a habit with a measure type frequency.
 
@@ -154,16 +158,16 @@ class CreateHabitReport:
             hab_id (int): The id of the habit.
 
         Returns:
-            HabitMeasureStreak: The report with the best streak of the habit.
+            ListHabitStreak: The report with the best streak of the habit.
         """
-        today = date.today()
         freq_type = freq_types[habit_data.hab.hab_freq_type]
         df = habit_data.data
-        return fn.ms_streaks(df, today, freq_type)
+
+        return fn.ms_streaks(df, freq_type)
 
     async def create_habit_yn_resume(
         self, habit_data: HabData
-    ) -> md.HabitYNResume:
+    ) -> rm.HabitYNResume:
         """
         Calculates the progress of a habit with a yes/no type.
 
@@ -182,14 +186,14 @@ class CreateHabitReport:
         month = fn.month_yn_resume(df, freq_type, today)
         total = fn.total_yn_resume(df, today)
 
-        report = md.HabitYNResume(
+        report = rm.HabitYNResume(
             month=month, semester=semester, year=year, total=total
         )
         return report
 
     async def create_habit_yn_history(
         self, habit_data: HabData
-    ) -> md.HabitYNHistory:
+    ) -> rm.HabitYNHistory:
         """
         Calculates the history of a habit with a yes/no type.
 
@@ -206,13 +210,13 @@ class CreateHabitReport:
         month = fn.yn_month_history(df)
         week = fn.yn_week_history(df)
 
-        report = md.HabitYNHistory(week=week, month=month, semester=semester, year=year)
+        report = rm.HabitYNHistory(week=week, month=month, semester=semester, year=year)
 
         return report
 
     async def create_habit_yn_streaks(
         self, habit_data: HabData
-    ) -> md.HabitYNStreak:
+    ) -> rm.ListHabitStreak:
         """
         Calculates the best streak of a habit with a yes/no type.
 
@@ -222,14 +226,13 @@ class CreateHabitReport:
         Returns:
             HabitYNBestStreak: The report with the best streak of the habit.
         """
-        today = date.today()
         freq_type = freq_types[habit_data.hab.hab_freq_type]
         df = habit_data.data
-        return fn.yn_streaks(df, today, freq_type)
+        return fn.yn_streaks(df, freq_type)
 
     async def create_habit_freq_week_day(
         self, habit_data: HabData
-    ) -> md.HabitFreqWeekDay:
+    ) -> rm.HabitFreqWeekDay:
         """
         Calculates the frequency of a habit with a week day type.
 
@@ -241,4 +244,5 @@ class CreateHabitReport:
         """
         df = habit_data.data
         report = fn.freq_week_day(df)
+
         return report
