@@ -13,7 +13,7 @@ from app.exceptions.exceptions import (
     HabitNotFoundError,
 )
 
-class HabitReport:
+class GetReport:
     def __init__(
         self,
         habit_repository: AbstractHabitReposiory,
