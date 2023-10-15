@@ -1,4 +1,5 @@
 from uuid import UUID
+from datetime import datetime
 from typing import List, Optional, Union
 from motor.motor_asyncio import AsyncIOMotorClient
 from beanie import init_beanie
@@ -23,8 +24,6 @@ class StatisticsRepository(AbstractStatisticRepository):
         return report
 
     async def create_report(self, report: ReportDocument):
-        report.current_date({ReportDocument.created_at, True})
-        report.current_date({ReportDocument.updated_at, True})
         await report.insert()
 
     async def update_report(self, hab_id: UUID, new_report: Union[HabitMeasureReport, HabitYNReport]):
