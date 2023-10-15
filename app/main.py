@@ -16,10 +16,8 @@ from app.common.constants import (
     HABITS_DB_URL,
     STATISTICS_DB_URL,
     STATISTICS_DB,
-    RABBITMQ_HOST,
     RABBITMQ_QUEUE,
-    RABBITMQ_USERNAME,
-    RABBITMQ_PASSWORD,
+    RABBITMQ_URL,
 )
 from app.rabbitmq.s_client import RabbitMQClient
 
@@ -43,28 +41,26 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup():
-    app.state.engine = await create_async_engine(HABITS_DB_URL)
-    app.state.client = await AsyncIOMotorClient(STATISTICS_DB_URL)
+    app.state.engine = create_async_engine(HABITS_DB_URL)
+    app.state.client = AsyncIOMotorClient(STATISTICS_DB_URL)
     await init_beanie(
         database=app.state.client[STATISTICS_DB], document_models=[ReportDocument]
     )
-    app.state.rabbitmq_client = RabbitMQClient(
-        RABBITMQ_HOST,
+    """app.state.rabbitmq_client = RabbitMQClient(
+        RABBITMQ_URL,
         RABBITMQ_QUEUE,
-        RABBITMQ_USERNAME,
-        RABBITMQ_PASSWORD,
         app.state.engine,
-        app.state.client,
+        app.state.client
     )
     await app.state.rabbitmq_client.connect()
-    await app.state.rabbitmq_client.start_consuming()
+    await app.state.rabbitmq_client.start_consuming()"""
 
 
 @app.on_event("shutdown")
 async def shutdown():
-    await app.state.engine.dispose()
     await app.state.client.close()
-    await app.state.rabbitmq_client.disconnect()
+    await app.state.engine.dispose()
+    #await app.state.rabbitmq_client.disconnect()
 
 
 @app.exception_handler(AppConnectionError)
