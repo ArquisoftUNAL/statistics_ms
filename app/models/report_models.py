@@ -1,6 +1,6 @@
 from pydantic import BaseModel
-from typing import Dict, Tuple, Optional, Union, List
-from datetime import date
+from typing import Optional, List
+from datetime import datetime
 
 class DataResume(BaseModel):
     percentage: float
@@ -9,31 +9,31 @@ class DataResume(BaseModel):
 
 class DateValue(BaseModel):
     year: int
-    month: Optional[int]
-    day: Optional[int]
+    semester: Optional[int] = None
+    month: Optional[int] = None
+    week: Optional[int] = None
+    day: Optional[int] = None
     value: float
 
-class ListDateValue(BaseModel): #DateFloatDir
+class ListDateValue(BaseModel):
     data: List[DateValue]
-    #data: Dict[Union[int, Tuple[int, int], date], float]
 
 class DateCount(BaseModel):
     year: int
-    week: Optional[int]
-    month: Optional[int]
-    semester: Optional[int]
+    week: Optional[int] = None
+    month: Optional[int] = None
+    semester: Optional[int] = None
     count: int
 
-class ListDateCount(BaseModel):#DateIntDir(BaseModel):
+class ListDateCount(BaseModel):
     data: List[DateCount]
-    #data: Dict[Union[int, Tuple[int, int]], int]
 
 class HabitMeasureResume(BaseModel):
     toDay: Optional[DataResume] = None
     week: Optional[DataResume] = None
     month: Optional[DataResume] = None
-    semester: Optional[DataResume] = None
-    year: Optional[DataResume] = None
+    semester: Optional[DataResume]
+    year: Optional[DataResume]
 
 class HabitMeasureHistory(BaseModel):
     day: ListDateValue
@@ -55,13 +55,12 @@ class HabitYNHistory(BaseModel):
     year: ListDateCount
 
 class HabitStreak(BaseModel):
-    start_date: date
-    end_date: date
+    start_date: datetime
+    end_date: datetime
     quantity: float
 
 class ListHabitStreak(BaseModel):
     data: List[HabitStreak]
-    #data: Dict[Tuple[date, date], int]
 
 class HabitFreqWeekDay(BaseModel):
     year: int
@@ -71,8 +70,6 @@ class HabitFreqWeekDay(BaseModel):
 
 class ListHabitFreqWeekDay(BaseModel):
     data: List[HabitFreqWeekDay]
-    #data: {(<year>, <month>): {<day of week>: <quantity>}}
-    #data: Dict[Tuple[int, int], Dict[int, int]]
 
 class HabitYNReport(BaseModel):
     resume: HabitYNResume
