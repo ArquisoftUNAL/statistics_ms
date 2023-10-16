@@ -47,8 +47,11 @@ class HabitRepository(AbstractHabitReposiory):
 
             query = text(GET_HABIT_DATA_QUERY)
             result = await session.execute(query, {"hab_id": hab_id})
-
+           
             await session.commit()
+
+            if result.rowcount == 0:
+                return HabData(hab=hab, data=pd.DataFrame())
 
             response = result.fetchall()
             data = pd.DataFrame(response)

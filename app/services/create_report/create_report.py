@@ -51,12 +51,15 @@ class CreateHabitReport:
             return None
 
     async def create_habit_yn_report(self, hab_id: UUID, habit_data: HabData) -> ReportDocument:
-        report = rm.HabitYNReport(
-            resume=await self.create_habit_yn_resume(habit_data),
-            history=await self.create_habit_yn_history(habit_data),
-            streaks=await self.create_habit_yn_streaks(habit_data),
-            days_frequency=await self.create_habit_freq_week_day(habit_data),
-        )
+        if habit_data.data.empty:
+            report = fn.create_empty_habit_yn_report()
+        else:
+            report = rm.HabitYNReport(
+                resume=await self.create_habit_yn_resume(habit_data),
+                history=await self.create_habit_yn_history(habit_data),
+                streaks=await self.create_habit_yn_streaks(habit_data),
+                days_frequency=await self.create_habit_freq_week_day(habit_data),
+            )
 
         report_doc = ReportDocument(
             hab_id=hab_id,
@@ -72,12 +75,15 @@ class CreateHabitReport:
         
 
     async def create_habit_measure_report(self, hab_id: UUID, habit_data: HabData) -> ReportDocument:
-        report = rm.HabitMeasureReport(
-            resume=await self.create_habit_measure_resume(habit_data),
-            history=await self.create_habit_measure_history(habit_data),
-            streaks=await self.create_habit_measure_streaks(habit_data),
-            days_frequency=await self.create_habit_freq_week_day(habit_data),
-        )
+        if habit_data.data.empty:
+            report = fn.create_empty_habit_measure_report()
+        else:
+            report = rm.HabitMeasureReport(
+                resume=await self.create_habit_measure_resume(habit_data),
+                history=await self.create_habit_measure_history(habit_data),
+                streaks=await self.create_habit_measure_streaks(habit_data),
+                days_frequency=await self.create_habit_freq_week_day(habit_data),
+            )
 
         report_doc = ReportDocument(
             hab_id=hab_id,

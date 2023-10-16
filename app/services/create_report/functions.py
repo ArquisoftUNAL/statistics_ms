@@ -3,6 +3,33 @@ from datetime import date
 import calendar
 import app.models.report_models as rm
 
+def create_empty_habit_measure_report() -> rm.HabitMeasureReport:
+    return rm.HabitMeasureReport(
+        resume=rm.HabitMeasureResume(),
+        history=rm.HabitMeasureHistory(
+            day=rm.ListDateValue(data=[]),
+            week=rm.ListDateValue(data=[]),
+            month=rm.ListDateValue(data=[]),
+            semester=rm.ListDateValue(data=[]),
+            year=rm.ListDateValue(data=[]),
+        ),
+        streaks=rm.ListHabitStreak(data=[]),
+        days_frequency=rm.ListHabitFreqWeekDay(data=[]),
+    )
+
+def create_empty_habit_yn_report() -> rm.HabitYNReport:
+    return rm.HabitYNReport(
+        resume=rm.HabitYNResume(month=0.0, semester=0.0, year=0.0, total=0),
+        history=rm.HabitYNHistory(
+            week=rm.ListDateCount(data=[]),
+            month=rm.ListDateCount(data=[]),
+            semester=rm.ListDateCount(data=[]),
+            year=rm.ListDateCount(data=[]),
+        ),
+        streaks=rm.ListHabitStreak(data=[]),
+        days_frequency=rm.ListHabitFreqWeekDay(data=[]),
+    )
+
 #Functions for get_habit_measure_resume report:
 def day_progress(df: pd.DataFrame, goal: int, today: date) -> rm.DataResume:    
     if df['hab_dat_collected_at'].iloc[0] == today:
