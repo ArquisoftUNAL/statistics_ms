@@ -187,7 +187,7 @@ def ms_semester_history(df: pd.DataFrame) -> rm.ListDateValue:
     return rm.ListDateValue(data=list_date)
 
 def ms_year_history(df: pd.DataFrame) -> rm.ListDateValue:
-    df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year']].astype(str)
+    df = df[['hab_dat_collected_at', 'hab_dat_amount', 'year']]
     df = df.groupby(df['year'])['hab_dat_amount'].sum().to_frame()
     df.reset_index(inplace=True)
     list_date = df.apply(lambda row: rm.DateValue(year=row['year'], value=row['hab_dat_amount']), axis=1).to_list()
