@@ -19,7 +19,7 @@ from app.common.constants import (
     RABBITMQ_QUEUE,
     RABBITMQ_URL,
 )
-from app.rabbitmq.s_client import RabbitMQClient
+from app.rabbitmq.rabbitmq_client import RabbitMQClient
 
 app = FastAPI()
 
@@ -46,14 +46,14 @@ async def startup():
     await init_beanie(
         database=app.state.client[STATISTICS_DB], document_models=[ReportDocument]
     )
-    """app.state.rabbitmq_client = RabbitMQClient(
+    app.state.rabbitmq_client = RabbitMQClient(
         RABBITMQ_URL,
         RABBITMQ_QUEUE,
         app.state.engine,
         app.state.client
     )
     await app.state.rabbitmq_client.connect()
-    await app.state.rabbitmq_client.start_consuming()"""
+    await app.state.rabbitmq_client.start_consuming()
 
 
 @app.on_event("shutdown")
