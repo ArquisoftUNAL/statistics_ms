@@ -16,7 +16,6 @@ class Report(BaseModel):
     created_at: datetime
 
 class ReportDocument(Document, Report):
-    hab_id: UUID = Indexed(UUID, unique=True)
-
     class Settings:
         name = "reports"
+        indexes = ["hab_id"]
