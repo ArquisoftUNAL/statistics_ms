@@ -1,3 +1,5 @@
+import logging
+from pymongo.errors import WriteError
 from app.repositories.interfaces.habits_repository_interface import (
     AbstractHabitReposiory,
 )
@@ -9,6 +11,8 @@ from app.models.habits_db_models import HabDataCollected
 from app.graphql.graphql_client import GraphQLClient
 from app.graphql.mutations import UpDateStreakMutation, Streak, UpDateStreak
 import app.models.report_models as rm
+from app.utils.frequency import freq_types
+from . import functions as fn
 
 
 class UpdateReport:
@@ -24,60 +28,49 @@ class UpdateReport:
         report_doc = await self.stat_repo.get_report_by_id(new_hab_data.hab_id)
 
         if report_doc is None:
-            report_doc = CreateHabitReport(self.hab_repo, self.stat_repo).create_habit_report(
-                new_hab_data.hab_id
-            )
-            report = report_doc.report
+            report_doc = CreateHabitReport(
+                self.hab_repo, self.stat_repo
+            ).create_habit_report(new_hab_data.hab_id)
 
         elif report_doc.hab_is_yn:
             report = await self.update_habit_yn_report(
-                report_doc.report, report_doc.hab_data_count, new_hab_data
+                report_doc.report,
+                report_doc.hab_data_count,
+                report_doc.hab_freq_type,
+                new_hab_data,
             )
+            report_doc.report = report
         else:
             report = await self.update_habit_measure_report(
-                report_doc.report, report_doc.hab_data_count, new_hab_data
+                report_doc.report,
+                report_doc.hab_data_count,
+                report_doc.hab_freq_type,
+                new_hab_data,
             )
-        
-        await self.stat_repo.update_report(report_doc.hab_id, report)
+            report_doc.report = report
 
-        streaks = dict(report.streaks)
-        keys = streaks.keys()
-        last_key = keys[0]
+        try:
+            await self.stat_repo.update_report(report_doc.hab_id, report_doc.report)
+        except WriteError as e:
+            logging.error(f"Error updating report on statistics database: {e}")
 
-        for key in keys:
-            if key[1] > last_key[1]:
-                last_key = key
-
-        start_date, end_date = last_key
-        value = streaks[last_key]
-        last_streak = Streak(
-            date_start=start_date,
-            date_end=end_date,
-            data=value,
-        )
-        update_streak = UpDateStreak(
-            freq_type=report_doc.hab_freq_type,
-            hab_id=report_doc.hab_id,
-            streak=last_streak
-        )
-        mutation = UpDateStreakMutation(update_streak)
-
-        client = GraphQLClient()
-        client.execute(*mutation.get_mutation())
-
+        return report_doc
 
     async def update_habit_yn_report(
-        self, report: rm.HabitYNReport, count: int, new_hab_data: HabDataCollected
+        self,
+        report: rm.HabitYNReport,
+        count: int,
+        freq: str,
+        new_hab_data: HabDataCollected,
     ) -> rm.HabitYNReport:
+        freqn = freq_types[freq]
         return rm.HabitYNReport(
             resume=await self.update_habit_yn_resume(
                 report.resume, count, new_hab_data
             ),
-            history=await self.update_habit_yn_history(
-                report.history, count, new_hab_data
-            ),
+            history=await self.update_habit_yn_history(report.history, new_hab_data),
             streaks=await self.update_habit_yn_streaks(
-                report.streaks, count, new_hab_data
+                report.streaks, freqn, new_hab_data
             ),
             days_frequency=await self.update_habit_freq_week_day(
                 report.days_frequency, count, new_hab_data
@@ -85,17 +78,22 @@ class UpdateReport:
         )
 
     async def update_habit_measure_report(
-        self, report: rm.HabitMeasureReport, count: int, new_hab_data: HabDataCollected
+        self,
+        report: rm.HabitMeasureReport,
+        count: int,
+        freq: str,
+        new_hab_data: HabDataCollected,
     ) -> rm.HabitMeasureReport:
+        freqn = freq_types[freq]
         return rm.HabitMeasureReport(
             resume=await self.update_habit_measure_resume(
                 report.resume, count, new_hab_data
             ),
             history=await self.update_habit_measure_history(
-                report.history, count, new_hab_data
+                report.history, new_hab_data
             ),
             streaks=await self.update_habit_measure_streaks(
-                report.streaks, count, new_hab_data
+                report.streaks, freqn, new_hab_data
             ),
             days_frequency=await self.update_habit_freq_week_day(
                 report.days_frequency, count, new_hab_data
@@ -103,36 +101,62 @@ class UpdateReport:
         )
 
     async def update_habit_measure_resume(
-        self, report: rm.HabitMeasureResume, count: int, new_hab_data: HabDataCollected
+        self, resume: rm.HabitMeasureResume, count: int, new_hab_data: HabDataCollected
     ) -> rm.HabitMeasureResume:
-        pass
+        return resume
 
     async def update_habit_measure_history(
-        self, report: rm.HabitMeasureHistory, count: int, new_hab_data: HabDataCollected
+        self, history: rm.HabitMeasureHistory, new_hab_data: HabDataCollected
     ) -> rm.HabitMeasureHistory:
-        pass
+        history.day = await fn.update_ms_day_history(history.day, new_hab_data)
+        history.week = await fn.update_ms_week_history(history.week, new_hab_data)
+        history.month = await fn.update_ms_month_history(history.month, new_hab_data)
+        history.semester = await fn.update_ms_semester_history(
+            history.semester, new_hab_data
+        )
+        history.year = await fn.update_ms_year_history(history.year, new_hab_data)
+
+        return history
 
     async def update_habit_measure_streaks(
-        self, report: rm.ListHabitStreak, count: int, new_hab_data: HabDataCollected
+        self, streaks: rm.ListHabitStreak, freq: int, new_hab_data: HabDataCollected
     ) -> rm.ListHabitStreak:
-        pass
+        streaks.data = await fn.update_ms_streaks(streaks.data, freq, new_hab_data)
+
+        return streaks
 
     async def update_habit_yn_resume(
-        self, report: rm.HabitYNResume, count: int, new_hab_data: HabDataCollected
+        self, resume: rm.HabitYNResume, count: int, new_hab_data: HabDataCollected
     ) -> rm.HabitYNResume:
-        pass
+        return resume
 
     async def update_habit_yn_history(
-        self, report: rm.HabitYNHistory, count: int, new_hab_data: HabDataCollected
+        self, history: rm.HabitYNHistory, new_hab_data: HabDataCollected
     ) -> rm.HabitYNHistory:
-        pass
+        history.week = await fn.update_yn_week_history(history.week, new_hab_data)
+        history.month = await fn.update_yn_month_history(history.month, new_hab_data)
+        history.semester = await fn.update_yn_semester_history(
+            history.semester, new_hab_data
+        )
+        history.year = await fn.update_yn_year_history(history.year, new_hab_data)
+
+        return history
 
     async def update_habit_yn_streaks(
-        self, report: rm.ListHabitStreak, count: int, new_hab_data: HabDataCollected
+        self, streaks: rm.ListHabitStreak, count: int, new_hab_data: HabDataCollected
     ) -> rm.ListHabitStreak:
-        pass
+        streaks.data = await fn.update_yn_streaks(streaks.data, count, new_hab_data)
+
+        return streaks
 
     async def update_habit_freq_week_day(
-        self, report: rm.HabitFreqWeekDay, count: int, new_hab_data: HabDataCollected
-    ) -> rm.HabitFreqWeekDay:
-        pass
+        self,
+        freq_week_day: rm.ListHabitFreqWeekDay,
+        count: int,
+        new_hab_data: HabDataCollected,
+    ) -> rm.ListHabitFreqWeekDay:
+        freq_week_day.data = await fn.update_freq_week_day(
+            freq_week_day.data, new_hab_data
+        )
+
+        return freq_week_day
