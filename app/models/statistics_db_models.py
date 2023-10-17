@@ -9,7 +9,7 @@ class Report(BaseModel):
     hab_id: UUID
     hab_is_yn: bool
     hab_freq_type: str
-    hab_goal: Optional[float]
+    hab_goal: Optional[float] = None
     hab_data_count: int
     report: Union[HabitMeasureReport, HabitYNReport]
     updated_at: datetime
