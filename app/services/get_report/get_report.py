@@ -29,14 +29,14 @@ class GetReport:
             report_doc = await self.stat_repo.get_report_by_id(habit_id)
 
             if report_doc is None:
-                report = await CreateHabitReport(
+                report_doc = await CreateHabitReport(
                     self.hab_repo, self.stat_repo
                 ).create_habit_report(habit_id)
 
-                if report is None:
+                if report_doc is None:
                     raise HabitNotFoundError("Habit not found")
 
-                return report
+                return report_doc.report
 
             return report_doc.report
 
