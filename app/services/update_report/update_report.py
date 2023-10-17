@@ -26,33 +26,32 @@ class UpdateReport:
 
     async def update_habit_report(self, new_hab_data: HabDataCollected):
         report_doc = await self.stat_repo.get_report_by_id(new_hab_data.hab_id)
-
         if report_doc is None:
-            report_doc = CreateHabitReport(
-                self.hab_repo, self.stat_repo
-            ).create_habit_report(new_hab_data.hab_id)
+            create_habit = CreateHabitReport(self.hab_repo, self.stat_repo)
+            report_doc = await create_habit.create_habit_report(new_hab_data.hab_id)
 
-        elif report_doc.hab_is_yn:
-            report = await self.update_habit_yn_report(
-                report_doc.report,
-                report_doc.hab_data_count,
-                report_doc.hab_freq_type,
-                new_hab_data,
-            )
-            report_doc.report = report
         else:
-            report = await self.update_habit_measure_report(
-                report_doc.report,
-                report_doc.hab_data_count,
-                report_doc.hab_freq_type,
-                new_hab_data,
-            )
-            report_doc.report = report
+            if report_doc.hab_is_yn:
+                report = await self.update_habit_yn_report(
+                    report_doc.report,
+                    report_doc.hab_data_count,
+                    report_doc.hab_freq_type,
+                    new_hab_data,
+                )
+                report_doc.report = report
+            else:
+                report = await self.update_habit_measure_report(
+                    report_doc.report,
+                    report_doc.hab_data_count,
+                    report_doc.hab_freq_type,
+                    new_hab_data,
+                )
+                report_doc.report = report
 
-        try:
-            await self.stat_repo.update_report(report_doc.hab_id, report_doc.report)
-        except WriteError as e:
-            logging.error(f"Error updating report on statistics database: {e}")
+            try:
+                await self.stat_repo.update_report(report_doc.hab_id, report_doc.report)
+            except WriteError as e:
+                logging.error(f"Error updating report on statistics database: {e}")
 
         return report_doc
 
@@ -121,7 +120,7 @@ class UpdateReport:
     async def update_habit_measure_streaks(
         self, streaks: rm.ListHabitStreak, freq: int, new_hab_data: HabDataCollected
     ) -> rm.ListHabitStreak:
-        streaks.data = await fn.update_ms_streaks(streaks.data, freq, new_hab_data)
+        streaks.data = await fn.update_ms_streaks(streaks, freq, new_hab_data)
 
         return streaks
 
@@ -145,7 +144,7 @@ class UpdateReport:
     async def update_habit_yn_streaks(
         self, streaks: rm.ListHabitStreak, count: int, new_hab_data: HabDataCollected
     ) -> rm.ListHabitStreak:
-        streaks.data = await fn.update_yn_streaks(streaks.data, count, new_hab_data)
+        streaks.data = await fn.update_yn_streaks(streaks, count, new_hab_data)
 
         return streaks
 
@@ -156,7 +155,7 @@ class UpdateReport:
         new_hab_data: HabDataCollected,
     ) -> rm.ListHabitFreqWeekDay:
         freq_week_day.data = await fn.update_freq_week_day(
-            freq_week_day.data, new_hab_data
+            freq_week_day, new_hab_data
         )
 
         return freq_week_day

@@ -248,7 +248,7 @@ async def update_freq_week_day(
     if (
         last_freq_week_day.year == newData.hab_dat_collected_at.year
         and last_freq_week_day.month == newData.hab_dat_collected_at.month
-        and last_freq_week_day.freq_week_day == newData.hab_dat_collected_at.isocalendar()[2]
+        and last_freq_week_day.week_day == newData.hab_dat_collected_at.isocalendar()[2]
     ):
         last_freq_week_day.quantity += 1
     else:
@@ -256,7 +256,7 @@ async def update_freq_week_day(
             rm.HabitFreqWeekDay(
                 year=newData.hab_dat_collected_at.year,
                 month=newData.hab_dat_collected_at.month,
-                freq_week_day=newData.hab_dat_collected_at.isocalendar()[2],
+                week_day=newData.hab_dat_collected_at.isocalendar()[2],
                 quantity=1,
             )
         )
