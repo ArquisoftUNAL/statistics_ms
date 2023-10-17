@@ -17,7 +17,8 @@ class GraphQLClient:
 
     async def execute(self, query, variable_values=None):
         async with self.client as session:
-            return await session.execute(
+            result = await session.execute(
                 gql(query),
                 variable_values=variable_values
             )
+            return result
