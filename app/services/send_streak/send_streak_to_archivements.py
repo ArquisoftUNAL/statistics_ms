@@ -21,3 +21,4 @@ async def send_streak_to_archivements(report_doc: ReportDocument):
         except Exception as e:
             if i == 2:
                 raise GraphqlMutationError("Failed to update streak after 3 attempts")
+    

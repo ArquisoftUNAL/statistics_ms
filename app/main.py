@@ -23,22 +23,6 @@ from app.rabbitmq.rabbitmq_client import RabbitMQClient
 
 app = FastAPI()
 
-"""origins = [
-    "http://localhost:3000",
-    "http://localhost:3001",
-    "http://localhost:3002",
-    "http://localhost:3003",
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["GET"],
-    allow_headers=["*"],
-)"""
-
-
 @app.on_event("startup")
 async def startup():
     app.state.engine = create_async_engine(HABITS_DB_URL)
@@ -46,21 +30,22 @@ async def startup():
     await init_beanie(
         database=app.state.client[STATISTICS_DB], document_models=[ReportDocument]
     )
-    """app.state.rabbitmq_client = RabbitMQClient(
+    app.state.rabbitmq_client = RabbitMQClient(
         RABBITMQ_URL,
         RABBITMQ_QUEUE,
         app.state.engine,
         app.state.client
     )
     await app.state.rabbitmq_client.connect()
-    await app.state.rabbitmq_client.start_consuming()"""
+    await app.state.rabbitmq_client.start_consuming()
 
 
 @app.on_event("shutdown")
 async def shutdown():
-    await app.state.client.close()
+    if app.state.client is not None:
+        app.state.client.close()
     await app.state.engine.dispose()
-    #await app.state.rabbitmq_client.disconnect()
+    await app.state.rabbitmq_client.disconnect()
 
 
 @app.exception_handler(AppConnectionError)

@@ -30,7 +30,7 @@ class UpdateReport:
             create_habit = CreateHabitReport(self.hab_repo, self.stat_repo)
             report_doc = await create_habit.create_habit_report(new_hab_data.hab_id)
 
-        else:
+        if report_doc is not None:
             if report_doc.hab_is_yn:
                 report = await self.update_habit_yn_report(
                     report_doc.report,
@@ -47,7 +47,6 @@ class UpdateReport:
                     new_hab_data,
                 )
                 report_doc.report = report
-
             try:
                 await self.stat_repo.update_report(report_doc.hab_id, report_doc.report)
             except WriteError as e:
@@ -120,7 +119,7 @@ class UpdateReport:
     async def update_habit_measure_streaks(
         self, streaks: rm.ListHabitStreak, freq: int, new_hab_data: HabDataCollected
     ) -> rm.ListHabitStreak:
-        streaks.data = await fn.update_ms_streaks(streaks, freq, new_hab_data)
+        streaks = await fn.update_ms_streaks(streaks, freq, new_hab_data)
 
         return streaks
 
@@ -144,7 +143,7 @@ class UpdateReport:
     async def update_habit_yn_streaks(
         self, streaks: rm.ListHabitStreak, count: int, new_hab_data: HabDataCollected
     ) -> rm.ListHabitStreak:
-        streaks.data = await fn.update_yn_streaks(streaks, count, new_hab_data)
+        streaks = await fn.update_yn_streaks(streaks, count, new_hab_data)
 
         return streaks
 
@@ -154,7 +153,7 @@ class UpdateReport:
         count: int,
         new_hab_data: HabDataCollected,
     ) -> rm.ListHabitFreqWeekDay:
-        freq_week_day.data = await fn.update_freq_week_day(
+        freq_week_day = await fn.update_freq_week_day(
             freq_week_day, new_hab_data
         )
 

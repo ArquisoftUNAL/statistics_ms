@@ -1,0 +1,6 @@
+{
+    "hab_dat_id": "df719cdd-c0b9-4dc8-be8c-5827fd5ac099",
+    "hab_dat_amount": 90,
+    "hab_dat_collected_at": "2023-10-12",
+    "hab_id": "01280769-6626-456a-aa9b-d5ed434ddd4d"
+}
