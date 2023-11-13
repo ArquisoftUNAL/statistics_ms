@@ -18,5 +18,5 @@ API_GATEWAY_URL = f"{os.getenv('API_GATEWAY_URL')}"
 STATISTICS_DB_URL = f"{os.getenv('MONGODB_URL')}"
 STATISTICS_DB = f"{os.getenv('MONDODB_NAME')}"
 
-RABBITMQ_URL = f"amqp://{os.getenv('RABBITMQ_USER')}:{os.getenv('RABBITMQ_PASSWORD')}@{os.getenv('RABBITMQ_HOST')}:{os.getenv('RABBITMQ_PORT')}" #os.getenv("RABBITMQ_URL")
+RABBITMQ_URL = os.getenv("RABBITMQ_URL") #f"amqp://{os.getenv('RABBITMQ_USER')}:{os.getenv('RABBITMQ_PASSWORD')}@{os.getenv('RABBITMQ_HOST')}:{os.getenv('RABBITMQ_PORT')}"
 RABBITMQ_QUEUE =  os.getenv("RABBITMQ_QUEUE")
